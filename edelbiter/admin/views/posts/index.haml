@@ -1,0 +1,61 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:posts, :index)
+      %li=link_to pat(:new), url(:posts, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:posts)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:post, :id)
+          -#%th=mat(:post, :titel)
+          %th=mat(:post, :kurztitel)
+          -#%th=mat(:post, :body)
+          %th=mat(:post, :wertung)
+          %th=mat(:post, :design)
+          %th=mat(:post, :hersteller)
+          %th=mat(:post, :kakaogehalt)
+          -#%th=mat(:post, :anbaugebiet)
+          %th=mat(:post, :bild)
+          -#%th=mat(:post, :fett)
+          -#%th=mat(:post, :kohlenhydrate)
+          -#%th=mat(:post, :zucker)
+          -#%th=mat(:post, :zutaten)
+          -#%th=mat(:post, :woher)
+          -#%th=mat(:post, :gewicht)
+          -#%th=mat(:post, :preis)
+          %th=mat(:post, :datum)
+          %th=mat(:post, :oeffentlich)
+          %th.last="&nbsp;"
+        -@posts.each do |post|
+          %tr
+            %td.first=post.id
+            -#%td=post.titel
+            %td=post.kurztitel
+            -#%td=post.body
+            %td=post.wertung
+            %td=post.design
+            %td=post.hersteller
+            %td=post.kakaogehalt
+            -#%td=post.anbaugebiet
+            %td=post.bild
+            -#%td=post.fett
+            -#%td=post.kohlenhydrate
+            -#%td=post.zucker
+            -#%td=post.zutaten
+            -#%td=post.woher
+            -#%td=post.gewicht
+            -#%td=post.preis
+            %td=post.datum
+            %td=post.oeffentlich
+            %td.last
+              =button_to pat(:edit), url(:posts, :edit, :id => post.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:posts, :destroy, :id => post.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

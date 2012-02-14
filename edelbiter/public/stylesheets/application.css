@@ -1,0 +1,145 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  background-color: #FFF; }
+  body a {
+    color: #000; }
+  body h2 {
+    padding-bottom: 12px;
+    font-weight: bold; }
+  body h3 {
+    padding-bottom: 10px; }
+  body pre {
+    display: block;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    padding: 0.5em; }
+  body ul.bulleted {
+    margin-left: 20px;
+    margin-bottom: 10px; }
+    body ul.bulleted li {
+      list-style-type: square; }
+      body ul.bulleted li span {
+        font-weight: bold; }
+
+#container {
+  width: 850px;
+  margin: auto;
+  overflow: hidden; }
+
+#header {
+  width: 1024px;
+  margin: auto;
+  padding: 30px 10px 20px 10px;
+  border-bottom: 2px solid #EC9A94;
+  text-align:center;
+  overflow: hidden; }
+  #header h1 {
+    color: #222;
+    font-family:Bodoni MT, Georgia, serif;
+    font-size: 80pt; }
+  #header h2 {
+    color: #222;
+    font-family:Bodoni MT, Georgia, serif;
+    font-size: 20pt; }
+  #header ul.menu {
+    margin-left: 80px;
+    margin-top: 10px;
+    overflow: hidden; }
+    #header ul.menu li {
+      float: left;
+      margin-right: 20px;
+      padding-bottom: 5px; }
+      #header ul.menu li a {
+        font-size: 1.2em;
+        color: #222;
+        text-decoration: none; }
+        #header ul.menu li a:hover {
+          text-decoration: underline; }
+
+#main {
+  width: 800px;
+  margin: 20px;
+  padding-top: 20px; }
+  #main h2 {
+    font-size: 2.1em; }
+  #main .post {
+    margin-bottom: 20px; }
+    #main .post p {
+      padding-bottom: 10px; }
+    #main .post .kurztitel {
+      font-family: Bodoni MT, Georgia,Times New Roman, serif;
+      font-size: 20pt;
+      color: #752A26; }
+      #main .post .kurztitel a {
+        color: #752A26;
+        text-decoration: none; }
+        #main .post .kurztitel a:hover {
+          text-decoration: underline; }
+    #main .post .datum {
+      font-size: 1.1em;
+      color: #999999;
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 2px; }
+    #main .post .body {
+      padding-bottom: 10px; }
+    #main .post .details {
+      border-top: 1px solid #CCCCCC;
+      margin-bottom: 0.25em;
+      padding: 5px 0;
+      overflow: hidden; }
+      #main .post .details .author {
+        float: left;
+        padding-right: 5px;
+        border-right: 1px solid #CCCCCC; }
+  #main #show .titel {
+    height:200px;
+    width:500px;
+    font-family: Bodoni MT, Georgia,Times New Roman, serif;
+    font-size: 24pt;
+    float:left;}
+  #main #show #infokasten {
+    float:right;
+    width:270px;
+    height: 180px;
+    padding: 0px 10px;
+    border-left: 1px solid #BBBBBB;
+    font-size:10pt;
+    color:#666;}
+    #main #show #infokasten .preis {
+      font-size: 12pt;
+      color:black;}
+  #main #show .body {
+    clear:both;
+    font-size: 12pt;
+    color:#000;}
+      
+
+#social_media {
+  padding: 20px;
+  margin-left: 20px;
+  height: 200px;
+  width: 750px;
+  border: 1px dotted black; }
+  #sidebar p {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 12px; }
+
+#about h2 {
+  font-family: "Bodoni MT, Georgia,Times New Roman,serif";
+  font-size: 2em;
+  color: #752A26; }
+#about h3 {
+  font-family: "Bodoni MT, Georgia,Times New Roman,serif";
+  font-size: 1.5em;
+  color: #752A26;
+  padding-bottom: 6px; }
+#about p {
+  padding-bottom: 12px; }
+
+#footer {
+  padding: 30px 10px 10px 10px; }
