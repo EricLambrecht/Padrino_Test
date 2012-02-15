@@ -45,7 +45,7 @@ body {
     font-size: 80pt; }
   #header h2 {
     color: #222;
-    font-family:Bodoni MT, Georgia, serif;
+    font-family:Bodoni MT, Didot, Georgia, serif;
     font-size: 20pt; }
   #header ul.menu {
     margin-left: 80px;
@@ -103,6 +103,9 @@ body {
         float: left;
         padding-right: 5px;
         border-right: 1px solid #CCCCCC; }
+ #main #show .bild {
+    padding-bottom:10px;
+ }
   #main #show .titel {
     height:200px;
     width:450px;
@@ -119,7 +122,8 @@ body {
     color:#666;}
     #main #show #infokasten .preis {
       font-size: 12pt;
-      color:black;}
+      color:black;
+      padding-bottom:5px;}
   #main #show .body {
     clear:both;
     font-size: 12pt;

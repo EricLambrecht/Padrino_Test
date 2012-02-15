@@ -12,7 +12,7 @@ Admin.controllers :posts do
 
   post :create do
     @post = Post.new(params[:post])
-    File.open('pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
+    File.open('public/pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
         f.write(params[:pic][:tempfile].read)
          @post.bild = @post.id.to_s + '.jpg'
     end
@@ -32,7 +32,7 @@ Admin.controllers :posts do
 
   put :update, :with => :id do
     @post = Post.get(params[:id])
-    File.open('pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
+    File.open('public/pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
         f.write(params[:pic][:tempfile].read)
         params[:post][:bild] = @post.id.to_s + '.jpg'
     end
