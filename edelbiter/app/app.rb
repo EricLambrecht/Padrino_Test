@@ -57,9 +57,15 @@ class Edelbiter < Padrino::Application
   #   end
   #
 
- get "/" do
-    redirect url(:posts, :index)
-  end
+# get "/" do
+#    redirect url(:posts, :index)
+# end
 
+  get :index, :map => "/" do
+    @posts = Post.all(:order => :kurztitel.asc)
+    # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehehn ist
+    @spotlight = Post.get(1)
+    render 'schokolade/index'
+  end
 
 end

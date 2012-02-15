@@ -42,8 +42,10 @@
 
 .group
   =f.label :bild
-  =f.error_message_on :bild
-  =f.text_field :bild, :class => :text_field
+  =f.error_message_on :bild 
+  %br
+  =f.file_field :bild, :name => 'pic'
+  %br
   %span.description NICHT FERTIG!
 
 .group

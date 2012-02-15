@@ -19,6 +19,7 @@ Edelbiter.controllers :suggest do
   # end
 
   get :index do
+    render 'suggest/index'
   end
 
 end

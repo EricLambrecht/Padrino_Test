@@ -19,6 +19,12 @@ Edelbiter.controllers :archive do
   # end
 
   get :index do
+    render 'archive/index'
+  end
+  
+  get :show, :with => :id do
+    @post = Post.get(params[:id])
+    render 'schokolade/show'
   end
 
 end

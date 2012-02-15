@@ -19,9 +19,12 @@ Edelbiter.controllers :blog do
   # end
 
   get :index do
+    render 'blog/index'
   end
 
-  get :show do
+  get :show, :with => :id do
+    @blogposts = Blogpost.get(params[:id])
+    render 'blog/show'
   end
 
 end

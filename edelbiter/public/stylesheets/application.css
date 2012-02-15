@@ -24,21 +24,24 @@ body {
       body ul.bulleted li span {
         font-weight: bold; }
 
-#container {
-  width: 850px;
-  margin: auto;
-  overflow: hidden; }
+
 
 #header {
-  width: 1024px;
+  width: 768px;
   margin: auto;
   padding: 30px 10px 20px 10px;
   border-bottom: 2px solid #EC9A94;
   text-align:center;
   overflow: hidden; }
+  #header #homelink a{
+     text-decoration:none;
+ }
+  #header #homelink a:hover{
+     color: grey;
+ }
   #header h1 {
     color: #222;
-    font-family:Bodoni MT, Georgia, serif;
+    font-family:Bodoni MT, Didot,  Georgia, serif;
     font-size: 80pt; }
   #header h2 {
     color: #222;
@@ -59,9 +62,14 @@ body {
         #header ul.menu li a:hover {
           text-decoration: underline; }
 
+#container {
+  width: 768px;
+  margin: auto;
+  overflow: hidden; }
+
 #main {
-  width: 800px;
-  margin: 20px;
+  width: 768px;
+  margin: 0px;
   padding-top: 20px; }
   #main h2 {
     font-size: 2.1em; }
@@ -97,7 +105,7 @@ body {
         border-right: 1px solid #CCCCCC; }
   #main #show .titel {
     height:200px;
-    width:500px;
+    width:450px;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
     float:left;}
@@ -130,11 +138,11 @@ body {
     padding-bottom: 12px; }
 
 #about h2 {
-  font-family: "Bodoni MT, Georgia,Times New Roman,serif";
+  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
   font-size: 2em;
   color: #752A26; }
 #about h3 {
-  font-family: "Bodoni MT, Georgia,Times New Roman,serif";
+  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
   font-size: 1.5em;
   color: #752A26;
   padding-bottom: 6px; }
