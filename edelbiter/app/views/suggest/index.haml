@@ -1,7 +1,27 @@
 
-- @title = "Vorschlag"
+- @title = "Vorschlag machen"
+
+
+-# Es muss noch ein Eintrag .suggest .text_field im application .css erstellt werden
+-# Es muss noch ein Eintrag .suggest .text_area im application .css erstellt werden
 
 .suggest
-	%p Hier sp&auml;ter Kontakformular
-	%p BLA BLA BLA
+  %p Beschreibung:
+  %p Machen sie doch Vorschlage usw...
+  %p Bitte geben Sie ihre E-Mail an, damit wir Ihnen antworten k&ouml;nnen.
+  
+  %br
+  
+  %form
+    %p Ihre Email:
+    =text_field_tag :absender, :class => :text_field
+
+    
+    %br
+    %p Ihre Nachricht:
+    =text_area_tag :nachricht, :class => :text_area
+    
+    %br 
+    =submit_tag "Absenden", :class => 'senden'
+    
 
