@@ -7,7 +7,7 @@
       %img{:src => '/pictures/'+@spotlight.bild}
     .titel= link_to @spotlight.titel, url_for(:archive, :show, :id => @spotlight.id)
     #infokasten
-      .preis= @spotlight.preis.to_s() + 'Euro'
+      .preis= @spotlight.preis.to_s() + ' Eur'
       .zutaten= 'Zutatenliste: ' + @spotlight.zutaten 
       .naehrwerte= 'N&auml;hrwerte: '
       = @spotlight.zucker.to_s + 'g Zucker'

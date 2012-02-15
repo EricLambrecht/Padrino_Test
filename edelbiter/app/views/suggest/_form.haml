@@ -1,0 +1,11 @@
+.group
+  =f.label :titel
+  =f.error_message_on :titel
+  =f.text_field :titel, :class => :text_field
+  %span.description Ex: Vollstaendiger Titel
+
+.group
+  =f.label :body
+  =f.error_message_on :body
+  ~f.text_area :body, :class => :text_area
+  %span.description Ex: Beschreibung
