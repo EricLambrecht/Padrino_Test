@@ -1,0 +1,15 @@
+
+- @title = @post.titel
+#show
+  .post
+    .titel= @post.titel
+    #infokasten
+      .preis= @post.preis.to_s() + 'Euro'
+      .zutaten= 'Zutatenliste: ' + @post.zutaten 
+      .naehrwerte= 'N&auml;hrwerte: '
+      = @post.zucker.to_s + 'g Zucker'
+      = @post.fett.to_s + 'g Fett'
+      .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
+      %p= 'Erh&auml;ltlich in: '+@post.woher 
+    .body= simple_format(@post.body)    
+%p= link_to 'Zur &Uuml;bersicht', url_for(:archive, :index)
