@@ -46,25 +46,25 @@
   %br
   =f.file_field :bild, :name => 'pic'
   %br
-  %span.description NICHT FERTIG!
+  %span.description !Mini-Bilder fehlen noch!
 
 .group
   =f.label :fett
   =f.error_message_on :fett
   =f.text_field :fett, :class => :text_field
-  %span.description Fettgehalt
+  %span.description Fettgehalt in g
 
 .group
   =f.label :kohlenhydrate
   =f.error_message_on :kohlenhydrate
   =f.text_field :kohlenhydrate, :class => :text_field
-  %span.description Kohlenhydrate
+  %span.description Kohlenhydrate in g
 
 .group
   =f.label :zucker
   =f.error_message_on :zucker
   =f.text_field :zucker, :class => :text_field
-  %span.description Zucker
+  %span.description Zucker in g
 
 .group
   =f.label :zutaten
@@ -82,31 +82,37 @@
   =f.label :gewicht
   =f.error_message_on :gewicht
   =f.text_field :gewicht, :class => :text_field
-  %span.description Packungsgewicht
+  %span.description Packungsgewicht (100g default) !NOCH NICHT EINGESTELLT 
 
 .group
   =f.label :preis
   =f.error_message_on :preis
   =f.text_field :preis, :class => :text_field
-  %span.description Ex: 5.34 [ohne Euro und Komma]
+  %span.description Bezahlter Preis - Ex: 5.34 [ohne Euro und Komma]
 
 .group
   =f.label :datum
   =f.error_message_on :datum
   =f.text_field :datum, :class => :text_field
-  %span.description Ex: a simple text
+  %span.description ! Muss automatisiert werden
 
-.group
-  =f.label :oeffentlich
-  =f.error_message_on :oeffentlich
-  =f.check_box :oeffentlich, :class => :check_box
-  %span.description Ex: a simple text
+%hr
+%br
 
 .group
   =f.label :kurztitel
   =f.error_message_on :kurztitel
-  =f.text_field :kurztitel, :class => :text_field
-  %span.description Ex: a simple text
+  %br
+  =f.text_field :kurztitel, :class => :kurztitel
+  %br
+  %span.description M&ouml;glichst kurzen und pr&auml;gnanten Titel w&auml;hlen
+  
+.group
+  =f.label 'Ver&ouml;ffentlichen?'
+  =f.error_message_on :oeffentlich
+  =f.check_box :oeffentlich, :class => :check_box 
+  %br
+  %span.description Wenn angekreuzt: f&uuml;r alle sichtbar
 
 
 .group.navform.wat-cf

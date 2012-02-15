@@ -257,6 +257,13 @@ hr {
   color: #666666;
 }
 
+
+.form .kurztitel {
+    width:80%;
+    border: 1px solid #cfcfcf;
+    padding: 2px;
+}
+
 .form input.text_field, .form input.password_field, .form textarea.text_area {
   width: 100%;
   border: 1px solid #cfcfcf;

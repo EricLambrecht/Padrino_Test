@@ -16,7 +16,7 @@ Admin.controllers :posts do
         f.write(params[:pic][:tempfile].read)
          @post.bild = @post.id.to_s + '.jpg'
     end
-    
+     
     if @post.save
       flash[:notice] = 'Post was successfully created.'
       redirect url(:posts, :edit, :id => @post.id)
