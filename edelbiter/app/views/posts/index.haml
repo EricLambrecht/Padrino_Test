@@ -1,5 +1,21 @@
 
-- @title = "Welcome"
+- @title = "Startseite"
+
+#show
+  .post
+    .titel= link_to @spotlight.titel, url_for(:posts, :show, :id => @spotlight.id)
+    #infokasten
+      .preis= @spotlight.preis.to_s() + 'Euro'
+      .zutaten= 'Zutatenliste: ' + @spotlight.zutaten 
+      .naehrwerte= 'N&auml;hrwerte: '
+      = @spotlight.zucker.to_s + 'g Zucker'
+      = @spotlight.fett.to_s + 'g Fett'
+      .anbaugebiet= 'Anbaugebiet: '+@spotlight.anbaugebiet
+      %p= 'Erh&auml;ltlich in: '+@spotlight.woher 
+    .body= simple_format(@spotlight.body)
+
+#social_media
+  %p Twitter (kommt sp&auml;ter)
+	
 
 #posts= partial 'posts/post', :collection => @posts
-

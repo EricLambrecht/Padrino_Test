@@ -1,23 +1,7 @@
 
 .post
   .kurztitel= link_to post.kurztitel, url_for(:posts, :show, :id => post.id)
-  .datum= time_ago_in_words(post.datum || Time.now) + ' ago'
-  .body= simple_format(post.body)
+  -# .datum= 'vor ' + time_ago_in_words(post.datum || Time.now)
+  -# .body= simple_format(post.body)
   
-#social_media
-  %p Recent Posts
-  %ul.bulleted
-    %li Item 1 - Lorem ipsum dolorum itsum estem
-    %li Item 2 - Lorem ipsum dolorum itsum estem
-    %li Item 3 - Lorem ipsum dolorum itsum estem
-  %p Categories
-  %ul.bulleted
-    %li Item 1 - Lorem ipsum dolorum itsum estem
-    %li Item 2 - Lorem ipsum dolorum itsum estem
-    %li Item 3 - Lorem ipsum dolorum itsum estem
-  %p Latest Comments
-  %ul.bulleted
-    %li Item 1 - Lorem ipsum dolorum itsum estem
-    %li Item 2 - Lorem ipsum dolorum itsum estem
-    %li Item 3 - Lorem ipsum dolorum itsum estem
 
