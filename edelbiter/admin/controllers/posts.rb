@@ -12,12 +12,26 @@ Admin.controllers :posts do
 
   post :create do
     @post = Post.new(params[:post])
-    File.open('public/pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
-        f.write(params[:pic][:tempfile].read)
-         @post.bild = @post.id.to_s + '.jpg'
-    end
-     
+
+
+    @post.wertung = nil if @post.wertung == ''
+    @post.design = nil if @post.design == ''
+    @post.fett = nil if @post.fett == ''
+    @post.zucker = nil if @post.zucker == ''
+    @post.kohlenhydrate = nil if @post.kohlenhydrate == ''
+    @post.kakaogehalt = nil if @post.kakaogehalt == ''
+    @post.bild = 'temp.jpg'
+    
+    
     if @post.save
+      @neu = Post.last(:titel => @post.titel)
+      if params[:pic]
+        File.open('public/pictures/' + @neu.id.to_s + '.jpg', 'wb') do |f|
+          f.write(params[:pic][:tempfile].read)
+          @neu.update(:bild => @neu.id.to_s + '.jpg')
+        end
+      end
+      
       flash[:notice] = 'Post was successfully created.'
       redirect url(:posts, :edit, :id => @post.id)
     else
