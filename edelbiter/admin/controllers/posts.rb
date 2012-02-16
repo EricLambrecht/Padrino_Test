@@ -46,9 +46,11 @@ Admin.controllers :posts do
 
   put :update, :with => :id do
     @post = Post.get(params[:id])
-    File.open('public/pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
+    if params[:pic]
+      File.open('public/pictures/' + @post.id.to_s + '.jpg', 'wb') do |f|
         f.write(params[:pic][:tempfile].read)
         params[:post][:bild] = @post.id.to_s + '.jpg'
+      end
     end
     if @post.update(params[:post])
       flash[:notice] = 'Post was successfully updated.'
@@ -61,6 +63,7 @@ Admin.controllers :posts do
   delete :destroy, :with => :id do
     post = Post.get(params[:id])
     if post.destroy
+      File.delete('public/pictures/' + post.id.to_s + '.jpg')
       flash[:notice] = 'Post was successfully destroyed.'
     else
       flash[:error] = 'Unable to destroy Post!'
