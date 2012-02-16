@@ -18,7 +18,7 @@ migration 2, :create_posts do
       column :zutaten, String, :length => 100
       
       column :woher, String 
-      column :gewicht, Float
+      column :gewicht, Float, :default => 100
       column :preis, Float
       
       column :datum, DateTime
