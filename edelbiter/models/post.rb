@@ -8,7 +8,7 @@ class Post
 # property <name>,            <type>
   property :id,               Serial
   property :titel,            String, :required => true
-  property :body,             Text, :required => true
+  property :body,             Text,   :required => true
   property :wertung,          Float
   property :design,           Float
   property :hersteller,       String
@@ -23,10 +23,10 @@ class Post
   property :zutaten,          String
   
   property :woher,            String 
-  property :gewicht,          Float, :default => 100
+  property :gewicht,          Float,  :default => 100
   property :preis,            Float
   
-  property :datum,            DateTime, :required => true
+  property :datum,            DateTime,:required => true
   property :oeffentlich,      Boolean
-  property :kurztitel,        String, :required => true
+  property :kurztitel,        String,  :required => true
 end
