@@ -3,9 +3,21 @@
 
 #chocolateListTable
   %table 
-    %tr
-      %td Bild
-      %td Kurztitel
-      %td Wertung
-      %td Preis
-    %tr= partial 'schokolade/postliste', :collection => @posts
+    %thead
+      %tr
+        %th Bild
+        %th Kurztitel
+        %th Wertung
+        %th Preis
+    %tbody 
+      %tr= partial 'schokolade/postliste', :collection => @posts
+
+      // TUTORIAL:  -  http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/
+      // Zebra-effekt nicht hinbekommen, muss man sich nochmal genauer angucken!!!
+:javascript
+  // Hover Effekt   -   Funktioniert
+  $('tbody tr').hover(function(){  
+    $(this).find('td').addClass('hovered');  
+  }, function(){  
+    $(this).find('td').removeClass('hovered');  
+  }); 

@@ -156,7 +156,20 @@ body {
 #footer {
   padding: 30px 10px 10px 10px; }
 
-
-#chocolateListTable td {
-  width: 250px;
+#chocolateListTable table {
+  background-color: white;
+  width: 100%;
 }
+
+#chocolateListTable td.hovered {  
+  background-color: lightblue;  
+  color: #666;  
+}  
+
+#chocolateListTable tbody td {  
+  background-color: white;  
+}  
+#chocolateListTable tbody td.odd {  
+  background-color: #666;  
+  color: white;  
+}  
