@@ -1,7 +1,11 @@
 
 - @title = "Schokoladen"
 
-.archive
-	%p Hier sp&auml;ter Liste mit Schokoladen
-	%p BLA BLA BLA
-
+#chocolateListTable
+  %table 
+    %tr
+      %td Bild
+      %td Kurztitel
+      %td Wertung
+      %td Preis
+    %tr= partial 'schokolade/postliste', :collection => @posts

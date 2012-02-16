@@ -155,3 +155,8 @@ body {
 
 #footer {
   padding: 30px 10px 10px 10px; }
+
+
+#chocolateListTable td {
+  width: 250px;
+}

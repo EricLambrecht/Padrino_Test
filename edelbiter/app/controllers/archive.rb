@@ -19,6 +19,7 @@ Edelbiter.controllers :archive do
   # end
 
   get :index do
+    @posts = Post.all(:order => :kurztitel.asc)
     render 'archive/index'
   end
   

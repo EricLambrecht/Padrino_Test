@@ -68,4 +68,5 @@ class Edelbiter < Padrino::Application
     render 'schokolade/index'
   end
 
+
 end

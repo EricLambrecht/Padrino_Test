@@ -1,0 +1,6 @@
+#chocolateListTable
+  %tr
+  %td  Bild
+  %td= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
+  %td= postliste.wertung
+  %td= postliste.preis
