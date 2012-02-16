@@ -24,6 +24,13 @@ gem 'dm-core'
 # Padrino Stable Gem
 gem 'padrino', '0.10.5'
 
+# Datenbank-Wechsel für Heroku
+group :production do
+ gem 'dm-postgres-adapter'
+ gem 'do_postgres'
+ gem 'pg'
+end
+
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 

@@ -10,7 +10,7 @@ migration 2, :create_posts do
       column :kakaogehalt, String
       column :anbaugebiet, String
       
-      column :bild, String, :required => true 
+      column :bild, String #, :required => true 
       
       column :fett, Float
       column :kohlenhydrate, Float
