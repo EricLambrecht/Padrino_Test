@@ -174,7 +174,7 @@ body {
   display: none;
 }
 #body {
-
+  font-size: 20px;
 }
   table {
     background-color: white;
@@ -183,7 +183,7 @@ body {
     padding: 10px;
     }
       th.sortable {
-        color: #666;
+        color: #999;
         cursor: pointer;
         text-decoration: underline;
       }
@@ -197,7 +197,7 @@ body {
         background-color: white;
       }
       td.odd {
-        background-color: #666;
+        background-color: #999;
         color: white;
       }
       td.hovered {

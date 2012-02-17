@@ -1,7 +1,8 @@
 -if postliste.oeffentlich
   #chocolateListTable
     %tr
-    %td  Bild
+    %td
+      %img{:src => '/pictures/nopic.jpg'}
     %td= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
     %td= postliste.wertung
     %td= postliste.preis.to_s + ' EUR'
