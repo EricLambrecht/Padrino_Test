@@ -69,11 +69,13 @@ body {
 #container {
   width: 768px;
   margin: auto;
+  padding: 0px;
   overflow: hidden; }
 
 #main {
-  width: 768px;
+  width: 100%;
   margin: 0px;
+  padding:0px;
   padding-top: 20px; }
   #main h2 {
     font-size: 2.1em; }
@@ -144,14 +146,19 @@ body {
 
 #social_media {
   padding: 20px;
-  margin-left: 20px;
+  margin: 20px 0px;
   height: 100px;
-  width: 700px;
+  width: 94.5%;
   border: 1px dotted black; }
   #sidebar p {
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 12px; }
+
+#posts  .post{
+  margin: 10px 0px;
+  padding:0px;
+}   
 
 /* Ueber Uns css */  
     
@@ -219,8 +226,9 @@ body {
 /* Footer */ 
   
 #footer {
-  padding: 30px 10px 10px 10px; }
-
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px; 
+  border-top: 1px solid #CCC0BB
 }  
 
 
