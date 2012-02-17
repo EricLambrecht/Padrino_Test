@@ -131,8 +131,15 @@ body {
       padding-bottom:5px;}
   #main #show .body {
     clear:both;
-    font-size: 12pt;
+    font-size: 11pt;
     color:#000;}
+  #main #show .wertung {
+    text-align:center;
+    font-size: 12pt;
+  }
+  #main #show .wertung #zahl {
+    font-size: 26pt;
+  }
       
 
 #social_media {
