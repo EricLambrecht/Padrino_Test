@@ -22,6 +22,8 @@ Admin.controllers :posts do
     @post.kakaogehalt = nil if @post.kakaogehalt == ''
     @post.bild = 'temp.jpg'
     
+    @post.datum = DateTime.now
+    
     
     if @post.save
       @neu = Post.last(:titel => @post.titel)
@@ -52,7 +54,20 @@ Admin.controllers :posts do
         params[:post][:bild] = @post.id.to_s + '.jpg'
       end
     end
-    if @post.update(params[:post])
+    
+    @eingabe = params[:post]
+    
+    # Wenn der alte Post unveroeffentlicht und der neue (durch Eingabe) oeffentlich sein soll
+    # puts @post.oeffentlich
+    # puts @eingabe[:oeffentlich]
+    
+    if ( !@post.oeffentlich and (@eingabe[:oeffentlich].to_i == 1) )
+      # ...dann aendere das Datum auf jetzt.
+      puts 'ich bin HIER'
+      @eingabe[:datum] = DateTime.now.to_s
+    end
+    
+    if @post.update(@eingabe)
       flash[:notice] = 'Post was successfully updated.'
       redirect url(:posts, :edit, :id => @post.id)
     else
