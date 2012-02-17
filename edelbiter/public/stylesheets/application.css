@@ -195,6 +195,7 @@ body {
       }
       td {
         background-color: white;
+        vertical-align:middle;
       }
       td.odd {
         background-color: #999;
