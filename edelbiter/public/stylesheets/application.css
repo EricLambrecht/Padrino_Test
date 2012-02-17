@@ -185,6 +185,10 @@ body {
 #suggest p {
   padding-bottom: 12px; }
   
+#suggest table {
+  width:100%;
+} 
+  
 #suggest table, tr, td {
   margin:0px;
   padding:0px;
