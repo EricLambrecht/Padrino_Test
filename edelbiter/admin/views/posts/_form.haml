@@ -9,92 +9,125 @@
   =f.error_message_on :body
   ~f.text_area :body, :class => :text_area
   %span.description Ex: Beschreibung
+  
+%br
 
-.group
-  =f.label :wertung
-  =f.error_message_on :wertung
-  =f.text_field :wertung, :class => :text_field
-  %span.description Ex: 10 1/3
+%table
+  %tr
+    %td.title
+      %h3 Wertungen
+    %td
+    %td.title
+      %h3 Spezifika
+    %td
+    %td
+    %td.title
+      %h3 Bild
+      
+  %tr
+    %td#wertung
+      =f.label :wertung
+      =f.error_message_on :wertung
+      =f.text_field :wertung, :class => :text_field
+      %span.description Ex: 10 1/3
 
-.group
-  =f.label :design
-  =f.error_message_on :design
-  =f.text_field :design, :class => :text_field
-  %span.description Ex: 10 1/3
+    %td#design
+      =f.label :design
+      =f.error_message_on :design
+      =f.text_field :design, :class => :text_field
+      %span.description Ex: 10 1/3
+    
+    %td#hersteller
+      =f.label :hersteller
+      =f.error_message_on :hersteller
+      =f.text_field :hersteller, :class => :text_field
+      %span.description Ex: Lindt
 
-.group
-  =f.label :hersteller
-  =f.error_message_on :hersteller
-  =f.text_field :hersteller, :class => :text_field
-  %span.description Ex: Lindt
+    %td#kakaogehalt
+      =f.label :kakaogehalt
+      =f.error_message_on :kakaogehalt
+      =f.text_field :kakaogehalt, :class => :text_field
+      %span.description 70[ohne Prozent]
 
-.group
-  =f.label :kakaogehalt
-  =f.error_message_on :kakaogehalt
-  =f.text_field :kakaogehalt, :class => :text_field
-  %span.description Ex: 70[ohne Prozentzeichen]
+    %td#anbaugebiet
+      =f.label :anbaugebiet
+      =f.error_message_on :anbaugebiet
+      =f.text_field :anbaugebiet, :class => :text_field
+      %span.description Ex: Ecuador
+      
+    %td#bild  
+      =f.label :bild
+      =f.error_message_on :bild 
+      %br
+      =f.file_field :bild, :name => 'pic'
+      %br
+      %span.description !Mini-Bilder fehlen noch!
+%hr
+%br
 
-.group
-  =f.label :anbaugebiet
-  =f.error_message_on :anbaugebiet
-  =f.text_field :anbaugebiet, :class => :text_field
-  %span.description Ex: Ecuador
 
-.group
-  =f.label :bild
-  =f.error_message_on :bild 
-  %br
-  =f.file_field :bild, :name => 'pic'
-  %br
-  %span.description !Mini-Bilder fehlen noch!
 
-.group
-  =f.label :fett
-  =f.error_message_on :fett
-  =f.text_field :fett, :class => :text_field
-  %span.description Fettgehalt in g
+%table
+  %tr
+    %td.title
+      %h3 N&auml;hrwerte
+    %td
+    %td
+    %td.title
+      %h3 Weitere Packungsangaben
+    %td
+    %td.title
+      %h3 Ort&Preis
 
-.group
-  =f.label :kohlenhydrate
-  =f.error_message_on :kohlenhydrate
-  =f.text_field :kohlenhydrate, :class => :text_field
-  %span.description Kohlenhydrate in g
+  %tr
+    %td.naehrwerte
+      =f.label :fett
+      =f.error_message_on :fett
+      =f.text_field :fett, :class => :text_field
+      %span.description Fettgehalt in g
 
-.group
-  =f.label :zucker
-  =f.error_message_on :zucker
-  =f.text_field :zucker, :class => :text_field
-  %span.description Zucker in g
+    %td.naehrwerte
+      =f.label :kohlenhydrate
+      =f.error_message_on :kohlenhydrate
+      =f.text_field :kohlenhydrate, :class => :text_field
+      %span.description Kohlenhydrate in g
 
-.group
-  =f.label :zutaten
-  =f.error_message_on :zutaten
-  =f.text_field :zutaten, :class => :text_field
-  %span.description Zutat, Zutat, zutat, ..
+    %td.naehrwerte
+      =f.label :zucker
+      =f.error_message_on :zucker
+      =f.text_field :zucker, :class => :text_field
+      %span.description Zucker in g
 
-.group
-  =f.label :woher
-  =f.error_message_on :woher
-  =f.text_field :woher, :class => :text_field
-  %span.description Wo erhaeltlich
+    %td#zutaten
+      =f.label :zutaten
+      =f.error_message_on :zutaten
+      =f.text_field :zutaten, :class => :text_field
+      %span.description Zutat, Zutat, zutat, ..
+      
+    %td#gewicht
+      =f.label :gewicht
+      =f.error_message_on :gewicht
+      =f.text_field :gewicht, :class => :text_field
+      %span.description Packungsgewicht
+      
+    %td#woher
+      =f.label :woher
+      =f.error_message_on :woher
+      =f.text_field :woher, :class => :text_field
+      %span.description Wo erhaeltlich?
 
-.group
-  =f.label :gewicht
-  =f.error_message_on :gewicht
-  =f.text_field :gewicht, :class => :text_field
-  %span.description Packungsgewicht (100g default) !NOCH NICHT EINGESTELLT 
+    %td#preis
+      =f.label :preis
+      =f.error_message_on :preis
+      =f.text_field :preis, :class => :text_field
+      %span.description Bezahlter Preis - Ex: 5.34
 
-.group
-  =f.label :preis
-  =f.error_message_on :preis
-  =f.text_field :preis, :class => :text_field
-  %span.description Bezahlter Preis - Ex: 5.34 [ohne Euro und Komma]
+-#.group
+-#  =f.label :datum
+-#  =f.error_message_on :datum
+-#  =f.text_field :datum, :class => :text_field
+-#  %span.description ! Muss automatisiert werden
 
-.group
-  =f.label :datum
-  =f.error_message_on :datum
-  =f.text_field :datum, :class => :text_field
-  %span.description ! Muss automatisiert werden
 
 %hr
 %br
@@ -107,13 +140,17 @@
   %br
   %span.description M&ouml;glichst kurzen und pr&auml;gnanten Titel w&auml;hlen
   
-.group
+.check
   =f.label 'Ver&ouml;ffentlichen?'
   =f.error_message_on :oeffentlich
   =f.check_box :oeffentlich, :class => :check_box 
   %br
   %span.description Wenn angekreuzt: f&uuml;r alle sichtbar
 
+.datum
+  Das Datum des Posts wird nur bei Erstellung und/oder Ver&ouml;ffentlichung aktualisiert.
+  
+.clear
 
 .group.navform.wat-cf
   =f.submit pat(:save), :class => :button

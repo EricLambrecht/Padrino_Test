@@ -129,6 +129,7 @@ hr {
   background: #36393d;
   color: #FFF;
   border-bottom: 5px solid #1a1a1a;
+  font-size:14pt;
 }
 
 #main-navigation ul li {
@@ -259,7 +260,7 @@ hr {
 
 
 .form .kurztitel {
-    width:80%;
+    width:60%;
     border: 1px solid #cfcfcf;
     padding: 2px;
 }
@@ -289,6 +290,53 @@ hr {
   color: #8C8C8C;
   font-size: .9em;
 }
+
+.form table td{
+  padding-right:20px;
+  padding-bottom:20px;
+}
+
+.form table .title {
+  padding-bottom:0px;
+  margin:0px;
+}
+
+.form table .title h3 {
+  margin-top:3px;
+  margin-bottom:2px;
+}
+
+.form table #wertung {    width:10%; }
+
+.form table #design {     width:10%; }
+
+.form table #hersteller { width:20%; }
+
+.form table #kakaogehalt {width:10%; }
+
+.form table #anbaugebiet {width:20%; }
+
+.form table #bild {       width:30%; 
+                        padding-right:0px;}
+
+.form table .naehrwerte { width:10%; }
+
+.form table #zutaten {    width:35%; }
+
+.form table #gewicht {    width:10%; }
+
+.form table #woher {      width:15%; }
+
+.form table #preis {    width:10%; padding-right:0px}
+
+.form .check { float:left; }
+
+.form .datum {
+  font-weight:bold;
+  float:right;
+}
+
+.form .clear { clear:both; }
 
 /* flash-messages */
 .flash .message {

@@ -11,7 +11,11 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 # Component requirements
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'haml'
-gem 'dm-sqlite-adapter'
+
+group :development, :test do
+  gem 'dm-sqlite-adapter'
+end
+
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-migrations'
