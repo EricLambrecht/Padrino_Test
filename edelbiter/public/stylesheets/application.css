@@ -156,20 +156,46 @@ body {
 #footer {
   padding: 30px 10px 10px 10px; }
 
-#chocolateListTable table {
-  background-color: white;
-  width: 100%;
+}  
+
+
+#pagewrap {
+  margin: 0 auto;
+  width: 700px;
+} 
+#search {
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  display: none;
 }
+#body {
 
-#chocolateListTable td.hovered {  
-  background-color: lightblue;  
-  color: #666;  
-}  
-
-#chocolateListTable tbody td {  
-  background-color: white;  
-}  
-#chocolateListTable tbody td.odd {  
-  background-color: #666;  
-  color: white;  
-}  
+}
+  table {
+    background-color: white;
+    -webkit-border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    }
+      th.sortable {
+        color: #666;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      th.sortable:hover { 
+        color: black;
+      }
+      th.sorted-asc, th.sorted-desc  {
+        color: black;
+      }
+      td {
+        background-color: white;
+      }
+      td.odd {
+        background-color: #666;
+        color: white;
+      }
+      td.hovered {
+        background-color: lightblue;
+        color: #666;
+      }
