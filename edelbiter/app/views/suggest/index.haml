@@ -5,7 +5,7 @@
 -# Es muss noch ein Eintrag .suggest .text_field im application .css erstellt werden
 -# Es muss noch ein Eintrag .suggest .text_area im application .css erstellt werden
 
-.suggest
+#suggest
   %p Beschreibung:
   %p Machen sie doch Vorschlage usw...
   %p Bitte geben Sie ihre E-Mail an, damit wir Ihnen antworten k&ouml;nnen.
@@ -13,11 +13,15 @@
   %br
   
   %form
-    %p Ihre Email:
-    =text_field_tag :absender, :class => :text_field
+    %table
+      %tr
+        %td
+          %p Ihre Name:
+          =text_field_tag :name, :class => :text_field
+        %td
+          %p Ihre E-Mail-Adresse:
+          =text_field_tag :absender, :class => :text_field2
 
-    
-    %br
     %p Ihre Nachricht:
     =text_area_tag :nachricht, :class => :text_area
     

@@ -153,6 +153,8 @@ body {
     padding-top: 10px;
     padding-bottom: 12px; }
 
+/* Ueber Uns css */  
+    
 #about h2 {
   font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
   font-size: 2em;
@@ -164,7 +166,54 @@ body {
   padding-bottom: 6px; }
 #about p {
   padding-bottom: 12px; }
+  
+/* Vorschlag css */  
 
+#suggest {
+  width:98%;
+}
+  
+#suggest h2 {
+  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-size: 2em;
+  color: #752A26; }
+#suggest h3 {
+  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-size: 1.5em;
+  color: #752A26;
+  padding-bottom: 6px; }
+#suggest p {
+  padding-bottom: 12px; }
+  
+#suggest table, tr, td {
+  margin:0px;
+  padding:0px;
+}
+  
+#suggest input.text_field{
+  width: 90%; 
+  border: 1px solid #CCC;
+  padding: 5px;
+  font-size: 12pt;
+  margin-bottom: 20px;}
+  
+#suggest input.text_field2{
+  width: 100%; 
+  border: 1px solid #CCC;
+  padding: 5px;
+  font-size: 12pt;
+  margin-bottom: 20px;}
+
+#suggest textarea {
+  width: 100%; 
+  border: 1px solid #CCC;
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+  margin-bottom: 20px;}
+
+/* Footer */ 
+  
 #footer {
   padding: 30px 10px 10px 10px; }
 
@@ -183,32 +232,34 @@ body {
 #body {
   font-size: 20px;
 }
-  table {
+
+
+#body table {
     background-color: white;
     -webkit-border-radius: 10px;
     width: 100%;
     padding: 10px;
     }
-      th.sortable {
+  #body th.sortable {
         color: #999;
         cursor: pointer;
         text-decoration: underline;
       }
-      th.sortable:hover { 
+  #body th.sortable:hover { 
         color: black;
       }
-      th.sorted-asc, th.sorted-desc  {
+  #body th.sorted-asc, th.sorted-desc  {
         color: black;
       }
-      td {
+  #body td {
         background-color: white;
         vertical-align:middle;
       }
-      td.odd {
+  #body td.odd {
         background-color: #999;
         color: white;
       }
-      td.hovered {
+  #body td.hovered {
         background-color: lightblue;
         color: #666;
       }
