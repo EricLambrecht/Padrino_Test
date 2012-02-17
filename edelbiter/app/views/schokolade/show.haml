@@ -8,12 +8,17 @@
       %img{:src => '/pictures/'+@post.bild}
     .titel= @post.titel
     #infokasten
-      .preis= @post.preis.to_s + ' Eur'
-      .zutaten= 'Zutatenliste: ' + @post.zutaten 
-      .naehrwerte= 'N&auml;hrwerte: '
-      = @post.zucker.to_s + 'g Zucker'
-      = @post.fett.to_s + 'g Fett'
-      .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
+      .kakao= 'Kakaogehalt: ' + @post.kakaogehalt.to_s + '%'
+      .preis= 'Preis: ' + @post.preis.to_s + ' EUR'
+      .inhalt= 'Packungsgewicht ' + @post.gewicht.to_s + 'g'
+      .naehrwerte= 'N&auml;hrwerte (pro 100g): '
+      .kohy= 'Kohlenhydrate: ' + @post.kohlenhydrate.to_s + 'g'
+      .zucker= '...davon Zucker: ' + @post.zucker.to_s + 'g'
+      .fett= 'Fett: ' + @post.fett.to_s + 'g'
+      .zutaten= 'Zutaten: ' + @post.zutaten 
       %p= 'Erh&auml;ltlich in: '+@post.woher 
+      %br
+      .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
+
     .body= simple_format(@post.body)    
 %p= link_to 'Zur &Uuml;bersicht', url_for(:archive, :index)

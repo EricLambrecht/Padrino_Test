@@ -35,25 +35,29 @@ body {
   overflow: hidden; }
   #header #homelink a{
      text-decoration:none;
+     padding:0px;
  }
   #header #homelink a:hover{
      color: grey;
+     padding:0px;
  }
   #header h1 {
     color: #222;
     font-family:Bodoni MT, Didot,  Georgia, serif;
-    font-size: 80pt; }
+    font-size: 80pt; 
+    padding:0px;
+    margin-top:10px;}
   #header h2 {
     color: #222;
     font-family:Bodoni MT, Didot, Georgia, serif;
     font-size: 20pt; }
   #header ul.menu {
-    margin-left: 80px;
+    margin-left: 20%;
     margin-top: 10px;
     overflow: hidden; }
     #header ul.menu li {
       float: left;
-      margin-right: 20px;
+      width:120px;
       padding-bottom: 5px; }
       #header ul.menu li a {
         font-size: 1.2em;
@@ -107,20 +111,21 @@ body {
     padding-bottom:10px;
  }
   #main #show .titel {
-    height:200px;
+    min-height:210px;
     width:450px;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
     float:left;}
   #main #show #infokasten {
     float:right;
-    width:270px;
-    height: 180px;
+    width:230px;
+    min-height: 200px;
     padding: 0px 10px;
     border-left: 1px solid #BBBBBB;
     font-size:10pt;
+    font-style:italic;
     color:#666;}
-    #main #show #infokasten .preis {
+    #main #show #infokasten .kakao {
       font-size: 12pt;
       color:black;
       padding-bottom:5px;}
