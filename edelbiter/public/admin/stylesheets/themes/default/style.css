@@ -129,6 +129,7 @@ hr {
   background: #36393d;
   color: #FFF;
   border-bottom: 5px solid #1a1a1a;
+  font-size:14pt;
 }
 
 #main-navigation ul li {
@@ -295,17 +296,27 @@ hr {
   padding-bottom:20px;
 }
 
-.form table #wertung {    width:9%; }
+.form table .title {
+  padding-bottom:0px;
+  margin:0px;
+}
 
-.form table #design {     width:9%; }
+.form table .title h3 {
+  margin-top:3px;
+  margin-bottom:2px;
+}
+
+.form table #wertung {    width:10%; }
+
+.form table #design {     width:10%; }
 
 .form table #hersteller { width:20%; }
 
-.form table #kakaogehalt {width:9%; }
+.form table #kakaogehalt {width:10%; }
 
 .form table #anbaugebiet {width:20%; }
 
-.form table #bild {       width:33%; 
+.form table #bild {       width:30%; 
                         padding-right:0px;}
 
 .form table .naehrwerte { width:10%; }
