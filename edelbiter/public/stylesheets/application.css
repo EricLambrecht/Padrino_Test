@@ -158,10 +158,22 @@ body {
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 12px; }
+    
+#social_media #tweets {
+  text-align:justify;
+  padding-right:10px;
+}
+
+#social_media #facebook{
+  width:170px;
+  border-left:1px solid #DDDDDD;
+  padding-left:10px;
+}
 
 #posts  .post{
   margin: 10px 0px;
   padding:0px;
+  clear:both;
 }   
 
 /* Ueber Uns css */  

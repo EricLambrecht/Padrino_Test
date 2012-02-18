@@ -4,8 +4,14 @@
 #show= partial 'schokolade/schokolade'
     
 #social_media
-  %p Aktuelle Tweets:
-  = partial 'schokolade/tweet', :collection => @tweets
+  %table
+    %tr
+      %td#tweets
+        %p Aktuelle Tweets:
+        = partial 'schokolade/tweet', :collection => @tweets
+      %td#facebook
+        %p Facebook:
+        %p LIKE
 
 -# Hier später die richtige Liste aller Schokoladen
 #posts= partial 'schokolade/post', :collection => @posts
