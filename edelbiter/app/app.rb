@@ -62,10 +62,15 @@ class Edelbiter < Padrino::Application
 # end
 
   get :index, :map => "/" do
+    
     # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehen ist.
     @post = Post.get(1)
     @posts = Post.all(:order => :kurztitel.asc)
+    
+    # Twitter
+    @tweets = Twitter.user_timeline("edelbiter").first.text
     render 'schokolade/index'
+    
   end
 
 

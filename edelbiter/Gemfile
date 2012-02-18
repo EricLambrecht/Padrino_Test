@@ -35,6 +35,9 @@ group :production do
  gem 'pg'
 end
 
+# Other requirements
+gem 'twitter'
+
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 
