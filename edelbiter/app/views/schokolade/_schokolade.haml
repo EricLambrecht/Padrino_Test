@@ -4,8 +4,8 @@
   .titel= link_to @post.titel, url_for(:archive, :show, :id => @post.id)
   #infokasten
     .kakao= 'Kakaogehalt: ' + @post.kakaogehalt.to_s + '%'
-    .preis= 'Preis: ' + @post.preis.to_s + ' EUR'
-    .inhalt= 'Packungsgewicht ' + @post.gewicht.to_s + 'g'
+    .preis= 'Preis: ' + sprintf("%.2f", @post.preis.to_s).sub(".",",") + ' EUR'
+    .inhalt= 'Packungsgewicht ' + sprintf("%.0f", @post.gewicht.to_s) + 'g'
     .naehrwerte= 'N&auml;hrwerte (pro 100g): '
     .kohy= 'Kohlenhydrate: ' + @post.kohlenhydrate.to_s + 'g'
     .zucker= '...davon Zucker: ' + @post.zucker.to_s + 'g'
