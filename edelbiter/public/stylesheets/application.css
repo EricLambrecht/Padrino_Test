@@ -103,7 +103,8 @@ body {
       margin-bottom: 15px;
       margin-top: 2px; }
     #main .post .body {
-      padding-bottom: 10px; }
+      padding-bottom: 10px; 
+      line-height: 1.1;}
     #main .post .details {
       border-top: 1px solid #CCCCCC;
       margin-bottom: 0.25em;
