@@ -1,28 +1,10 @@
 
 - @title = "Startseite"
 
-#show
-  .spotlight
-    .bild 
-      %img{:src => '/pictures/'+@spotlight.bild, :width => '100%', :height => '400px'}
-    .titel= @spotlight.titel
-    #infokasten
-      .kakao= 'Kakaogehalt: ' + @spotlight.kakaogehalt.to_s + '%'
-      .preis= 'Preis: ' + @spotlight.preis.to_s + ' EUR'
-      .inhalt= 'Packungsgewicht ' + @spotlight.gewicht.to_s + 'g'
-      .naehrwerte= 'N&auml;hrwerte (pro 100g): '
-      .kohy= 'Kohlenhydrate: ' + @spotlight.kohlenhydrate.to_s + 'g'
-      .zucker= '...davon Zucker: ' + @spotlight.zucker.to_s + 'g'
-      .fett= 'Fett: ' + @spotlight.fett.to_s + 'g'
-      .zutaten= 'Zutaten: ' + @spotlight.zutaten 
-      %p= 'Erh&auml;ltlich in: '+@spotlight.woher 
-      %br
-      .anbaugebiet= 'Anbaugebiet: '+@spotlight.anbaugebiet
-
-    .body= simple_format(@spotlight.body)
+#show= partial 'schokolade/schokolade'
     
 #social_media
   %p Twitter (kommt sp&auml;ter)
-	
 
+-# Hier später die richtige Liste aller Schokoladen
 #posts= partial 'schokolade/post', :collection => @posts

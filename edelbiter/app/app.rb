@@ -62,9 +62,9 @@ class Edelbiter < Padrino::Application
 # end
 
   get :index, :map => "/" do
+    # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehen ist.
+    @post = Post.get(1)
     @posts = Post.all(:order => :kurztitel.asc)
-    # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehehn ist
-    @spotlight = Post.get(1)
     render 'schokolade/index'
   end
 

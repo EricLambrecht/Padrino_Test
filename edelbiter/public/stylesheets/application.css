@@ -27,7 +27,7 @@ body {
 
 
 #header {
-  width: 768px;
+  width: 720px;
   margin: auto;
   padding: 30px 10px 20px 10px;
   border-bottom: 2px solid #EC9A94;
@@ -67,14 +67,18 @@ body {
           text-decoration: underline; }
 
 #container {
-  width: 768px;
+  width: 700px;
   margin: auto;
+  display: block;
   padding: 0px;
+  text-align:center;
   overflow: hidden; }
 
 #main {
-  width: 100%;
-  margin: 0px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:left;
   padding:0px;
   padding-top: 20px; }
   #main h2 {
@@ -114,7 +118,7 @@ body {
  }
   #main #show .titel {
     min-height:210px;
-    width:450px;
+    width:400px;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
     float:left;}

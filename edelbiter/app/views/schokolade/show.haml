@@ -1,29 +1,6 @@
 -# Seitentitel -> Kurzer Titel
 - @title = @post.kurztitel
 
-#show
-  .post
-    .bild 
-      %img{:src => '/pictures/'+@post.bild, :width => '100%', :height => '400px'}
-    .titel= @post.titel
-    #infokasten
-      .kakao= 'Kakaogehalt: ' + @post.kakaogehalt.to_s + '%'
-      .preis= 'Preis: ' + @post.preis.to_s + ' EUR'
-      .inhalt= 'Packungsgewicht ' + @post.gewicht.to_s + 'g'
-      .naehrwerte= 'N&auml;hrwerte (pro 100g): '
-      .kohy= 'Kohlenhydrate: ' + @post.kohlenhydrate.to_s + 'g'
-      .zucker= '...davon Zucker: ' + @post.zucker.to_s + 'g'
-      .fett= 'Fett: ' + @post.fett.to_s + 'g'
-      .zutaten= 'Zutaten: ' + @post.zutaten 
-      %p= 'Erh&auml;ltlich in: '+@post.woher 
-      %br
-      .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
-
-    .body= simple_format(@post.body)
-
-    .wertung
-      = 'Wertung: Sehr schlecht '
-      %span#zahl= @post.wertung
-      = ' Punkte'
+#show= partial 'schokolade/schokolade'
       
 %p= link_to 'Zur &Uuml;bersicht', url_for(:archive, :index)
