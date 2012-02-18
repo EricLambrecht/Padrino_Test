@@ -68,7 +68,7 @@ class Edelbiter < Padrino::Application
     @posts = Post.all(:order => :kurztitel.asc)
     
     # Twitter
-    @tweets = Twitter.user_timeline("edelbiter").first.text
+    @tweets = Twitter.user_timeline("edelbiter", :count => 3)
     render 'schokolade/index'
     
   end

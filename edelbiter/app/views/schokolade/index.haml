@@ -5,8 +5,7 @@
     
 #social_media
   %p Aktuelle Tweets:
-  %br
-  %p=  @tweets
+  = partial 'schokolade/tweet', :collection => @tweets
 
 -# Hier später die richtige Liste aller Schokoladen
 #posts= partial 'schokolade/post', :collection => @posts

@@ -151,7 +151,7 @@ body {
 #social_media {
   padding: 20px;
   margin: 20px 0px;
-  height: 100px;
+  height: auto;
   width: 94.5%;
   border: 1px dotted black; }
   #sidebar p {
