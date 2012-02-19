@@ -122,7 +122,14 @@ body {
     width:400px;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
+    text-align: left;
     float:left;}
+  #main #show .titel a{
+         text-decoration:none;
+         padding:0px; }
+  #main #show a:hover{
+        color: grey;
+        padding:0px; }
   #main #show #infokasten {
     float:right;
     width:230px;

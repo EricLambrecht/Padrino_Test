@@ -67,13 +67,10 @@ class Edelbiter < Padrino::Application
   #   end
   #
 
-# get "/" do
-#    redirect url(:posts, :index)
-# end
-
   get :index, :map => "/" do
     
     # Hier wird ausgewählt, welcher Beitrag auf der Startseite zu sehen ist.
+    
     if (Post.last(:oeffentlich => true).datum + 0) >= DateTime.now
       @post = Post.last(:oeffentlich => true)
     else
@@ -85,6 +82,7 @@ class Edelbiter < Padrino::Application
     @posts = Post.all(:order => :kurztitel.asc)
     
     # Twitter
+    
     @tweets = Twitter.user_timeline("edelbiter", :count => 3)
     render 'schokolade/index'
     
