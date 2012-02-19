@@ -73,7 +73,7 @@ class Edelbiter < Padrino::Application
 
   get :index, :map => "/" do
     
-    # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehen ist.
+    # Hier wird ausgewählt, welcher Beitrag auf der Startseite zu sehen ist.
     if (Post.last(:oeffentlich => true).datum + 0) >= DateTime.now
       @post = Post.last(:oeffentlich => true)
     else
@@ -89,6 +89,37 @@ class Edelbiter < Padrino::Application
     render 'schokolade/index'
     
   end
+  
+  
+  # Ab hier werden falsche Seitenaufrufe abgefangen
+  
+  get '/post/:url' do
+    redirect 'http://www.edelbiter.tumblr.com/post/' + params[:url]
+  end
+  
+  get '/post/:url/:url2' do
+    redirect 'http://www.edelbiter.tumblr.com/post/' + params[:url]
+  end
+  
+  get 'page/:url' do
+    redirect 'http://www.edelbiter.tumblr.com/page/' + params[:url]
+  end
+  
+  get '/liste1' do
+    redirect '/'
+  end
+  
+  get '/liste2' do
+    redirect '/'
+  end
+  
+  get '/edelbiter' do
+    redirect url(:about, :index)
+  end
 
-
+  not_found do
+    status 404
+    redirect url(:about, :notFound)
+  end
+  
 end

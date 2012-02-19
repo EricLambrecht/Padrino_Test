@@ -21,5 +21,9 @@ Edelbiter.controllers :about do
   get :index do
     render 'about/index'
   end
+  
+  get :notFound do
+    render 'about/notFound'
+  end
 
 end
