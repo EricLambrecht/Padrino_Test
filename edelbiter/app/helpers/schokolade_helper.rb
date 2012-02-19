@@ -16,4 +16,5 @@ Edelbiter.helpers do
     s.gsub!( @email_regexp, '\1<a href="mailto:\2@\3">\2@\3</a>' )
     s
   end
+  
 end

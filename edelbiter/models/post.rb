@@ -29,4 +29,6 @@ class Post
   property :datum,            DateTime,:required => true
   property :oeffentlich,      Boolean
   property :kurztitel,        String,  :required => true
+  
+  property :spotlight,        Boolean, :default => false
 end

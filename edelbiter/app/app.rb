@@ -73,7 +73,14 @@ class Edelbiter < Padrino::Application
   get :index, :map => "/" do
     
     # Hier wird später ausgewählt, welche Schokolade auf der Startseite zu sehen ist.
-    @post = Post.get(1)
+    if (Post.last(:oeffentlich => true).datum + 0) >= DateTime.now
+      @post = Post.last(:oeffentlich => true)
+    else
+      spotlights = Post.all(:oeffentlich => true)
+      randomDateID = (DateTime.now.strftime('%d').to_i + (30 * (DateTime.now.strftime('%m').to_i-1))) % spotlights.size
+      @post = spotlights[randomDateID]
+    end
+    
     @posts = Post.all(:order => :kurztitel.asc)
     
     # Twitter
