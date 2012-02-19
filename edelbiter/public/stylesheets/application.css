@@ -151,19 +151,33 @@ body {
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     letter-spacing:0px;
     text-align:justify;
-    color:#000;}
+    text-justify: newspaper;
+    text-indent: 20px;
+    color:#000;
+    column-count:2;
+    column-gap:1em;
+    -moz-column-count:2;
+    -moz-column-gap:1em;
+    -webkit-column-count:2;
+    -webkit-column-gap:1em;}
   #main #show .body p:first-child:first-letter {
-    font-size:2.5em;
+    font-size:2.6em;
     display:block;
     float:left;
     margin: 7px 5px 5px 0px;
   }
+  
+  #main #show .body p:first-child {
+    text-indent:0px;  
+  }
   #main #show .wertung {
     text-align:center;
-    font-size: 12pt;
+    font-size: 16pt;
+    font-family: Bodoni MT, Georgia,Times New Roman, serif;
+    font-style:oblique;
   }
   #main #show .wertung #zahl {
-    font-size: 26pt;
+    font-size: 28pt;
   }
       
 
