@@ -104,7 +104,7 @@ body {
       margin-top: 2px; }
     #main .post .body {
       padding-bottom: 10px; 
-      line-height: 1.1;}
+      line-height: 1.2em;}
     #main .post .details {
       border-top: 1px solid #CCCCCC;
       margin-bottom: 0.25em;
@@ -116,10 +116,11 @@ body {
         border-right: 1px solid #CCCCCC; }
  #main #show .bild {
     padding-bottom:10px;
+    font-variant:small-caps;
  }
   #main #show .titel {
     min-height:210px;
-    width:400px;
+    width:430px;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
     text-align: left;
@@ -132,12 +133,13 @@ body {
         padding:0px; }
   #main #show #infokasten {
     float:right;
-    width:230px;
+    width:200px;
     min-height: 200px;
     padding: 0px 10px;
-    border-left: 1px solid #BBBBBB;
+    border-left: 1px solid #DDD;
     font-size:10pt;
-    font-style:italic;
+    line-height:1.2em;
+    font-style:oblique;
     color:#666;}
     #main #show #infokasten .kakao {
       font-size: 12pt;
@@ -145,9 +147,17 @@ body {
       padding-bottom:5px;}
   #main #show .body {
     clear:both;
-    font-size: 11pt;
+    font-size: 14pt;
+    font-family: Bodoni MT, Georgia,Times New Roman, serif;
+    letter-spacing:0px;
     text-align:justify;
     color:#000;}
+  #main #show .body p:first-child:first-letter {
+    font-size:2.5em;
+    display:block;
+    float:left;
+    margin: 7px 5px 5px 0px;
+  }
   #main #show .wertung {
     text-align:center;
     font-size: 12pt;
@@ -162,20 +172,22 @@ body {
   margin: 20px 0px;
   height: auto;
   width: 94.5%;
-  border: 1px dotted black; }
+  border: 1px solid #DDD; }
   #sidebar p {
     font-weight: bold;
     padding-top: 10px;
     padding-bottom: 12px; }
     
-#social_media #tweets {
+#social_media .tweets {
   text-align:justify;
-  padding-right:10px;
+  font-style:oblique;
+  padding-right:20px;
+  width:27%;
 }
 
 #social_media #facebook{
   width:110px;
-  border-left:1px solid #DDDDDD;
+  border-left:1px solid #EEE;
   padding-left:20px;
   text-align: center;
   vertical-align: middle;

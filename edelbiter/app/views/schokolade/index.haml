@@ -4,14 +4,13 @@
 #show= partial 'schokolade/schokolade'
     
 #social_media
+  -#%p Aktuelle Tweets:
+  -#%br
   %table
     %tr
-      %td#tweets
-        %p Aktuelle Tweets:
-        = partial 'schokolade/tweet', :collection => @tweets
+      = partial 'schokolade/tweet', :collection => @tweets
       %td#facebook
         = partial 'schokolade/facebook'
-        %br
         %p (Facebook)
 
 #pagewrap

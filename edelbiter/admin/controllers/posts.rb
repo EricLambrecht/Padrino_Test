@@ -57,6 +57,7 @@ Admin.controllers :posts do
     
     @eingabe = params[:post]
     
+    # Numerische Werte auf nil setzen, wenn leer-String vorhanden
     @eingabe[:wertung] = nil if @eingabe[:wertung] == ''
     @eingabe[:design] = nil if @eingabe[:design] == ''
     @eingabe[:fett] = nil if @eingabe[:fett] == ''
