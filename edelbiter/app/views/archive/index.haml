@@ -3,13 +3,12 @@
 
 #pagewrap
   #search
-    %label{:for => "filter"} Filter
-    %input#filter{:name => "filter", :type => "text", :value => ""}
+    %label{:for => "filter"}
+    %input#filter{:name => "filter", :placeholder => "Suche...", :type => "text", :value => ""}
   #body
     %table 
       %thead
         %tr
-          %th Bild
           %th Kurztitel
           %th Wertung
           %th Preis

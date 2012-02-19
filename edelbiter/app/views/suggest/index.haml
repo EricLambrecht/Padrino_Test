@@ -16,13 +16,13 @@
       %tr
         %td
           %p Betreff:
-          =text_field_tag :betreff, :class => :text_field
+          =text_field_tag :betreff, :placeholder => "Betreff", :class => :text_field
         %td
           %p Ihre E-Mail-Adresse:
-          =text_field_tag :absender, :class => :text_field2
+          =text_field_tag :absender, :placeholder => "E-Mail-Adresse", :class => :text_field2
 
     %p Ihre Nachricht:
-    =text_area_tag :nachricht, :class => :text_area
+    =text_area_tag :nachricht, :placeholder => "Nachricht...", :class => :text_area
     
     %br 
     =submit_tag "Absenden", :class => 'senden'
