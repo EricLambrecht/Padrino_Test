@@ -6,9 +6,9 @@ Edelbiter.controllers :suggest do
   
   post :send do 
     # Das Gem Mail wird hierfuer benutzt (installiert)
-    #Mail.defaults do
-    #  smtp 'localhost:25' # Port 25 default, testen!
-    #end
+    Mail.defaults do
+      sendmail 'localhost:25' # Port 25 default, testen!
+    end
     
     absender  = params[:absender]
     betreff   = params[:betreff]
@@ -16,14 +16,16 @@ Edelbiter.controllers :suggest do
      
     mail = Mail.new do
           from absender
-            to 'beschwerden@edelbiter.de'
+            to 'edelbiter@gmail.com'
        subject betreff
           body nachricht
-           via :smtp # padrino sagt optional, to :smtp if defined, otherwise :sendmail
+           via :sendmail # padrino sagt optional, to :smtp if defined, otherwise :sendmail
     end
     
-    mail.to_s
+    #mail.to_s
     
     mail.deliver!
+    flash[:notice] = 'Post was successfully created.'
+    redirect url(:suggest, :index)
   end
 end

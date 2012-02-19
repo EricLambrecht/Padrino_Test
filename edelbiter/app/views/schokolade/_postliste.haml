@@ -2,5 +2,5 @@
   #chocolateListTable
     %tr
     %td= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
-    %td= postliste.wertung
-    %td= postliste.preis.to_s + ' EUR'
+    %td= drittel(postliste.wertung)
+    %td= sprintf("%.2f", postliste.preis.to_s).sub(".",",") + ' EUR'

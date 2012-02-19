@@ -5,6 +5,7 @@
 -# Es muss noch ein Eintrag .suggest .text_area im application .css erstellt werden
 
 #suggest
+  .flash=[:notice].map { |type| flash_tag(type, :class => "message #{type}") }.join
   %p Beschreibung:
   %p Machen sie doch Vorschlage usw...
   %p Bitte geben Sie ihre E-Mail an, damit wir Ihnen antworten k&ouml;nnen.
