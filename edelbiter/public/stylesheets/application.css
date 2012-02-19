@@ -38,7 +38,7 @@ body {
      padding:0px;
  }
   #header #homelink a:hover{
-     color: grey;
+     color: #555;
      padding:0px;
  }
   #header h1 {
@@ -104,7 +104,7 @@ body {
       margin-top: 2px; }
     #main .post .body {
       padding-bottom: 10px; 
-      line-height: 1.2em;}
+      line-height: 1.4em;}
     #main .post .details {
       border-top: 1px solid #CCCCCC;
       margin-bottom: 0.25em;
@@ -115,7 +115,7 @@ body {
         padding-right: 5px;
         border-right: 1px solid #CCCCCC; }
  #main #show .bild {
-    padding-bottom:10px;
+    padding-bottom:20px;
     font-variant:small-caps;
  }
   #main #show .titel {
@@ -161,12 +161,19 @@ body {
     -webkit-column-count:2;
     -webkit-column-gap:1em;}
   #main #show .body p:first-child:first-letter {
-    font-size:2.6em;
+    font-size:2.7em;
     display:block;
     float:left;
-    margin: 7px 5px 5px 0px;
+    margin: 12px 5px 5px 0px;
   }
   
+ /*Trennlinien*/
+ #main hr {
+   margin:0 -5%;
+   width:110%;
+ } 
+  
+  /* Schokolade */
   #main #show .body p:first-child {
     text-indent:0px;  
   }
@@ -183,7 +190,7 @@ body {
 
 #social_media {
   padding: 20px;
-  margin: 20px 0px;
+  margin: 40px 0px;
   height: auto;
   width: 94.5%;
   border: 1px solid #DDD; }
@@ -197,6 +204,7 @@ body {
   font-style:oblique;
   padding-right:20px;
   width:27%;
+  color:#444;
 }
 
 #social_media #facebook{
@@ -286,7 +294,7 @@ body {
 
 
 #pagewrap {
-  margin: 0 auto;
+  margin: 30px auto;
   width: 700px;
 } 
 #search {
