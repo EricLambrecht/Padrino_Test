@@ -2,7 +2,9 @@
 - @title = "Startseite"
 
 #show= partial 'schokolade/schokolade'
-    
+
+%hr
+  
 #social_media
   -#%p Aktuelle Tweets:
   -#%br
@@ -12,7 +14,9 @@
       %td#facebook
         = partial 'schokolade/facebook'
         %p (Facebook)
-
+        
+%hr
+        
 #pagewrap
   #search
     %label{:for => "filter"} Filter
