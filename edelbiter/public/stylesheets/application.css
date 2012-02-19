@@ -269,11 +269,20 @@ body {
     -webkit-border-radius: 10px;
     width: 100%;
     padding: 10px;
+    font-size: 12pt;
     }
+
+  #body td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EEE;
+  }
   #body th.sortable {
-        color: #999;
+        color: #000;
         cursor: pointer;
         text-decoration: underline;
+        border-bottom: 2px solid #AAA;
+        padding-bottom: 3px;
       }
   #body th.sortable:hover { 
         color: black;
@@ -286,10 +295,10 @@ body {
         vertical-align:middle;
       }
   #body td.odd {
-        background-color: #999;
-        color: white;
+        background-color: #EEE;
+        color: #000;
       }
   #body td.hovered {
-        background-color: lightblue;
+        background-color: #EEE;
         color: #666;
       }

@@ -1,11 +1,5 @@
 $(document).ready(function() {
-	zebraRows('tr:odd td', 'odd');
-	
-	$('tbody tr').hover(function(){
-	  $(this).find('td').addClass('hovered');
-	}, function(){
-	  $(this).find('td').removeClass('hovered');
-	});
+
 	
 	//default each row to visible
 	$('tbody tr').addClass('visible');
@@ -68,7 +62,7 @@ $(document).ready(function() {
 						
 						//add the rows in the correct order to the bottom of the table
 						$.each($rows, function(index, row) {
-							$('tbody').append(row);
+							$('#body tbody').append(row);
 							row.sortKey = null;
 						});
 						
@@ -87,14 +81,6 @@ $(document).ready(function() {
 					});
 	});
 });
-
-
-//used to apply alternating row styles
-function zebraRows(selector, className)
-{
-	$(selector).removeClass(className)
-							.addClass(className);
-}
 
 //filter results based on query
 function filter(selector, query) {

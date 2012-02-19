@@ -14,4 +14,19 @@
         = partial 'schokolade/facebook'
 
 -# Hier später die richtige Liste aller Schokoladen
-#posts= partial 'schokolade/post', :collection => @posts
+#pagewrap
+  #search
+    %label{:for => "filter"} Filter
+    %input#filter{:name => "filter", :type => "text", :value => ""}
+  #body
+    %table 
+      %thead
+        %tr
+          %th Kurztitel
+          %th Wertung
+          %th Preis
+      %tbody 
+        %tr= partial 'schokolade/postliste', :collection => @posts
+    
+
+    =javascript_include_tag('application.js')
