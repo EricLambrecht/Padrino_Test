@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	
 	//default each row to visible
 	$('tbody tr').addClass('visible');
