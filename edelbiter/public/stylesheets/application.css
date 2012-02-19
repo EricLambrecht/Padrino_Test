@@ -139,6 +139,7 @@ body {
   #main #show .body {
     clear:both;
     font-size: 11pt;
+    text-align:justify;
     color:#000;}
   #main #show .wertung {
     text-align:center;
