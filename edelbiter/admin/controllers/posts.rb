@@ -57,6 +57,14 @@ Admin.controllers :posts do
     
     @eingabe = params[:post]
     
+    @eingabe[:wertung] = nil if @eingabe[:wertung] == ''
+    @eingabe[:design] = nil if @eingabe[:design] == ''
+    @eingabe[:fett] = nil if @eingabe[:fett] == ''
+    @eingabe[:zucker] = nil if @eingabe[:zucker] == ''
+    @eingabe[:kohlenhydrate] = nil if @eingabe[:kohlenhydrate] == ''
+    @eingabe[:kakaogehalt] = nil if @eingabe[:kakaogehalt] == ''
+    
+    
     # Wenn der alte Post unveroeffentlicht und der neue (durch Eingabe) oeffentlich sein soll
     # puts @post.oeffentlich
     # puts @eingabe[:oeffentlich]
