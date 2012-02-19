@@ -294,13 +294,15 @@ body {
 
 
 #pagewrap {
-  margin: 30px auto;
-  width: 700px;
+  margin-top: 30px;
+  width: 100%;
 } 
 #search {
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   display: none;
   text-align: center;
+  margin-bottom:20px;
 }
 #search input{
   width: 80%;
@@ -316,7 +318,7 @@ body {
     background-color: white;
     -webkit-border-radius: 10px;
     width: 100%;
-    padding: 10px;
+    padding: 0px;
     font-size: 12pt;
     }
 
