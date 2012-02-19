@@ -41,7 +41,7 @@ class Edelbiter < Padrino::Application
   #  :port                 => 587,
   #  #:domain               => 'edelbiter.de',
   #  :user_name            => "edelbiter@gmail.com",
-  #  :password             => "rohrzucker",
+  #  :password             => "*******",
   #  :authentication       => :plain,
   #  :enable_starttls_auto => true
   #}
