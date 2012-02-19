@@ -23,6 +23,11 @@ Edelbiter.controllers :archive do
     render 'archive/index'
   end
   
+  post :index do
+    # @posts = Post.abc
+    # redirect 'archive/1-2-3-4-5/6'
+  end
+  
   get :show, :with => :id do
     @post = Post.get(params[:id])
     render 'schokolade/show'
