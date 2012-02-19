@@ -1,3 +1,5 @@
-Padrino Test f�r das Projekt "Edelbiter.de"
+Padrino Test für das Projekt "Edelbiter.de"
 
 http://developers.facebook.com/docs/reference/plugins/like/  // Facebook like button
+
+[Wir brauchen einen smtp-Server oder ein google-mail-Account, um die Mails zu senden.]
