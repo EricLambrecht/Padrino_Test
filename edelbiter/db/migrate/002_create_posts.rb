@@ -24,6 +24,8 @@ migration 2, :create_posts do
       column :datum, DateTime
       column :oeffentlich, Boolean, :default => false
       column :kurztitel, String, :length => 40
+      
+      column :spotlight, Boolean, :default => false
     end
   end
 

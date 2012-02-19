@@ -76,7 +76,7 @@ class Edelbiter < Padrino::Application
     if (Post.last(:oeffentlich => true).datum + 0) >= DateTime.now
       @post = Post.last(:oeffentlich => true)
     else
-      spotlights = Post.all(:oeffentlich => true)
+      spotlights = Post.all(:spotlight => true)
       randomDateID = (DateTime.now.strftime('%d').to_i + (30 * (DateTime.now.strftime('%m').to_i-1))) % spotlights.size
       @post = spotlights[randomDateID]
     end

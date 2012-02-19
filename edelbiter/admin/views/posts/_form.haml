@@ -147,6 +147,13 @@
   %br
   %span.description Wenn angekreuzt: f&uuml;r alle sichtbar
 
+  .check
+    =f.label 'Spotlight?'
+    =f.error_message_on :spotlight
+    =f.check_box :spotlight, :class => :check_box 
+    %br
+    %span.description Wenn angekreuzt: Im Rampenlicht
+    
 .datum
   Das Datum des Posts wird nur bei Erstellung und/oder Ver&ouml;ffentlichung aktualisiert.
   
