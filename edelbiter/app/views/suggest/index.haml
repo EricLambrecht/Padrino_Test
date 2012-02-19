@@ -1,4 +1,3 @@
-
 - @title = "Vorschlag machen"
 
 
@@ -12,7 +11,7 @@
   
   %br
   
-  %form
+  %form{:action => url(:suggest, :send), :method => 'post'}
     %table
       %tr
         %td
