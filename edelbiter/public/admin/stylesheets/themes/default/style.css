@@ -329,14 +329,23 @@ hr {
 
 .form table #preis {    width:10%; padding-right:0px}
 
-.form .check { float:left; }
+.form .check { 
+  float:left; 
+  margin-right:10px;
+  margin-bottom:15px;
+  }
 
 .form .datum {
   font-weight:bold;
   float:right;
+  text-align:right;
 }
 
-.form .clear { clear:both; }
+.form .clear { clear:right; }
+
+.form .navform{
+  margin-top:40px;
+}
 
 /* flash-messages */
 .flash .message {
