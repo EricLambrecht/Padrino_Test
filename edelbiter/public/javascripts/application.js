@@ -23,10 +23,6 @@ $(document).ready(function() {
 		else {
       filter('tbody tr', $(this).val());
     }
-
-		//reapply zebra rows
-		$('.visible td').removeClass('odd');
-		zebraRows('.visible:even td', 'odd');
 	});
 	
 	//grab all header rows
