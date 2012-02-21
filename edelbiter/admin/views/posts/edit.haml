@@ -6,7 +6,7 @@
       %li.active=link_to pat(:edit), url(:posts, :edit, :id => @post.id)
   .content
     %h2.title
-      =pat(:edit)
+      =pat(:edit)+':'
       =mt(:post)
     .inner
       -form_for :post, url(:posts, :update, :id => @post.id), :method => :put, :enctype => 'multipart/form-data', :class => :form do |f|

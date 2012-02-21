@@ -9,24 +9,26 @@
       =mt(:posts)
     .inner
       %table.table
+        %colgroup
+          -# (zurzeit 9 Spalten)
+          %col{:width => '5%'}
+          %col{:width => '20%'}
+          %col{:width => '10%'}
+          %col{:width => '10%'}
+          %col{:width => '15%'} 
+          %col{:width => '8%'}
+          %col{:width => '10%'}
+          %col{:width => '10%'}
+          %col{:width => '12%'}
         %tr
           %th.first=mat(:post, :id)
           -#%th=mat(:post, :titel)
           %th=mat(:post, :kurztitel)
-          -#%th=mat(:post, :body)
           %th=mat(:post, :wertung)
           %th=mat(:post, :design)
           %th=mat(:post, :hersteller)
           -#%th=mat(:post, :kakaogehalt)
-          -#%th=mat(:post, :anbaugebiet)
           %th=mat(:post, :bild)
-          -#%th=mat(:post, :fett)
-          -#%th=mat(:post, :kohlenhydrate)
-          -#%th=mat(:post, :zucker)
-          -#%th=mat(:post, :zutaten)
-          -#%th=mat(:post, :woher)
-          -#%th=mat(:post, :gewicht)
-          -#%th=mat(:post, :preis)
           %th=mat(:post, :datum)
           %th=mat(:post, :oeffentlich)
           %th.last="&nbsp;"
@@ -35,20 +37,13 @@
             %td.first=post.id
             -#%td=post.titel
             %td=post.kurztitel
-            -#%td=post.body
+
             %td=post.wertung
             %td=post.design
             %td=post.hersteller
             -#%td=post.kakaogehalt
-            -#%td=post.anbaugebiet
+
             %td=post.bild
-            -#%td=post.fett
-            -#%td=post.kohlenhydrate
-            -#%td=post.zucker
-            -#%td=post.zutaten
-            -#%td=post.woher
-            -#%td=post.gewicht
-            -#%td=post.preis
             %td#datum=post.datum.strftime("%d-%m-%Y")
             %td=post.oeffentlich
             %td.last
