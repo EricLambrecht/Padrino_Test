@@ -159,7 +159,7 @@
 #tweet.check
   =f.label 'Tweet erstellen?'
   =f.error_message_on :tweet
-  %input{:type => 'checkbox', :id => 'tweetcheck'}
+  %input{:type => 'checkbox', :id => 'tweetcheck', :onClick => 'change();'}
   %br
   =f.text_area :tweettext, :id => 'tweettext', :disabled => true, :rows => 3, :cols => 20
     

@@ -1,13 +1,7 @@
-$(document).ready(function() {
-prompt('OK');
-  $('#tweetcheck').click(
-    function ()
-    {  
-      if ($('#tweetcheck').is(':checked')) {
-        $('#tweettext').attr('disabled', false);    
-      }
-      else {
-        $('#tweettext').attr('disabled', true);
-      }
-    }); 
-});
+function change()
+{
+  if(document.getElementById('tweetcheck').checked)
+     document.getElementById('tweettext').disabled = '';
+  else
+     document.getElementById('tweettext').disabled = 'disabled';
+}
