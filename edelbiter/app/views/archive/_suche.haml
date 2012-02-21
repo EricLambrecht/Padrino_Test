@@ -1,30 +1,37 @@
-%form{:action => "/", :method => "post"}
-  %p Reihenfolge:
-  %input{:name => "Reihenfolge", :checked => '', :type => "radio", :value => "0"}
-    Von oben nach unten
-  %br
-  %input{:name => "Reihenfolge", :type => "radio", :value => "1"}
-    Von unten nach oben
-  %br
-  %br
-  %p Kategorie:
-  %select{:name => "Kategorie", :size => "1"}
-    %option{:label => "Alle"} Alle
-    %optgroup{:label => "Wertung"}
-      %option{:label => "0-3 Punkte", :value => "1"} 0-3 Punkte
-      %option{:label => "4-5 Punkte", :value => "2"} 4-5 Punkte
-      %option{:label => "6-7 Punkte", :value => "3"} 6-7 Punkte
-    %optgroup{:label => "Kakaogehalt"}
-      %option{:label => "unter 70%", :value => "4"} unter 70%
-      %option{:label => "70% bis 80%", :value => "5"} 70% bis 80%
-      %option{:label => "Ueber 80%", :value => "6"} &uuml;ber 80%
-    %optgroup{:label => "Preis"}
-      %option{:label => "Unter 1 EUR", :value => "7"} Unter 1 EUR
-      %option{:label => "1 bis 3 EUR", :value => "8"} 1 bis 3 EUR
-      %option{:label => "3 bis 5 EUR", :value => "9"} 3 bis 5 EUR
-      %option{:label => "Ueber 5 EUR", :value => "10"} &Uuml;ber 5 EUR
-  %br
-  %br
-  %input{:type => "submit", :value => "Senden"}
-  %br
-  %br
+Reihenfolge:
+=f.radio_button :reihenfolge, :value => 1
+Von oben nach unten
+=f.radio_button :reihenfolge, :value => 0
+Von unten nach oben
+
+=f.submit 
+
+
+/ %form{:action => "/", :method => "post"}
+/   %p Reihenfolge:
+/   %input{:name => "Reihenfolge", :checked => '', :type => "radio", :value => "0"} Von oben nach unten
+/   %br
+/   %input{:name => "Reihenfolge", :type => "radio", :value => "1"} Von unten nach oben
+/   %br
+/   %br
+/   %p Kategorie:
+/   %select{:name => "Kategorie", :size => "1"}
+/     %option{:label => "Alle"} Alle
+/     %optgroup{:label => "Wertung"}
+/       %option{:label => "0-3 Punkte", :value => "1"} 0-3 Punkte
+/       %option{:label => "4-5 Punkte", :value => "2"} 4-5 Punkte
+/       %option{:label => "6-7 Punkte", :value => "3"} 6-7 Punkte
+/     %optgroup{:label => "Kakaogehalt"}
+/       %option{:label => "unter 70%", :value => "4"} unter 70%
+/       %option{:label => "70% bis 80%", :value => "5"} 70% bis 80%
+/       %option{:label => "Ueber 80%", :value => "6"} &uuml;ber 80%
+/     %optgroup{:label => "Preis"}
+/       %option{:label => "Unter 1 EUR", :value => "7"} Unter 1 EUR
+/       %option{:label => "1 bis 3 EUR", :value => "8"} 1 bis 3 EUR
+/       %option{:label => "3 bis 5 EUR", :value => "9"} 3 bis 5 EUR
+/       %option{:label => "Ueber 5 EUR", :value => "10"} &Uuml;ber 5 EUR
+/   %br
+/   %br
+/   %input{:type => "submit", :value => "Senden"}
+/   %br
+/   %br

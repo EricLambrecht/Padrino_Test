@@ -18,16 +18,30 @@ Edelbiter.controllers :archive do
   #   "Hello world!"
   # end
 
+  # Index-Seite, hier wir die Default-Einstellung festgelegt  
   get :index do
+    @auswahl = Auswahl.new
+    @auswahl.reihenfolge = 1
     @posts = Post.all(:order => :kurztitel.asc)
     render 'archive/index'
   end
   
+  # Post Methode empfängt Benutzerauswahl
   post :index do
-    # @posts = Post.abc
-    # redirect 'archive/1-2-3-4-5/6'
+    @auswahl = Auswahl.new(params[:auswahl])
+    redirect url(:archive, :sort, :reihenfolge => @auswahl.reihenfolge)
   end
   
+  # Seite, die nach einer Suchanfrage angezeigt wird
+  get :sort, :with => :reihenfolge do
+    @auswahl = Auswahl.new
+    @auswahl.reihenfolge = params[:reihenfolge]
+    @posts = Post.all(:order => :kurztitel.asc) if @auswahl.reihenfolge == 1
+    @posts = Post.all(:order => :kurztitel.desc) if @auswahl.reihenfolge == 0
+    render 'archive/index'
+  end
+  
+  # Anzeige eines einzelnen Schokoladen-Artikels
   get :show, :with => :id do
     @post = Post.get(params[:id])
     render 'schokolade/show'
