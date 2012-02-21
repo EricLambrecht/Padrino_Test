@@ -3,7 +3,9 @@
 
 #pagewrap
   
-  #suche= partial 'archive/suche'
+  -form_for @auswahl, url(:archive, :index) do |f|
+    #suche= partial 'archive/suche', :locals => { :f => f }
+  %br
   
   #search
     %label{:for => "filter"}
@@ -17,7 +19,6 @@
           %th Preis
       %tbody 
         %tr= partial 'schokolade/postliste', :collection => @posts
-
 
 
       // TUTORIAL:  -  http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/

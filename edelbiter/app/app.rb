@@ -88,7 +88,6 @@ class Edelbiter < Padrino::Application
     
   end
   
-  
   # Ab hier werden falsche Seitenaufrufe abgefangen
   
   get '/post/:url' do
