@@ -19,11 +19,12 @@ Edelbiter.controllers :blog do
   # end
 
   get :index do
+    @blogposts = Blogpost.all(:order => :datum.desc)
     render 'blog/index'
   end
 
   get :show, :with => :id do
-    @blogposts = Blogpost.get(params[:id])
+    @blogpost = Blogpost.get(params[:id])
     render 'blog/show'
   end
 

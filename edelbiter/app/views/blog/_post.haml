@@ -1,0 +1,5 @@
+-if post.oeffentlich
+  .post
+    .kurztitel= link_to post.titel, url_for(:blog, :show, :id => post.id)
+    .datum= 'vor ' + time_ago_in_words(post.datum || Time.now)
+    .body= simple_format(post.body)

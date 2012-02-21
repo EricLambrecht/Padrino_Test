@@ -1,0 +1,5 @@
+-if @blogpost.oeffentlich
+  .post
+    .kurztitel= @blogpost.titel
+    .datum= 'vor ' + time_ago_in_words(@blogpost.datum || Time.now)
+    .body= simple_format(@blogpost.body)
