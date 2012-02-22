@@ -7,22 +7,22 @@
     #suche= partial 'archive/suche', :locals => { :f => f }
   %br
   
-  #search
-    %label{:for => "filter"}
-    %input#filter{:name => "filter", :placeholder => "Suche...", :type => "text", :value => ""}
-  #body
-    %table 
-      %thead
-        %tr
-          %th Kurztitel
-          %th Wertung
-          %th Preis
-      %tbody 
-        %tr= partial 'schokolade/postliste', :collection => @posts
+  = if @auswahl.ansicht == 1
+    #search
+      %label{:for => "filter"}
+      %input#filter{:name => "filter", :placeholder => "Suche...", :type => "text", :value => ""}
+    #body
+      =javascript_include_tag('application.js')
+      %table 
+        %thead
+          %tr
+            %th Kurztitel
+            %th Wertung
+            %th Preis
+        %tbody 
+          %tr= partial 'schokolade/postliste', :collection => @posts
+  = if @auswahl.ansicht == 0
+    #show= partial 'archive/schokolade', :collection => @posts
 
-
-      // TUTORIAL:  -  http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/
-      // Zebra-effekt nicht hinbekommen, muss man sich nochmal genauer angucken!!!
-
-    =javascript_include_tag('application.js')
-
+    -# TUTORIAL:  -  http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/
+    -# Zebra-effekt nicht hinbekommen, muss man sich nochmal genauer angucken!!!
