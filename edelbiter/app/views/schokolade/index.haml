@@ -6,16 +6,16 @@
 %hr
   
 #social_media
-
-  %table
-    =javascript_include_tag('twitterFolgen.js')
-    %tr
-      = link_to image_tag('/pictures/twitter.png'), url_for('http://www.twitter.com/edelbiter')
-      %a.twitter-follow-button{"data-lang" => "de", "data-show-count" => "false", "data-show-screen-name" => "false", :href => "https://twitter.com/edelbiter"} @edelbiter folgen
-      = link_to '@edelbiter', url_for('http://www.twitter.com/edelbiter')
-      = link_to image_tag('/pictures/facebook.png'), url_for('http://www.facebook.com/edelbiter')
-      %br
-      %br
+  =javascript_include_tag('twitterFolgen.js')
+  = link_to image_tag('/pictures/twitter.png'), url_for('http://www.twitter.com/edelbiter')
+  %a.twitter-follow-button{"data-lang" => "de", "data-show-count" => "false", "data-show-screen-name" => "false", :href => "https://twitter.com/edelbiter"} @edelbiter folgen
+  = link_to '@edelbiter', url_for('http://www.twitter.com/edelbiter')
+  = link_to image_tag('/pictures/facebook.png'), url_for('http://www.facebook.com/edelbiter'), :id => "fb_img"
+  
+  %table  
+    %tr 
+      // 4 spaltig!
+      // tweets (unterhalb) beinhalten schon <td>s!
       = partial 'schokolade/tweet', :collection => @tweets
       %td#facebook
         = partial 'schokolade/facebook'

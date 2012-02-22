@@ -190,7 +190,7 @@ body {
       
 
 #social_media {
-  padding: 20px;
+  padding: 15px 15px 20px 20px;
   margin: 40px 0px;
   height: auto;
   width: 94.5%;
@@ -214,6 +214,14 @@ body {
   padding-left:20px;
   text-align: center;
   vertical-align: top;
+}
+
+#social_media #fb_img {
+  float:right;
+}
+
+#social_media table {
+  margin-top:10px;
 }
 
 #posts  .post{
