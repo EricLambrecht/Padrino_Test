@@ -212,7 +212,7 @@ body {
   border-left:1px solid #EEE;
   padding-left:20px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #posts  .post{
