@@ -6,9 +6,11 @@
 
 #suggest
   .flash=[:notice].map { |type| flash_tag(type, :class => "message #{type}") }.join
-  %p Beschreibung:
-  %p Machen sie doch Vorschlage usw...
-  %p Bitte geben Sie ihre E-Mail an, damit wir Ihnen antworten k&ouml;nnen.
+  %h2 Vorschlag machen
+  %p
+    Machen sie doch Vorschl&auml;ge usw...
+    %br
+    Bitte geben Sie ihre E-Mail an, damit wir Ihnen antworten k&ouml;nnen.
   
   %br
   
@@ -16,13 +18,13 @@
     %table
       %tr
         %td
-          %p Betreff:
+          %h3 Betreff:
           =text_field_tag :betreff, :placeholder => "Betreff", :class => :text_field
         %td
-          %p Ihre E-Mail-Adresse:
+          %h3 Ihre E-Mail-Adresse:
           =text_field_tag :absender, :placeholder => "E-Mail-Adresse", :class => :text_field2
 
-    %p Ihre Nachricht:
+    %h3 Ihre Nachricht:
     =text_area_tag :nachricht, :placeholder => "Nachricht...", :class => :text_area
     
     %br 

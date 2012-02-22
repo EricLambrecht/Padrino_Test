@@ -36,15 +36,15 @@ class Edelbiter < Padrino::Application
   # layout  :my_layout            # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
   
-  #set :delivery_method, :smtp => {
-  #  :adress               => "smtp.gmail.com",
-  #  :port                 => 587,
-  #  #:domain               => 'edelbiter.de',
-  #  :user_name            => "edelbiter@gmail.com",
-  #  :password             => "*******",
-  #  :authentication       => :plain,
-  #  :enable_starttls_auto => true
-  #}
+  # set :delivery_method, :smtp => {
+    # :adress               => "smtp.gmail.com",
+    # :port                 => 587,
+    # :domain               => 'edelbiter.de',
+    # :user_name            => "edelbiter@gmail.com",
+    # :password             => "rohrzucker",
+    # :authentication       => :plain,
+    # :enable_starttls_auto => true
+  # }
 
   ##
   # You can configure for a specified environment like:
