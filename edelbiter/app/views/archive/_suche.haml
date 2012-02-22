@@ -1,14 +1,16 @@
-Reihenfolge:
-=f.radio_button :reihenfolge, :value => 0
-Von oben nach unten
-=f.radio_button :reihenfolge, :value => 1
-Von unten nach oben
-%br
-Ansicht:
-=f.radio_button :ansicht, :value => 0
-Vollst&auml;ndig
-=f.radio_button :ansicht, :value => 1
-Als Liste
+/ Reihenfolge:
+/ =f.radio_button :reihenfolge, :value => 0
+/ Von oben nach unten
+/ =f.radio_button :reihenfolge, :value => 1
+/ Von unten nach oben
+/ %br
+/ Ansicht:
+/ =f.radio_button :ansicht, :value => 0
+/ Vollst&auml;ndig
+/ =f.radio_button :ansicht, :value => 1
+/ Als Liste
+=f.hidden_field(:ansicht, :value => @auswahl.ansicht)
+=f.hidden_field(:reihenfolge, :value => @auswahl.reihenfolge)
 %br
 Sortierung:
 =f.select :sortierung, :options => [['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3], ['nach Datum des Tests', 4]]
@@ -17,6 +19,19 @@ Kategorie:
 =f.select :kategorie, :options => [['Alle', 0], ['unter 70%', 1], ['70% bis 80%', 2], ['&Uuml;ber 80%', 3]]
 %br
 =f.submit
+%br
+%br
+Reihenfolge:
+= if @auswahl.reihenfolge == 0
+  Absinkend
+  = link_to 'Umkehren', url_for(:archive, :sort, :reihenfolge => 1, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+= if @auswahl.reihenfolge == 1
+  Aufsteigend
+  = link_to 'Umkehren', url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+= if @auswahl.ansicht == 0
+  = link_to 'Als Liste anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+= if @auswahl.ansicht == 1
+  = link_to 'Als vollst&auml;ndige Tests anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
 %br
 %br
 Anzahl Ergebnisse: 

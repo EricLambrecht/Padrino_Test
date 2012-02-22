@@ -11,8 +11,7 @@
     .zucker= '...davon Zucker: ' + schokolade.zucker.to_s + 'g'
     .fett= 'Fett: ' + schokolade.fett.to_s + 'g'
     .zutaten= 'Zutaten: ' + schokolade.zutaten 
-    %p= 'Erh&auml;ltlich in: '+schokolade.woher 
-    %br
+    = schokolade.woher
     .anbaugebiet= 'Anbaugebiet: '+schokolade.anbaugebiet
 
   .body= simple_format(schokolade.body)

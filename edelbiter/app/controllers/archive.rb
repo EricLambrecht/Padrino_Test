@@ -4,11 +4,11 @@ Edelbiter.controllers :archive do
   get :index do
     @auswahl = Auswahl.new
     @auswahl.reihenfolge = 0
-    @auswahl.sortierung = 0
+    @auswahl.sortierung = 4
     @auswahl.kategorie = 0
     @auswahl.seite = 1
     @auswahl.ansicht = 0
-    @posts = Post.all(:oeffentlich => true, :order => :kurztitel.asc)
+    @posts = Post.all(:oeffentlich => true, :order => :datum.asc)
     render 'archive/index'
   end
   

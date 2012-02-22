@@ -11,8 +11,7 @@
     .zucker= '...davon Zucker: ' + @post.zucker.to_s + 'g'
     .fett= 'Fett: ' + @post.fett.to_s + 'g'
     .zutaten= 'Zutaten: ' + @post.zutaten 
-    %p= 'Erh&auml;ltlich in: '+@post.woher 
-    %br
+    = @post.woher
     .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
 
   .body= simple_format(@post.body)
