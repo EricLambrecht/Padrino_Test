@@ -1,10 +1,22 @@
 Reihenfolge:
-=f.radio_button :reihenfolge, :value => 1
-Von oben nach unten
 =f.radio_button :reihenfolge, :value => 0
+Von oben nach unten
+=f.radio_button :reihenfolge, :value => 1
 Von unten nach oben
-
-=f.submit 
+%br
+Ansicht:
+=f.radio_button :ansicht, :value => 0
+Vollst&auml;ndig Anzeigen
+=f.radio_button :ansicht, :value => 1
+Listenansicht
+%br
+Sortierung:
+=f.select :sortierung, :options => [['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2]]
+%br
+Kategorie:
+=f.select :kategorie, :options => [['unter 70%', 0], ['70% bis 80%', 1], ['&Uuml;ber 80%', 2]]
+%br
+=f.submit
 
 
 / %form{:action => "/", :method => "post"}
