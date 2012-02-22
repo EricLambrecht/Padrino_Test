@@ -124,7 +124,8 @@ body {
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-size: 24pt;
     text-align: left;
-    float:left;}
+    font-weight:bold;
+    float:left; }
   #main #show .titel a{
          text-decoration:none;
          padding:0px; }
@@ -154,6 +155,7 @@ body {
     text-align:justify;
     text-justify: newspaper;
     text-indent: 20px;
+    font-weight:lighter;
     color:#000;
     column-count:2;
     column-gap:1em;
