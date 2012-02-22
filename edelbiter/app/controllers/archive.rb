@@ -43,8 +43,8 @@ Edelbiter.controllers :archive do
     @posts = Post.all(:oeffentlich => true, :order => :wertung.asc) if @auswahl.reihenfolge == 1 && @auswahl.sortierung == 2
     @posts = Post.all(:oeffentlich => true, :order => :kakaogehalt.desc) if @auswahl.reihenfolge == 0 && @auswahl.sortierung == 3
     @posts = Post.all(:oeffentlich => true, :order => :kakaogehalt.asc) if @auswahl.reihenfolge == 1 && @auswahl.sortierung == 3
-    @posts = Post.all(:oeffentlich => true, :order => :datum.desc) if @auswahl.reihenfolge == 0 && @auswahl.sortierung == 4
-    @posts = Post.all(:oeffentlich => true, :order => :datum.asc) if @auswahl.reihenfolge == 1 && @auswahl.sortierung == 4
+    @posts = Post.all(:oeffentlich => true, :order => :datum.desc) if @auswahl.reihenfolge == 1 && @auswahl.sortierung == 4
+    @posts = Post.all(:oeffentlich => true, :order => :datum.asc) if @auswahl.reihenfolge == 0 && @auswahl.sortierung == 4
     render 'archive/index'
   end
   

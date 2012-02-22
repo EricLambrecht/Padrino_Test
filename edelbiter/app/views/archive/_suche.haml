@@ -11,15 +11,14 @@
 / Als Liste
 =f.hidden_field(:ansicht, :value => @auswahl.ansicht)
 =f.hidden_field(:reihenfolge, :value => @auswahl.reihenfolge)
-%br
 Sortierung:
-=f.select :sortierung, :options => [['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3], ['nach Datum des Tests', 4]]
+=f.select :sortierung, :options => [['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3], ['nach Datum des Tests', 4]], :onchange => 'this.form.submit()'
 %br
 Kategorie:
-=f.select :kategorie, :options => [['Alle', 0], ['unter 70%', 1], ['70% bis 80%', 2], ['&Uuml;ber 80%', 3]]
+=f.select :kategorie, :options => [['Alle', 0], ['unter 70%', 1], ['70% bis 80%', 2], ['&Uuml;ber 80%', 3]], :onchange => 'this.form.submit()'
 %br
-=f.submit
-%br
+%noscript
+  =f.submit
 %br
 Reihenfolge:
 = if @auswahl.reihenfolge == 0
@@ -28,10 +27,16 @@ Reihenfolge:
 = if @auswahl.reihenfolge == 1
   Aufsteigend
   = link_to 'Umkehren', url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+%br
+%br
+Ansicht:
 = if @auswahl.ansicht == 0
+  Vollst&auml;ndige Tests
   = link_to 'Als Liste anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
 = if @auswahl.ansicht == 1
+  Liste
   = link_to 'Als vollst&auml;ndige Tests anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+%br
 %br
 %br
 Anzahl Ergebnisse: 
