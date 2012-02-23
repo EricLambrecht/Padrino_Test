@@ -43,6 +43,8 @@ Edelbiter.controllers :archive do
       # 'Preis' => [['Unter 2 EUR',7],['2 bis 4 EUR',8],['&Uuml;ber 4 EUR',9]],
       # 'Anderes' => [['Gutes Design',10],['Schlechtes Design',11],['Bemerkenswert',12],['Sauere Schokolade',13]]}
     
+    @auswahl.reihenfolge = 1 if @auswahl.sortierung == 0
+    
     @posts = Post.all(:oeffentlich => true) if @auswahl.kategorie == 0
     @posts = Post.all(:oeffentlich => true, :kakaogehalt.lt => 70) if @auswahl.kategorie == 1
     @posts = Post.all(:oeffentlich => true, :kakaogehalt.lt => 80, :kakaogehalt.gte => 70) if @auswahl.kategorie == 2
