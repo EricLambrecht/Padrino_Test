@@ -12,10 +12,10 @@
 =f.hidden_field(:ansicht, :value => @auswahl.ansicht)
 =f.hidden_field(:reihenfolge, :value => @auswahl.reihenfolge)
 Sortierung:
-=f.select :sortierung, :options => [['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3], ['nach Datum des Tests', 4]], :onchange => 'this.form.submit()'
+=f.select :sortierung, :options => [['nach Datum des Tests', 4], ['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3]], :onchange => 'this.form.submit()'
 %br
 Kategorie:
-=f.select :kategorie, :options => [['Alle', 0], ['unter 70%', 1], ['70% bis 80%', 2], ['&Uuml;ber 80%', 3]], :onchange => 'this.form.submit()'
+=f.select :kategorie, :grouped_options => {'' => [['Alle',0]], 'Kakaogehalt' => [['Unter 70%',1],['70% bis 80%',2],['&Uuml;ber 80%',3]],'Wertung' => [['0 bis 3 Punkte',4],['4 bis 6 Punkte',5],['7 bis 12 Punkte',6]], 'Preis' => [['Unter 2 EUR',7],['2 bis 4 EUR',8],['&Uuml;ber 4 EUR',9]], 'Anderes' => [['Gutes Design',10],['Schlechtes Design',11],['Bemerkenswert',12]]}, :onchange => 'this.form.submit()'
 %br
 %noscript
   =f.submit
