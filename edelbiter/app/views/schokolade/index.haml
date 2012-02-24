@@ -1,9 +1,9 @@
 
 - @title = "Startseite"
+.ueberschrift
+  Im Rampenlicht:
 
 #show= partial 'schokolade/schokolade'
-
-%hr
   
 #social_media
   =javascript_include_tag('twitterFolgen.js')
@@ -20,21 +20,25 @@
       %td#facebook
         = partial 'schokolade/facebook'
         
-%hr
-        
-#pagewrap
-  #search
-    %label{:for => "filter"} Filter
-    %input#filter{:name => "filter", :type => "text", :value => ""}
-  #body
+%hr.ellereverse
+%br
+%br 
+.ueberschrift
+  Liste aller getesteten Schokoladen:
+%br
+%br
+#search
+  %label{:for => "filter"} Filter
+  %input#filter{:name => "filter", :type => "text", :value => ""}
+#body
+  #postliste
     %table 
       %thead
         %tr
           %th Kurztitel
           %th Wertung
           %th Preis
-      %tbody 
+      %tbody
         %tr= partial 'schokolade/postliste', :collection => @posts
-    
 
-    =javascript_include_tag('application.js')
+  =javascript_include_tag('application.js')

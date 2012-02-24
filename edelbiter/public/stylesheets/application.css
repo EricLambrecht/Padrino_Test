@@ -1,7 +1,7 @@
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
-  background-color: #FFF; }
+  background-color: #F5F5F5; }
   body a {
     color: #000; }
   body h2 {
@@ -24,69 +24,122 @@ body {
       body ul.bulleted li span {
         font-weight: bold; }
 
-
+#container {
+  width: 740px;
+  margin: auto;
+  display: block;
+  padding: 40px;
+  text-align:center;
+  background-color:white;
+  border-right:1px solid #E0E0E0;
+  border-left:1px solid #E0E0E0;
+  overflow: visible; }
 
 #header {
-  width: 720px;
+  width: 100%;
   margin: auto;
-  padding: 30px 10px 20px 10px;
-  border-bottom: 2px solid #EC9A94;
+  padding: 30px 0px 20px 0px;
   text-align:center;
-  overflow: hidden; }
+  overflow: hidden; 
+  }
   #header #homelink a{
      text-decoration:none;
      padding:0px;
  }
   #header #homelink a:hover{
-     color: #555;
+     color: #C58380;
      padding:0px;
  }
-  #header h1 {
+  #header #homelink {
     color: #222;
     font-family:Bodoni MT, Didot,  Georgia, serif;
-    font-size: 80pt; 
+    font-size: 90pt;
+    letter-spacing:0.01em;
     padding:0px;
-    margin-top:10px;}
+    margin-top: 14px;
+    margin-bottom: 5px;
+    padding-top:-10px;
+    /*letter-spacing:0.1em;*/
+    z-index: 2;
+  }
   #header h2 {
     color: #222;
     font-family:Bodoni MT, Didot, Georgia, serif;
     font-size: 20pt; }
-  #header ul.menu {
-    margin-left: 20%;
-    margin-top: 10px;
-    overflow: hidden; }
-    #header ul.menu li {
-      float: left;
-      width:120px;
-      padding-bottom: 5px; }
-      #header ul.menu li a {
-        font-size: 1.2em;
-        color: #222;
-        text-decoration: none; }
-        #header ul.menu li a:hover {
-          text-decoration: underline; }
+  
+  #lautschrift {
+    display: inline;
+  }
+  
+  #subtitle {
+    margin-left: 7px;
+    display: inline;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+  }
+    
+  #header .menu {
+    width:110%;
+    margin:auto;
+    z-index: -1;
+  } 
+    
+  #header .menu td .link{
+    font-size: 11pt;
+    width:150px;
+    padding-left:1px;
+    padding-bottom:1px;
+    border-bottom:3px solid #000000;
+  }
+  
+  #header .menu td {
+    width: 25%;
+    
+  }
+  
+  /*#header .menu td:first-child {
+      margin-left:0px;
+    }*/
+  
+  #header .menu td .link:hover{
+    border-bottom:3px solid #C58380;
+  }
+  
+  #header .menu td a {
+    text-decoration:none;
+    display: block;
+  }
 
-#container {
-  width: 700px;
-  margin: auto;
-  display: block;
-  padding: 0px;
+.ellereverse {
   text-align:center;
-  overflow: visible; }
+  width:100%;
+  height:2px;
+  border:0px;
+  border-bottom:3px solid #000;
+  border-top:1px solid #000;
+}
+  
+.elle {
+  width:100%;
+  height:2px;
+  border:0px;
+  border-top:3px solid #000;
+  border-bottom:1px solid #000;
+
+}
 
 #main {
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
   text-align:left;
-  padding:0px;
   padding-top: 20px; }
   #main h2 {
+    text-align:left;
     font-size: 2.1em; }
   #main .post {
-    margin-bottom: 20px; }
+    margin-bottom: 35px;
+    margin-top: 25px}
     #main .post p {
-      padding-bottom: 10px; }
+      padding-bottom: 0px;
+      }
     #main .post .kurztitel {
       font-family: Bodoni MT, Georgia,Times New Roman, serif;
       font-size: 20pt;
@@ -104,7 +157,10 @@ body {
       margin-top: 2px; }
     #main .post .body {
       padding-bottom: 10px; 
-      line-height: 1.4em;}
+      line-height: 1.4em;
+      -webkit-hyphens: auto;
+         -moz-hyphens: auto;
+              hyphens: auto;}
     #main .post .details {
       border-top: 1px solid #CCCCCC;
       margin-bottom: 0.25em;
@@ -115,8 +171,18 @@ body {
         padding-right: 5px;
         border-right: 1px solid #CCCCCC; }
  #main #show .bild {
-    padding-bottom:20px;
-    font-variant:small-caps;
+    margin-bottom:20px;
+    position:relative;
+ }
+ #main #show .bild span {
+   position:absolute;
+   display: block;
+   width: 101%;
+   height: 100%;
+   top: -1px;
+   left: -1px;
+   background: url("/pictures/rahmen.png") no-repeat;
+   background-size: 100%;
  }
   #main #show .titel {
     /* min-height:210px; */
@@ -172,8 +238,8 @@ body {
   
  /*Trennlinien*/
  #main hr {
-   margin:0 -5%;
-   width:110%;
+   margin:auto;
+   width:100%;
  } 
   
   /* Schokolade */
@@ -182,6 +248,7 @@ body {
   }
   #main #show .wertung {
     text-align:center;
+    margin-bottom: 20px;
     font-size: 16pt;
     font-family: Bodoni MT, Georgia,Times New Roman, serif;
     font-style:oblique;
@@ -196,7 +263,7 @@ body {
   margin: 40px 0px;
   height: auto;
   width: 94.5%;
-  border: 1px solid #DDD; }
+  }
   #sidebar p {
     font-weight: bold;
     padding-top: 10px;
@@ -252,7 +319,7 @@ body {
   width:98%;
 }
   
-#suggest h2 {
+.ueberschrift {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2em;
   color: #000;  
@@ -306,13 +373,17 @@ body {
 #footer {
   margin-top: 20px;
   padding: 10px 10px 10px 10px; 
-  border-top: 1px solid #CCC0BB
 }  
 
-
-#pagewrap {
+#postliste {
   margin-top: 30px;
-  width: 100%;
+  margin-bottom: 40px;
+}
+#postliste th {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
 } 
 #search {
   -webkit-border-radius: 10px;
@@ -330,6 +401,19 @@ body {
   font-size: 20px;
 }
 
+#suche {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  line-height: 1.5em;
+  border: 1px solid black;
+  padding: 10px;
+}
+#suche td {
+  text-align: center;
+  font-size: 13pt;
+  width:340px;
+}
 
 #body table {
     background-color: white;

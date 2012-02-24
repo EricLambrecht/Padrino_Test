@@ -1,6 +1,7 @@
 .post
-  .bild 
-    %img{:src => '/pictures/'+@post.bild, :width => '100%', :height => '400px'}
+  .bild
+    %span
+    %img{:src => "/pictures/"+@post.bild, :width => '100%', :height => '380px'}
   .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
   #infokasten
     .kakao= 'Kakaogehalt: ' + @post.kakaogehalt.to_s + '%'
@@ -14,9 +15,11 @@
     = @post.woher
     .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
 
-  .body= simple_format(@post.body)
+  .body{:lang => 'de'}= simple_format(@post.body)
 
   .wertung
     = 'Wertung: Sehr schlecht '
     %span#zahl= drittel(@post.wertung)
     = ' Punkte'
+    
+%hr.elle

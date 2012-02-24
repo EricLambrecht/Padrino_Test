@@ -4,20 +4,29 @@
   %head
     %title= [@title, "Edelbiter Test"].compact.join(" | ")
     = stylesheet_link_tag 'reset', 'application'
-    = javascript_include_tag 'jquery', 'application'
+    = javascript_include_tag 'jquery'
     = yield_content :include
   %body
-    #header
-      %ul.menu
-        %li= link_to 'BLOG', url_for(:blog, :index)
-        %li= link_to 'SCHOKOLADEN', url_for(:archive, :index)
-        %li= link_to '&Uuml;BER UNS', url_for(:about, :index)
-        %li= link_to 'VORSCHLAG', url_for(:suggest, :index)
-      %h1#homelink= link_to 'EDELBITER', url_for('/')
-      %h2 [edelbeiter] Wir essen Schokolade.
     #container
+      #header
+        %table.menu
+          %tr
+            %td
+              .link= link_to 'BLOG', url_for(:blog, :index)
+            %td
+              .link= link_to 'SCHOKOLADEN', url_for(:archive, :index)
+            %td
+              .link= link_to '&Uuml;BER UNS', url_for(:about, :index)
+            %td
+              .link= link_to 'VORSCHLAG', url_for(:suggest, :index)
+        %h1#homelink= link_to 'EDELBITER', url_for('/')
+        %h2#lautschrift [edelbaiter]
+        %h2#subtitle Wir essen Schokolade.
+      %hr.elle
+
       #main= yield
+      %hr.ellereverse
 
       #footer
-        %p Copyright (c) 2009-2010 Edelbiter 
+        %p Copyright (c) 2011-2012 Edelbiter 
         %p= link_to 'admin', url_for('/admin')

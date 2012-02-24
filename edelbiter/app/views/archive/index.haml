@@ -1,28 +1,28 @@
 
 - @title = "Schokoladen"
 
-#pagewrap
-  
-  -form_for @auswahl, url(:archive, :index) do |f|
-    #suche= partial 'archive/suche', :locals => { :f => f }
-  %br
-  
-  = if @auswahl.ansicht == 1
-    #search
-      %label{:for => "filter"}
-      %input#filter{:name => "filter", :placeholder => "Suche...", :type => "text", :value => ""}
-    #body
-      =javascript_include_tag('application.js')
+.ueberschrift
+  Suchen, finden & genie&szlig;en:
+%br
+
+-form_for @auswahl, url(:archive, :index) do |f|
+  #suche= partial 'archive/suche', :locals => { :f => f }
+%br
+
+- if @auswahl.ansicht == 1
+  #body
+    #postliste
       %table 
         %thead
           %tr
             %th Kurztitel
             %th Wertung
             %th Preis
-        %tbody 
+        %tbody
           %tr= partial 'schokolade/postliste', :collection => @posts
-  = if @auswahl.ansicht == 0
+- if @auswahl.ansicht == 0
+  #main
     #show= partial 'archive/schokolade', :collection => @posts
-    %br
-    %br
-  = partial 'archive/seitenzahl'
+  %br
+  %br
+= partial 'archive/seitenzahl'
