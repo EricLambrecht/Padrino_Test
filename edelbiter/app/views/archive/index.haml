@@ -21,21 +21,8 @@
             %th Preis
         %tbody 
           %tr= partial 'schokolade/postliste', :collection => @posts
-  #show
-    = if @auswahl.ansicht == 0
-      = partial 'archive/schokolade', :collection => @posts
-      %br
-      %br
-      .wertung
-        = if @anzahlErgebnisse > @postsJeSeite
-          = if @auswahl.seite > 1
-            = link_to 'zur&uuml;ck', url_for(:archive, :sort, :seite => (@auswahl.seite - 1), :ansicht => @auswahl.ansicht, :reihenfolge => @auswahl.reihenfolge, :kategorie => @auswahl.kategorie, :sortierung => @auswahl.sortierung)
-          Seite
-          = @auswahl.seite
-          von
-          = @anzahlSeiten.to_i
-          = if @auswahl.seite < @anzahlSeiten.to_i
-            = link_to 'weiter', url_for(:archive, :sort, :seite => (@auswahl.seite + 1), :ansicht => @auswahl.ansicht, :reihenfolge => @auswahl.reihenfolge, :kategorie => @auswahl.kategorie, :sortierung => @auswahl.sortierung)
-
-      -# TUTORIAL:  -  http://net.tutsplus.com/tutorials/javascript-ajax/using-jquery-to-manipulate-and-filter-data/
-      -# Zebra-effekt nicht hinbekommen, muss man sich nochmal genauer angucken!!!
+  = if @auswahl.ansicht == 0
+    #show= partial 'archive/schokolade', :collection => @posts
+    %br
+    %br
+  = partial 'archive/seitenzahl'

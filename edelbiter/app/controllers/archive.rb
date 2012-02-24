@@ -8,8 +8,14 @@ Edelbiter.controllers :archive do
     @auswahl.kategorie = 0
     @auswahl.seite = 1
     @auswahl.ansicht = 0
-    @posts = Post.all(:oeffentlich => true, :order => :datum.asc)
-    render 'archive/index'
+    redirect url(
+        :archive,
+        :sort,
+        :reihenfolge => @auswahl.reihenfolge,
+        :sortierung => @auswahl.sortierung, 
+        :kategorie => @auswahl.kategorie, 
+        :seite => 1,                   #@auswahl.seite, 
+        :ansicht => @auswahl.ansicht)
   end
   
   # Post Methode empfängt Benutzerauswahl
@@ -35,13 +41,6 @@ Edelbiter.controllers :archive do
     @auswahl.kategorie = params[:kategorie]
     @auswahl.seite = params[:seite]
     @auswahl.ansicht = params[:ansicht]
-    
-      # Form-Builder:
-      # =f.select :kategorie, :grouped_options => {'' => [['Alle',0]],
-      # 'Kakaogehalt' => [['Unter 70%',1],['70% bis 80%',2],['&Uuml;ber 80%',3]],
-      # 'Wertung' => [['0 bis 3 Punkte',4],['4 bis 6 Punkte',5],['7 bis 12 Punkte',6]],
-      # 'Preis' => [['Unter 2 EUR',7],['2 bis 4 EUR',8],['&Uuml;ber 4 EUR',9]],
-      # 'Anderes' => [['Gutes Design',10],['Schlechtes Design',11],['Bemerkenswert',12],['Sauere Schokolade',13]]}
     
     @auswahl.reihenfolge = 1 if @auswahl.sortierung == 0
     
@@ -73,9 +72,9 @@ Edelbiter.controllers :archive do
     @anzahlErgebnisse = @posts.size
     
     # Vorbereitung der Seiten-Mechanik
-    @postsJeSeite = 4
+    @postsJeSeite = 3
     if @auswahl.ansicht == 0 && @posts.size > @postsJeSeite
-        @anzahlSeiten = sprintf("%0g", (@posts.size / @postsJeSeite) + 0.5)
+        @anzahlSeiten = sprintf("%.0f", (@anzahlErgebnisse / @postsJeSeite) + 0.5).to_i
         schokoladenAufSeite = @posts.all(:limit => (@postsJeSeite * @auswahl.seite)) - @posts.all(:limit => (@postsJeSeite * (@auswahl.seite-1)))
         @posts = schokoladenAufSeite.all
     end
