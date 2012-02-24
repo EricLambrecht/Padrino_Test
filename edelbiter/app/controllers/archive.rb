@@ -70,18 +70,15 @@ Edelbiter.controllers :archive do
     @posts = @posts.all(:order => :datum.desc) if @auswahl.reihenfolge == 1 && @auswahl.sortierung == 4
     @posts = @posts.all(:order => :datum.asc) if @auswahl.reihenfolge == 0 && @auswahl.sortierung == 4
     
+    @anzahlErgebnisse = @posts.size
+    
     # Vorbereitung der Seiten-Mechanik
-    # postsJeSeite = 2
-    #     if @auswahl.ansicht == 0 && @posts.size > postsJeSeite
-    #       @anzahlSeiten = sprintf("%0g", (@posts.size / postsJeSeite) + 0.5)
-    #       temp = postsJeSeite*(@auswahl.seite-1)
-    #       schokoladenAufSeite = []
-    #       postsJeSeite.times do |i|
-    #         schokoladenAufSeite.push(@posts.get(i+temp))
-    #       end
-    #       @posts = schokoladenAufSeite
-    #       puts 'NOOOOOOOOOOOOOOOOOO ' + @posts.get(1).wertung.to_s
-    #     end
+    postsJeSeite = 1
+    if @auswahl.ansicht == 0 && @posts.size > postsJeSeite
+        @anzahlSeiten = sprintf("%0g", (@posts.size / postsJeSeite) + 0.5)
+        schokoladenAufSeite = @posts.all(:limit => (postsJeSeite * @auswahl.seite)) - @posts.all(:limit => (postsJeSeite * (@auswahl.seite-1)))
+        @posts = schokoladenAufSeite.all
+    end
         
     render 'archive/index'
   end
