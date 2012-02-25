@@ -110,23 +110,6 @@ body {
     display: block;
   }
 
-.ellereverse {
-  text-align:center;
-  width:100%;
-  height:2px;
-  border:0px;
-  border-bottom:3px solid #000;
-  border-top:1px solid #000;
-}
-  
-.elle {
-  width:100%;
-  height:2px;
-  border:0px;
-  border-top:3px solid #000;
-  border-bottom:1px solid #000;
-
-}
 
 #main {
   text-align:left;
@@ -240,7 +223,26 @@ body {
  #main hr {
    margin:auto;
    width:100%;
+   background:none;
  } 
+ 
+.ellereverse {
+  text-align:center;
+  width:100%;
+  padding:1px 0px;
+  border:0px;
+  border-bottom:3px solid #000;
+  border-top:1px solid #000;
+}
+  
+.elle {
+  width:100%;
+  padding:1px 0px;
+  border:0px;
+  border-top:3px solid #000;
+  border-bottom:1px solid #000;
+  background:none;
+}
   
   /* Schokolade */
   #main #show .body p:first-child {
