@@ -191,7 +191,7 @@ body {
     font-size:10pt;
     line-height:1.2em;
     color:#666;}
-  #main #show #infokasten .kakao, .preis, .gewicht, .zutaten, .wo {
+  #main #show #infokasten .kakao, .preis, .gewicht{
       padding-bottom:2px;
   } 
   #main #show #infokasten .naehrwert {
@@ -201,7 +201,7 @@ body {
       text-align:left;
       font-style:oblique;
       padding-left:4px;}   
-  #main #show #infokasten .zutaten {
+  #main #show #infokasten .zutaten, .wo, .anbaugebiet{
       font-style:oblique;
   }
   #main #show .body {

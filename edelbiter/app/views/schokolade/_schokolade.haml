@@ -30,13 +30,15 @@
       = 'Zutaten:'
       %br
       .zutaten= @post.zutaten 
-    %table
-      %tr
-        %td.wo= 'Erh&auml;ltlich: '
-        %td.wert=  @post.woher
-      %tr
-        %td.anbaugebiet= 'Anbaugebiet: '
-        %td.wert= @post.anbaugebiet
+    .group
+      = 'Erh&auml;ltlich: '
+      %br
+      .wo=  @post.woher
+
+    .group
+      = 'Anbaugebiet: '
+      %br
+      .anbaugebiet= @post.anbaugebiet
 
   .body{:lang => 'de'}= simple_format(@post.body)
 
