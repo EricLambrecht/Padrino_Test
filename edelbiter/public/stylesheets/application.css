@@ -190,12 +190,20 @@ body {
     border-left: 1px solid #DDD;
     font-size:10pt;
     line-height:1.2em;
-    font-style:oblique;
     color:#666;}
-  /*  #main #show #infokasten .kakao {
-      font-size: 12pt;
-      color:black;
-      padding-bottom:5px;} */
+  #main #show #infokasten .kakao, .preis, .gewicht, .zutaten, .wo {
+      padding-bottom:2px;
+  } 
+  #main #show #infokasten .naehrwert {
+      text-align:right;
+      font-style:oblique;}
+  #main #show #infokasten .wert {
+      text-align:left;
+      font-style:oblique;
+      padding-left:4px;}   
+  #main #show #infokasten .zutaten {
+      font-style:oblique;
+  }
   #main #show .body {
     clear:both;
     font-size: 14pt;

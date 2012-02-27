@@ -4,16 +4,39 @@
     %img{:src => "/pictures/"+@post.bild, :width => '100%', :height => '380px'}
   .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
   #infokasten
-    .kakao= 'Kakaogehalt: ' + @post.kakaogehalt.to_s + '%'
-    .preis= 'Preis: ' + sprintf("%.2f", @post.preis.to_s).sub(".",",") + ' EUR'
-    .inhalt= 'Packungsgewicht ' + sprintf("%.0f", @post.gewicht.to_s) + 'g'
-    .naehrwerte= 'N&auml;hrwerte (pro 100g): '
-    .kohy= 'Kohlenhydrate: ' + @post.kohlenhydrate.to_s + 'g'
-    .zucker= '...davon Zucker: ' + @post.zucker.to_s + 'g'
-    .fett= 'Fett: ' + @post.fett.to_s + 'g'
-    .zutaten= 'Zutaten: ' + @post.zutaten 
-    = @post.woher
-    .anbaugebiet= 'Anbaugebiet: '+@post.anbaugebiet
+    %table
+      %tr
+        %td.kakao= 'Kakaogehalt: '
+        %td.wert= @post.kakaogehalt.to_s + '%'
+      %tr
+        %td.preis= 'Preis: '
+        %td.wert= sprintf("%.2f", @post.preis.to_s).sub(".",",") + ' EUR'
+      %tr
+        %td.gewicht= 'Packungsgewicht '
+        %td.wert= sprintf("%.0f", @post.gewicht.to_s) + 'g'
+      %tr
+        %td.naehrwerte= 'N&auml;hrwerte (pro 100g): '
+      %tr
+        %td.naehrwert= 'Kohlenhydrate: ' 
+        %td.wert=sprintf("%.0f", @post.kohlenhydrate.to_s) + 'g'
+      %tr
+        %td.naehrwert= '...davon Zucker: '
+        %td.wert= sprintf("%.0f", @post.zucker.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'Fett: '
+        %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
+    
+    .group
+      = 'Zutaten:'
+      %br
+      .zutaten= @post.zutaten 
+    %table
+      %tr
+        %td.wo= 'Erh&auml;ltlich: '
+        %td.wert=  @post.woher
+      %tr
+        %td.anbaugebiet= 'Anbaugebiet: '
+        %td.wert= @post.anbaugebiet
 
   .body{:lang => 'de'}= simple_format(@post.body)
 
