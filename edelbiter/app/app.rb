@@ -72,9 +72,14 @@ class Edelbiter < Padrino::Application
     
     # Hier wird ausgewählt, welcher Beitrag auf der Startseite zu sehen ist.
     
-    if (Post.last(:oeffentlich => true).datum + 0) >= DateTime.now
+    if (Post.last(:oeffentlich => true).datum + 2) >= DateTime.now
+      @spotlight_name = "Aktueller Test:"
       @post = Post.last(:oeffentlich => true)
+    elsif (Blogpost.last(:oeffentlich => true).datum + 3) >= DateTime.now
+      @spotlight_name = "Aktueller Blogeintrag:"
+      @post = Blogpost.last(:oeffentlich => true)
     else
+      @spotlight_name = "Im Rampenlicht:"
       spotlights = Post.all(:spotlight => true)
       randomDateID = (DateTime.now.strftime('%d').to_i + (30 * (DateTime.now.strftime('%m').to_i-1))) % spotlights.size
       @post = spotlights[randomDateID]
@@ -99,7 +104,7 @@ class Edelbiter < Padrino::Application
     redirect 'http://www.edelbiter.tumblr.com/post/' + params[:url]
   end
   
-  get 'page/:url' do
+  get '/page/:url' do
     redirect 'http://www.edelbiter.tumblr.com/page/' + params[:url]
   end
   

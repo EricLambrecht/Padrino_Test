@@ -1,9 +1,13 @@
 
 - @title = "Startseite"
-.ueberschrift
-  Im Rampenlicht:
 
-#show= partial 'schokolade/schokolade'
+.ueberschrift
+  = @spotlight_name
+
+- if @post.class.name == 'Post'
+  #show= partial 'schokolade/schokolade'
+- if @post.class.name == 'Blogpost'
+  .post= partial 'schokolade/blogpost'
   
 #social_media
   =javascript_include_tag('twitterFolgen.js')
