@@ -21,20 +21,20 @@
       - if @auswahl.sortierung == 0
         Alphabetisch
       - if @auswahl.reihenfolge == 0 && @auswahl.sortierung != 0
-        Absinkend
+        %i.icon-arrow-down
         = link_to 'Umkehren', url_for(:archive, :sort, :reihenfolge => 1, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.reihenfolge == 1 && @auswahl.sortierung != 0
-        Aufsteigend
+        %i.icon-arrow-up
         = link_to 'Umkehren', url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       %br
       %br
       Ansicht:
       %br
       - if @auswahl.ansicht == 0
-        Vollst&auml;ndig
+        %i.icon-list
         = link_to 'Als Liste anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.ansicht == 1
-        Liste
+        %i.icon-align-justify
         = link_to 'Als vollst&auml;ndige Tests anzeigen', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
 Anzahl Ergebnisse: 
 = @anzahlErgebnisse
