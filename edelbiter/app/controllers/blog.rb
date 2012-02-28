@@ -32,7 +32,7 @@ Edelbiter.controllers :blog do
   
   get :index, :with => :seite do
     @seite = params[:seite].to_i
-    @blogposts = Blogpost.all(:order => :datum.desc)
+    @blogposts = Blogpost.all(:oeffentlich => true, :order => :datum.desc)
     # PostsJeSeite muss identisch mit PostsJeSeite im vorherigen Controller sein!
     @postsJeSeite = 4
     @anzahlErgebnisse = @blogposts.size
