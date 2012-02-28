@@ -85,6 +85,8 @@ class Edelbiter < Padrino::Application
       @post = spotlights[randomDateID]
     end
     
+    # Posts und Seiten-Mechanik
+    
     @posts = Post.all(:order => :kurztitel.asc)
     
     # Twitter

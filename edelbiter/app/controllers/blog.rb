@@ -19,10 +19,29 @@ Edelbiter.controllers :blog do
   # end
 
   get :index do
-    @blogposts = Blogpost.all(:order => :datum.desc)
+    @blogposts = Blogpost.all(:oeffentlich => true, :order => :datum.desc)
+    # PostsJeSeite muss identisch mit PostsJeSeite im nächsten Controller sein!
+    @seite = 1
+    @postsJeSeite = 4
+    @anzahlErgebnisse = @blogposts.size
+    @anzahlSeiten = sprintf("%.0f", (@anzahlErgebnisse / @postsJeSeite) + 0.5).to_i
+    postsAufSeite = @blogposts.all(:limit => @postsJeSeite)
+    @blogposts = postsAufSeite.all
     render 'blog/index'
   end
-
+  
+  get :index, :with => :seite do
+    @seite = params[:seite].to_i
+    @blogposts = Blogpost.all(:order => :datum.desc)
+    # PostsJeSeite muss identisch mit PostsJeSeite im vorherigen Controller sein!
+    @postsJeSeite = 4
+    @anzahlErgebnisse = @blogposts.size
+    @anzahlSeiten = sprintf("%.0f", (@anzahlErgebnisse / @postsJeSeite) + 0.5).to_i
+    postsAufSeite = @blogposts.all(:limit => (@postsJeSeite * @seite)) - @blogposts.all(:limit => (@postsJeSeite * (@seite-1)))
+    @blogposts = postsAufSeite.all
+    render 'blog/index'
+  end
+  
   get :show, :with => :id do
     @blogpost = Blogpost.get(params[:id])
     render 'blog/show'
