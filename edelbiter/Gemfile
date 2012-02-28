@@ -37,6 +37,7 @@ end
 
 # Other requirements
 gem 'twitter'
+gem 'sinatra-simple-navigation', :require => 'sinatra/simple-navigation'
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'

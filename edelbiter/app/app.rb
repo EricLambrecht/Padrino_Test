@@ -2,6 +2,7 @@ class Edelbiter < Padrino::Application
   register Padrino::Rendering
   register Padrino::Mailer
   register Padrino::Helpers
+  register Sinatra::SimpleNavigation
 
   enable :sessions
 
