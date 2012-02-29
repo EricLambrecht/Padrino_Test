@@ -87,6 +87,7 @@ body {
     padding: 0; }
   #top_navigation ul li a {
     font-size: 11pt;
+    font-weight: lighter;
     width:150px;
     padding-left:1px;
     padding-bottom:1px;
@@ -100,30 +101,6 @@ body {
     border-bottom:3px solid #C58380;}
   #top_navigation ul li a.selected {
     border-bottom:3px solid #C58380;}
-  
-/*  #header .menu {
-    width:110%;
-    margin:auto;
-    z-index: -1;
-  }
-  #header .menu td .link{
-    font-size: 11pt;
-    width:150px;
-    padding-left:1px;
-    padding-bottom:1px;
-    border-bottom:3px solid #000000;
-  }
-  #header .menu td {
-    width: 25%; 
-  }  
-  #header .menu td .link:hover{
-    border-bottom:3px solid #C58380;
-  }
-  #header .menu td a {
-    text-decoration:none;
-    display: block;
-  }
-*/
 
 #main {
   text-align:left;
@@ -170,16 +147,17 @@ body {
  #main #show .bild {
     margin-bottom:20px;
     position:relative;
+    text-align: center;
  }
  #main #show .bild span {
    position:absolute;
    display: block;
    width: 101%;
    height: 100%;
-   top: -1px;
-   left: -1px;
+   top: -2px;
+   left: 40px;
    background: url("/pictures/rahmen.png") no-repeat;
-   background-size: 100%;
+   background-size: 88%;
  }
   #main #show .titel {
     /* min-height:210px; */
@@ -196,8 +174,9 @@ body {
         color: grey;
         padding:0px; }
   #main #show #infokasten {
+    font-style:oblique;
     float:right;
-    width:200px;
+    width: 180;
     /* min-height: 200px; */
     padding: 0px 10px;
     margin-bottom: 10px;
@@ -205,19 +184,18 @@ body {
     font-size:10pt;
     line-height:1.2em;
     color:#666;}
-  #main #show #infokasten .kakao, .preis, .gewicht{
-      padding-bottom:2px;
-  } 
-  #main #show #infokasten .naehrwert {
-      text-align:right;
-      font-style:oblique;}
-  #main #show #infokasten .wert {
-      text-align:left;
-      font-style:oblique;
-      padding-left:4px;}   
-  #main #show #infokasten .zutaten, .wo, .anbaugebiet{
-      font-style:oblique;
+  #main #show #infokasten table{
+    width: 180px;
   }
+  #main #show #infokasten .naehrwert {
+      text-align:left;}
+  #main #show #infokasten .wert {
+      text-align:right;
+      padding-left:4px;}
+  #main #show #infokasten .zutaten {
+      width: 180px;
+      margin-bottom: 4px}
+
   #main #show .body {
     clear:both;
     font-size: 14pt;
