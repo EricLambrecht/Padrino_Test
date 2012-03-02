@@ -3,38 +3,32 @@
 %table
   %tr
     %td
-      Sortierung:
-      %br
-      =f.select :sortierung, :options => [['nach Datum des Tests', 4], ['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3]], :onchange => 'this.form.submit()'
-      %br
-      %br
       Kategorie:
-      %br
       =f.select :kategorie, :grouped_options => {'' => [['Alle',0]], 'Kakaogehalt' => [['Unter 70%',1],['70% bis 80%',2],['&Uuml;ber 80%',3]],'Wertung' => [['0 bis 3 Punkte',4],['4 bis 6 Punkte',5],['7 bis 12 Punkte',6]], 'Preis' => [['Unter 2 EUR',7],['2 bis 4 EUR',8],['&Uuml;ber 4 EUR',9]], 'Anderes' => [['Gutes Design',10],['Schlechtes Design',11],['Bemerkenswert',12]]}, :onchange => 'this.form.submit()'
-      %br
+      &nbsp;&nbsp;&nbsp;&nbsp;Sortierung:
+      =f.select :sortierung, :options => [['nach Datum des Tests', 4], ['nach Hersteller', 0], ['nach Preis', 1], ['nach Wertung', 2], ['nach Kakaogehalt', 3]], :onchange => 'this.form.submit()'
       %noscript
         =f.submit
-      %br
+  %tr
     %td
+      &nbsp;
+  %tr
+    %td.nolinkundderline
       Reihenfolge:
-      %br
       - if @auswahl.sortierung == 0
         Alphabetisch
       - if @auswahl.reihenfolge == 0 && @auswahl.sortierung != 0
         %i.icon-arrow-down
-        = link_to ' Umkehren', url_for(:archive, :sort, :reihenfolge => 1, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+          = link_to '&nbsp;&nbsp;&nbsp;', url_for(:archive, :sort, :reihenfolge => 1, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.reihenfolge == 1 && @auswahl.sortierung != 0
         %i.icon-arrow-up
-        = link_to ' Umkehren', url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
-      %br
-      %br
-      Ansicht:
-      %br
+          = link_to '&nbsp;&nbsp;&nbsp;', url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+      &nbsp;&nbsp;&nbsp;&nbsp;Ansicht:
       - if @auswahl.ansicht == 0
         %i.icon-list
-        = link_to ' Liste', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+          = link_to '&nbsp;&nbsp;&nbsp;', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.ansicht == 1
         %i.icon-align-justify
-        = link_to ' Komplett', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
+          = link_to '&nbsp;&nbsp;&nbsp;', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
 Anzahl Ergebnisse: 
 = @anzahlErgebnisse

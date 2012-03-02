@@ -414,7 +414,10 @@ body {
 #suche td {
   text-align: center;
   font-size: 13pt;
-  width:340px;
+  width: 75%;
+}
+#suche .nolinkundderline a{
+  text-decoration: none;
 }
 
 #body table {
@@ -459,7 +462,12 @@ body {
       }
 
 
+
+
 /* Iconset (bootstrap)  */
+
+
+
 
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
