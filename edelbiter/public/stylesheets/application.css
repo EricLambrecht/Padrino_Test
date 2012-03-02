@@ -45,6 +45,14 @@ body {
   #header #homelink a{
      text-decoration:none;
      padding:0px;
+     display: block;
+     width: 750px;
+     height: 149px;
+     background: url("/pictures/soraya.png") no-repeat;
+     background-size: 100%;
+ }
+ #header .titelbild span{
+
  }
   #header #homelink a:hover{
      color: #C58380;
