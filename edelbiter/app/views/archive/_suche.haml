@@ -1,5 +1,6 @@
 =f.hidden_field(:ansicht, :value => @auswahl.ansicht)
 =f.hidden_field(:reihenfolge, :value => @auswahl.reihenfolge)
+%br
 %table
   %tr
     %td
@@ -30,5 +31,12 @@
       - if @auswahl.ansicht == 1
         %i.icon-align-justify
           = link_to '&nbsp;&nbsp;&nbsp;', url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
-Anzahl Ergebnisse: 
-= @anzahlErgebnisse
+%br
+- if @anzahlErgebnisse < 1
+  Kein Ergebnis
+- elsif @anzahlErgebnisse == 1
+  = @anzahlErgebnisse 
+  Ergebnis 
+- else
+  = @anzahlErgebnisse
+  Ergebnisse
