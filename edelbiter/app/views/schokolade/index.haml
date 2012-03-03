@@ -38,10 +38,12 @@
     %table 
       %thead
         %tr
-          %th#sortable Kurztitel
-          %th Wertung
-          %th Preis
+          %th.sortable-text Kurztitel
+          %th.sortable-numeric Wertung
+          %th.sortable-numeric Preis
       %tbody
         %tr= partial 'schokolade/postliste', :collection => @posts
 
   =javascript_include_tag('application.js')
+  =javascript_include_tag('tablesort.js')
+
