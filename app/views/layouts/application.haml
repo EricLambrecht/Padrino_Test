@@ -1,0 +1,35 @@
+
+!!! Strict
+%html
+  %head
+    %title= [@title, "Edelbiter Test"].compact.join(" | ")
+    = stylesheet_link_tag 'reset', 'application'
+    = javascript_include_tag 'jquery'
+    = yield_content :include
+  %body
+    #container
+      #header
+        #top_navigation= render_navigation
+        / %table.menu
+        /           %tr
+        /             %td
+        /               .link= link_to 'BLOG', url_for(:blog, :index)
+        /             %td
+        /               .link= link_to 'SCHOKOLADEN', url_for(:archive, :index)
+        /             %td
+        /               .link= link_to '&Uuml;BER UNS', url_for(:about, :index)
+        /             %td
+        /               .link= link_to 'VORSCHLAG', url_for(:suggest, :index)
+        .titelbild
+          %span
+        %h1#homelink= link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
+        %h2#lautschrift [edelbaiter]
+        %h2#subtitle Wir essen Schokolade.
+      %hr.elle
+
+      #main= yield
+      %hr.ellereverse
+
+      #footer
+        %p Copyright (c) 2011-2012 Edelbiter 
+        %p= link_to 'admin', url_for('/admin')

@@ -1,0 +1,50 @@
+.post
+  .bild
+    %span
+    %img{:src => "/pictures/"+schokolade.bild, :width => '650px', :height => '330px'}
+  .titel= link_to schokolade.titel.upcase, url_for(:archive, :show, :id => schokolade.id)
+  #infokasten
+    .zutaten
+      = schokolade.woher
+    %table
+      %tr
+        %td.kakao= 'Kakaogehalt: '
+        %td.wert= schokolade.kakaogehalt.to_s + '%'
+      %tr
+        %td.preis= 'Preis: '
+        %td.wert= sprintf("%.2f", schokolade.preis.to_s).sub(".",",") + '&euro;'
+      %tr
+        %td.gewicht= 'Packungsgewicht: '
+        %td.wert= sprintf("%.0f", schokolade.gewicht.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'Kohlenhydrate: ' 
+        %td.wert=sprintf("%.0f", schokolade.kohlenhydrate.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'davon Zucker: '
+        %td.wert= sprintf("%.0f", schokolade.zucker.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'Fett: '
+        %td.wert= sprintf("%.0f", schokolade.fett.to_s) + 'g'
+    %table
+      %tr
+        %td.kakao= 'Zutaten:'
+        %td.wert= schokolade.zutaten 
+    
+
+  .body{:lang => 'de'}= simple_format(schokolade.body)
+
+  .wertung
+    -if schokolade.wertung < 3
+      = 'Wertung: Sehr schlecht '
+    -elsif schokolade.wertung < 5
+      = 'Wertung: Schlecht'
+    -elsif schokolade.wertung < 7
+      = 'Wertung: Befriedigend'
+    -elsif schokolade.wertung < 10
+      = 'Wertung: Gut'
+    -else
+      = 'Wertung: Sehr Gut'
+    %span#zahl= drittel(schokolade.wertung)
+    = ' Punkte'
+    
+%hr.elle
