@@ -11,9 +11,8 @@
   
 #social_media
   =javascript_include_tag('twitterFolgen.js')
-  = link_to image_tag('/pictures/twitter.png'), url_for('http://www.twitter.com/edelbiter')
+  = link_to image_tag('/pictures/twitter.png'), url_for('http://www.twitter.com/edelbiter'), target: '_blank'
   %a.twitter-follow-button{"data-lang" => "de", "data-show-count" => "false", "data-show-screen-name" => "false", :href => "https://twitter.com/edelbiter"} @edelbiter folgen
-  = link_to '@edelbiter', url_for('http://www.twitter.com/edelbiter')
   = link_to image_tag('/pictures/facebook.png'), url_for('http://www.facebook.com/edelbiter'), :id => "fb_img"
   
   %table  
