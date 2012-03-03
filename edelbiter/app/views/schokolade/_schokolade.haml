@@ -34,7 +34,16 @@
   .body{:lang => 'de'}= simple_format(@post.body)
 
   .wertung
-    = 'Wertung: Sehr schlecht '
+    -if @post.wertung < 3
+      = 'Wertung: Sehr schlecht '
+    -elsif @post.wertung < 5
+      = 'Wertung: Schlecht'
+    -elsif @post.wertung < 7
+      = 'Wertung: Befriedigend'
+    -elsif @post.wertung < 10
+      = 'Wertung: Gut'
+    -else
+      = 'Wertung: Sehr Gut'
     %span#zahl= drittel(@post.wertung)
     = ' Punkte'
     
