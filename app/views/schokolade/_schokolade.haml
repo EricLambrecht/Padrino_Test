@@ -1,0 +1,50 @@
+.post
+  .bild
+    %span
+    %img{:src => "/pictures/"+@post.bild, :width => '650px', :height => '330px'}
+  .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
+  #infokasten
+    .zutaten
+      = @post.woher
+    %table
+      %tr
+        %td.kakao= 'Kakaogehalt: '
+        %td.wert= @post.kakaogehalt.to_s + '%'
+      %tr
+        %td.preis= 'Preis: '
+        %td.wert= sprintf("%.2f", @post.preis.to_s).sub(".",",") + '&euro;'
+      %tr
+        %td.gewicht= 'Packungsgewicht: '
+        %td.wert= sprintf("%.0f", @post.gewicht.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'Kohlenhydrate: ' 
+        %td.wert=sprintf("%.0f", @post.kohlenhydrate.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'davon Zucker: '
+        %td.wert= sprintf("%.0f", @post.zucker.to_s) + 'g'
+      %tr
+        %td.naehrwert= 'Fett: '
+        %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
+    %table
+      %tr
+        %td.kakao= 'Zutaten:'
+        %td.wert= @post.zutaten 
+    
+
+  .body{:lang => 'de'}= simple_format(@post.body)
+
+  .wertung
+    -if @post.wertung < 3
+      = 'Wertung: Sehr schlecht '
+    -elsif @post.wertung < 5
+      = 'Wertung: Schlecht'
+    -elsif @post.wertung < 7
+      = 'Wertung: Befriedigend'
+    -elsif @post.wertung < 10
+      = 'Wertung: Gut'
+    -else
+      = 'Wertung: Sehr Gut'
+    %span#zahl= drittel(@post.wertung)
+    = ' Punkte'
+    
+%hr.elle
