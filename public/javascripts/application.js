@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 		//if there is text, lets filter
 		else {
-      filter('tbody tr', $(this).val());
+      filter('#postliste tbody tr', $(this).val());
     }
 	});
 	
