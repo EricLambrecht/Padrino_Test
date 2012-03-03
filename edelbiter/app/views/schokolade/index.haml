@@ -13,7 +13,7 @@
   =javascript_include_tag('twitterFolgen.js')
   = link_to image_tag('/pictures/twitter.png'), url_for('http://www.twitter.com/edelbiter'), target: '_blank'
   %a.twitter-follow-button{"data-lang" => "de", "data-show-count" => "false", "data-show-screen-name" => "false", :href => "https://twitter.com/edelbiter"} @edelbiter folgen
-  = link_to image_tag('/pictures/facebook.png'), url_for('http://www.facebook.com/edelbiter'), :id => "fb_img"
+  = link_to image_tag('/pictures/facebook.png'), url_for('http://www.facebook.com/edelbiter'), :id => "fb_img", target: '_blank'
   
   %table  
     %tr 
@@ -38,7 +38,7 @@
     %table 
       %thead
         %tr
-          %th Kurztitel
+          %th#sortable Kurztitel
           %th Wertung
           %th Preis
       %tbody
