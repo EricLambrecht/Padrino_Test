@@ -2,7 +2,7 @@
 
 Edelbiter.helpers do
   
-  # Erkennt links in einem String
+  # Erkennt links in einem String  // Oeffnet Jetzt links in einem neuen Fenster, falls das irgendwo nicht erwuenscht sein sollte, muss ein neuer helper erstellt werden...
   
   def linkify( text )
     
@@ -33,5 +33,20 @@ Edelbiter.helpers do
       return sprintf("%.1f",wertung.to_s).sub(".",",")
     end
   end
-  
+
+  # Die Wertung kann in Worten Dargestellt werden...
+
+  def wertungWorte (wertung)
+    if wertung < 3
+      return 'Wertung: Sehr schlecht '
+    elsif wertung < 5
+      return 'Wertung: Schlecht'
+    elsif wertung < 7
+      return 'Wertung: Befriedigend'
+    elsif wertung < 10
+      return 'Wertung: Gut'
+    else
+      return 'Wertung: Sehr Gut'
+    end
+  end
 end
