@@ -4,5 +4,7 @@
 -if postliste.oeffentlich
   %tr
     %td#kurztitel= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
+    %td= postliste.datum
     %td= drittel(postliste.wertung)
+    %td= postliste.kakaogehalt
     %td= sprintf("%.2f", postliste.preis.to_s).sub(".",",") + ' EUR'

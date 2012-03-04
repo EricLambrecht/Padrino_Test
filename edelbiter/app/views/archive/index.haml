@@ -1,5 +1,6 @@
 
 - @title = "Schokoladen"
+=javascript_include_tag('tablesort.js')
 
 .ueberschrift
   Suchen, finden & genie&szlig;en:
@@ -11,14 +12,18 @@
   #body
     #postliste
       %table
+        %caption
+          = 'Gefundene Eintr&auml;ge: ' 
+          =@anzahlErgebnisse
         %thead
           %tr
             %th.sortable-text Kurztitel
+            %th.sortable-numeric Datum
             %th.sortable-numeric Wertung
+            %th.sortable-numeric Kakaogehalt
             %th.sortable-numeric Preis
         %tbody
-          %tr= partial 'schokolade/postliste', :collection => @posts
-  =javascript_include_tag('tablesort.js')
+          %tr= partial 'archive/postliste', :collection => @posts
 - if @auswahl.ansicht == 0
   #main
     #show= partial 'archive/schokolade', :collection => @posts

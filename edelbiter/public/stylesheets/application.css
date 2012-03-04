@@ -429,7 +429,7 @@ body {
         padding: 0 0 5px 0;
         margin:0 auto;
         width:auto;
-        font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font:  13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
         text-align: right;
         }
 #postliste th
@@ -556,6 +556,7 @@ th.sort-active a
 
 
 
+
 #search {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -592,6 +593,10 @@ th.sort-active a
   text-align: center;
   font-size: 13pt;
   width: 75%;
+}
+
+#suche .alignright{
+  text-align: right;
 }
 
 #body table {

@@ -28,11 +28,12 @@
       - if @auswahl.ansicht == 1
         = link_to image_tag("/img/glyphicons_113_justify.png", border: 0), url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
 %br
-- if @anzahlErgebnisse < 1
-  Kein Ergebnis
-- elsif @anzahlErgebnisse == 1
-  = @anzahlErgebnisse 
-  Ergebnis 
-- else
-  = @anzahlErgebnisse
-  Ergebnisse
+.alignright
+  - if @auswahl.ansicht == 0 
+    - if @anzahlErgebnisse < 1
+      Keine Eintr&auml;ge gefunden
+    - elsif @anzahlErgebnisse == 1
+      Ein Eintrag Gefunden
+    - else
+      = @anzahlErgebnisse
+      Eintr&auml;ge gefunden
