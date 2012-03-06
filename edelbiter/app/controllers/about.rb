@@ -19,6 +19,7 @@ Edelbiter.controllers :about do
   # end
 
   get :index do
+    @abouts = About.all(:oeffentlich => true)
     render 'about/index'
   end
   

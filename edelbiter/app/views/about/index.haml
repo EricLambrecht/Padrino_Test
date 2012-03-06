@@ -1,8 +1,12 @@
 
 - @title = "About Us"
 
-.About
-	%p Ueber uns:
-	%p BLA BLA BLA
-	%p FOTO FOTO FOTO
+- @abouts.each do |about|
+  .About
+    %img{:src => "/pictures/"+about.pic, :width => '650px', :height => '330px'}
+    %br
+    %p= about.title
+    %br
+    %br
+    %p=about.body 
 
