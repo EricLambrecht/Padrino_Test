@@ -5,4 +5,4 @@
   %tr
     %td#kurztitel= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
     %td= drittel(postliste.wertung)
-    %td= sprintf("%.2f", postliste.preis.to_s).sub(".",",") + ' EUR'
+    %td= sprintf("%.2f", postliste.preis.to_s).sub(".",",") + ' &euro;'
