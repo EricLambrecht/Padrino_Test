@@ -322,6 +322,21 @@ body {
   padding-bottom: 6px; }
 #about p {
   padding-bottom: 12px; }
+
+#about .titel {
+  /* min-height:210px; */
+  width:430px;
+  font-family: Bodoni MT, Georgia,Times New Roman, serif;
+  font-size: 24pt;
+  text-align: left;
+  font-weight:bold;
+}
+#about .titel a{
+       text-decoration:none;
+       padding:0px; }
+#about a:hover{
+      color: grey;
+      padding:0px; }
   
 /* Vorschlag css */  
 

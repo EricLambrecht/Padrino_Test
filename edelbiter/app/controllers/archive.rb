@@ -78,7 +78,6 @@ Edelbiter.controllers :archive do
         schokoladenAufSeite = @posts.all(:limit => (@postsJeSeite * @auswahl.seite)) - @posts.all(:limit => (@postsJeSeite * (@auswahl.seite-1)))
         @posts = schokoladenAufSeite.all
     end
-        
     render 'archive/index'
   end
   

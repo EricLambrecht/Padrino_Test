@@ -1,0 +1,41 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:additionals, :index)
+      %li=link_to pat(:new), url(:additionals, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:additionals)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:additional, :id)
+          %th=mat(:additional, :impname)
+          %th=mat(:additional, :impstr)
+          %th=mat(:additional, :impstadt)
+          %th=mat(:additional, :impland)
+          %th=mat(:additional, :copyright)
+          %th=mat(:additional, :logopic)
+          %th=mat(:additional, :logountertitel)
+          %th=mat(:additional, :vorschlag)
+          %th.last="&nbsp;"
+        -@additionals.each do |additional|
+          %tr
+            %td.first=additional.id
+            %td=additional.impname
+            %td=additional.impstr
+            %td=additional.impstadt
+            %td=additional.impland
+            %td=additional.copyright
+            %td=additional.logopic
+            %td=additional.logountertitel
+            %td=additional.vorschlag
+            %td.last
+              =button_to pat(:edit), url(:additionals, :edit, :id => additional.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:additionals, :destroy, :id => additional.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

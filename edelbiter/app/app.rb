@@ -6,6 +6,8 @@ class Edelbiter < Padrino::Application
 
   enable :sessions
 
+  $additional = Additional.last(:id => '1')
+
   ##
   # Caching support
   #

@@ -36,5 +36,6 @@ class Admin < Padrino::Application
     role.project_module :blogposts, "/blogposts"
     role.project_module :accounts, "/accounts"
     role.project_module :abouts, "/abouts"
+    role.project_module :additionals, "/additionals"
   end
 end
