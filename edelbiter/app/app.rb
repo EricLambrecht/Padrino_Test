@@ -6,7 +6,13 @@ class Edelbiter < Padrino::Application
 
   enable :sessions
 
-  $additional = Additional.last(:id => '1')
+  $additional = Additional.all
+  if !$additional
+    $additional = nil
+  end
+  $additional = $additional[0]
+ 
+
 
   ##
   # Caching support
@@ -93,7 +99,8 @@ class Edelbiter < Padrino::Application
     
     @tweets = Twitter.user_timeline("edelbiter", :count => 3)
     render 'schokolade/index'
-    
+      
+
   end
   
   # Ab hier werden falsche Seitenaufrufe abgefangen

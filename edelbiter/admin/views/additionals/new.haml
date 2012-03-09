@@ -8,7 +8,11 @@
       =pat(:new)
       =mt(:additional)
     .inner
-      -form_for :additional, url(:additionals, :create), :class => :form do |f|
-        =partial "additionals/form", :locals => { :f => f }
+      -if $additional == nil
+        -form_for :additional, url(:additionals, :create), :class => :form do |f|
+          =partial "additionals/form", :locals => { :f => f }
+      -else
+        %p Es ist schon ein Eintrag vorhanden
+
 
 -content_for :sidebar, partial("base/sidebar")
