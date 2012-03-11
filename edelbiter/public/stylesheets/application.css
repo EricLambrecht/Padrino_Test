@@ -72,11 +72,10 @@ body {
     font-family:Bodoni MT, Didot, Georgia, serif;
     font-size: 20pt; }
   
-  #lautschrift {
-    display: inline;
-  }
+
   
   #subtitle {
+    display: inline;
     margin-left: 7px;
     display: inline;
     margin-bottom: 0px;
@@ -507,19 +506,7 @@ body {
         color:#000;
         text-decoration:none;
         }
-/*
-These styles should be added when very long tables are expected
-th.sort-active
-        {
-        background:#CAE8EA url(../media/bg_header_sorting.jpg) no-repeat 0 0;
-        cursor:wait;
-        }
-th.sort-active a
-        {
-        color:#a80000 !important;
-        cursor:wait;
-        }
-*/
+
 #postliste th a
         {
         text-decoration:none;

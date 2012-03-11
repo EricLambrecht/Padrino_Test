@@ -23,8 +23,7 @@
         .titelbild
           %span
         %h1#homelink= link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
-        %h2#lautschrift [edelbaiter]
-        %h2#subtitle Wir essen Schokolade.
+        %h2#subtitle= $additional.logountertitel
       %hr.elle
 
       #main= yield

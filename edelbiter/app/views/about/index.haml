@@ -3,13 +3,13 @@
 
 #about
   - @abouts.each do |about|
-    %img{:src => "/pictures/"+about.pic, :width => '650px', :height => '330px'}
+    -if about.pic != ''
+      %img{:src => "/pictures/"+about.pic}
     %br
     .titel= link_to about.title.upcase, url_for('')
     %br
     %p=about.body 
 
--# Hier koennte man sich noch eine Datenbank aufbauen, in die man generelle sachen die auf der Internetseite sind einfach abaender kann, also zum beispiel so sachen wie eben imperessum, titelbild, Copyright, vielleicht sogar das "schokolade", damit man aus dem admin bereich mit ziemlich wenig aufwand eine andere seite bauen kann, die zwar die gleiche seitenmechanik hat, aber in der es dann um andere sachen geht... aber das waere ne sache, mir zu viel aufwandt... da man auch die datenbanken irgendwie dynamisch erstellen koennen muesste... 
 #imperessum
   %br
   %b Imperessum:
@@ -17,5 +17,4 @@
   %p= $additional.impstr
   %p= $additional.impstadt
   %p= $additional.impland
-
 
