@@ -3,27 +3,17 @@
 %html
   %head
     %title= [@title, "Edelbiter Test"].compact.join(" | ")
-    = stylesheet_link_tag 'reset', 'application'
+    = stylesheet_link_tag 'reset', 'application', 'webfonts'
     = javascript_include_tag 'jquery'
     = yield_content :include
   %body
     #container
       #header
         #top_navigation= render_navigation
-        / %table.menu
-        /           %tr
-        /             %td
-        /               .link= link_to 'BLOG', url_for(:blog, :index)
-        /             %td
-        /               .link= link_to 'SCHOKOLADEN', url_for(:archive, :index)
-        /             %td
-        /               .link= link_to '&Uuml;BER UNS', url_for(:about, :index)
-        /             %td
-        /               .link= link_to 'VORSCHLAG', url_for(:suggest, :index)
         .titelbild
           %span
-        %h1#homelink= link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
-        %h2#subtitle= $additional.logountertitel
+        #homelink= link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
+        #subtitle= $additional.logountertitel
       %hr.elle
 
       #main= yield

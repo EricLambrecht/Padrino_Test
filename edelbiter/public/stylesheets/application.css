@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
   background-color: #F5F5F5; }
   body a {
@@ -38,7 +38,7 @@ body {
 #header {
   width: 100%;
   margin: auto;
-  padding: 30px 0px 20px 0px;
+  padding: 30px 0px 10px 0px;
   text-align:center;
   overflow: hidden; 
   }
@@ -64,25 +64,21 @@ body {
     font-size: 90pt;
     letter-spacing:0.01em;
     padding:0px;
-    margin-bottom: 5px;
-    /*letter-spacing:0.1em;*/
+    margin-bottom: 0px;
   }
-  #header h2 {
+  #header {
     color: #222;
-    font-family:Bodoni MT, Didot, Georgia, serif;
-    font-size: 20pt; }
-  
-
+    font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
+    font-size: 12pt;
+    letter-spacing: 1px;
+  }
   
   #subtitle {
-    display: inline;
-    margin-left: 7px;
-    display: inline;
-    margin-bottom: 0px;
-    letter-spacing: 1px;
+    text-align: center;
   }
     
   #top_navigation ul {
+    font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     width:110%;
     padding-bottom: 30px;
     margin:auto;
@@ -105,7 +101,9 @@ body {
     text-decoration: none;
     display: block;}
   #top_navigation ul li a:hover {
-    border-bottom:3px solid #C58380;}
+    border-bottom:3px solid #C58380;
+    padding-left:1px;
+    padding-bottom:2px;}
   #top_navigation ul li a.selected {
     border-bottom:3px solid #C58380;}
 
@@ -122,7 +120,7 @@ body {
       padding-bottom: 0px;
       }
     #main .post .kurztitel {
-      font-family: Bodoni MT, Georgia,Times New Roman, serif;
+      font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 20pt;
       color: #752A26; }
       #main .post .kurztitel a {
@@ -137,6 +135,7 @@ body {
       margin-bottom: 15px;
       margin-top: 2px; }
     #main .post .body {
+      font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
       padding-bottom: 10px; 
       line-height: 1.4em;
       -webkit-hyphens: auto;
@@ -169,7 +168,7 @@ body {
   #main #show .titel {
     /* min-height:210px; */
     width:430px;
-    font-family: Bodoni MT, Georgia,Times New Roman, serif;
+    font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24pt;
     text-align: left;
     font-weight:bold;
@@ -181,7 +180,7 @@ body {
         color: grey;
         padding:0px; }
   #main #show #infokasten {
-    font-style:oblique;
+    font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     float:right;
     width: 180;
     /* min-height: 200px; */
@@ -201,12 +200,12 @@ body {
       padding-left:4px;}
   #main #show #infokasten .zutaten {
       width: 180px;
-      margin-bottom: 4px}
+      margin-bottom: 0px}
 
   #main #show .body {
     clear:both;
     font-size: 14pt;
-    font-family: Bodoni MT, Georgia,Times New Roman, serif;
+    font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     letter-spacing:0px;
     text-align:justify;
     text-justify: newspaper;
@@ -259,8 +258,7 @@ body {
     text-align:center;
     margin-bottom: 20px;
     font-size: 16pt;
-    font-family: Bodoni MT, Georgia,Times New Roman, serif;
-    font-style:oblique;
+    font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   }
   #main #show .wertung #zahl {
     font-size: 28pt;
@@ -268,6 +266,7 @@ body {
       
 
 #social_media {
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   padding: 15px 15px 20px 20px;
   margin: 40px 0px;
   height: auto;
@@ -280,7 +279,6 @@ body {
     
 #social_media .tweets {
   text-align:justify;
-  font-style:oblique;
   padding-right:20px;
   width:27%;
   color:#444;
@@ -308,14 +306,16 @@ body {
   clear:both;
 }   
 
-/* Ueber Uns css */  
+/* Ueber Uns css
+   Wird #about überhaupt benutzt?
+*/  
     
 #about h2 {
-  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 2em;
   color: #752A26; }
 #about h3 {
-  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 1.5em;
   color: #752A26;
   padding-bottom: 6px; }
@@ -325,7 +325,7 @@ body {
 #about .titel {
   /* min-height:210px; */
   width:430px;
-  font-family: Bodoni MT, Georgia,Times New Roman, serif;
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 24pt;
   text-align: left;
   font-weight:bold;
@@ -344,20 +344,19 @@ body {
 }
   
 .ueberschrift {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2em;
   color: #000;  
   font-weight: bold;
-  letter-spacing:-1px;
   }
 #suggest h3 {
-  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 1.5em;
   color: #000;
   padding-bottom: 6px; }
 #suggest p {
   padding-bottom: 12px; 
-  font-family: "Bodoni MT, Didot, Georgia,Times New Roman,serif";
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 13pt;
 }
   
