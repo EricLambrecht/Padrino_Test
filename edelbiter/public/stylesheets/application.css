@@ -90,7 +90,6 @@ body {
     padding: 0; }
   #top_navigation ul li a {
     font-size: 11pt;
-    font-weight: lighter;
     width:150px;
     padding-left:1px;
     padding-bottom:2px;
@@ -171,7 +170,6 @@ body {
     font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24pt;
     text-align: left;
-    font-weight:bold;
     float:left; }
   #main #show .titel a{
          text-decoration:none;
@@ -210,7 +208,6 @@ body {
     text-align:justify;
     text-justify: newspaper;
     text-indent: 20px;
-    font-weight:lighter;
     color:#000;
     column-count:2;
     column-gap:1em;
@@ -273,7 +270,6 @@ body {
   width: 94.5%;
   }
   #sidebar p {
-    font-weight: bold;
     padding-top: 10px;
     padding-bottom: 12px; }
     
@@ -328,7 +324,6 @@ body {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   font-size: 24pt;
   text-align: left;
-  font-weight:bold;
 }
 #about .titel a{
        text-decoration:none;
@@ -347,7 +342,6 @@ body {
   font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2em;
   color: #000;  
-  font-weight: bold;
   }
 #suggest h3 {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
