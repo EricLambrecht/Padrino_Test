@@ -46,22 +46,31 @@ body {
      text-decoration:none;
      padding:0px;
      display: block;
-     width: 750px;
-     height: 149px;
-     background: url("/pictures/soraya.png") no-repeat;
-     background-size: 100%;
+     width: 700px;
+     height: 70px;
+     left: 200px;
+     top: 115px;
+     z-index: 5;
+     position: absolute;
  }
  #header .titelbild span{
-
+     position: absolute;
+     z-index: 1;
+     width: 1000px;
+     height: 200px;
+     top: 105px;
+     left: 26px;
+     background: url("/pictures/banner.png") no-repeat;
+     background-size: 100%;
  }
   #header #homelink a:hover{
-     color: #C58380;
+     color: #aa9870;
      padding:0px;
  }
   #header #homelink {
     color: #222;
     font-family:Bodoni MT, Didot,  Georgia, serif;
-    font-size: 90pt;
+    font-size: 60pt;
     letter-spacing:0.01em;
     padding:0px;
     margin-bottom: 0px;
@@ -75,9 +84,11 @@ body {
   
   #subtitle {
     text-align: center;
+    margin-top: 120px;
   }
-    
+  
   #top_navigation ul {
+  
     font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     width:110%;
     padding-bottom: 30px;
@@ -100,11 +111,12 @@ body {
     text-decoration: none;
     display: block;}
   #top_navigation ul li a:hover {
-    border-bottom:3px solid #C58380;
+    border-bottom:3px solid #aa9870;
+    color: black;
     padding-left:1px;
     padding-bottom:2px;}
   #top_navigation ul li a.selected {
-    border-bottom:3px solid #C58380;}
+    border-bottom:3px solid #aa9870;}
 
 #main {
   text-align:left;
@@ -121,15 +133,16 @@ body {
     #main .post .kurztitel {
       font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 20pt;
-      color: #752A26; }
+      color: #aa9870; }
       #main .post .kurztitel a {
-        color: #752A26;
+        color: #aa9870;
         text-decoration: none; }
         #main .post .kurztitel a:hover {
           text-decoration: underline; }
     #main .post .datum {
       font-size: 1.1em;
       color: #999999;
+      font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
       display: block;
       margin-bottom: 15px;
       margin-top: 2px; }
@@ -175,7 +188,7 @@ body {
          text-decoration:none;
          padding:0px; }
   #main #show a:hover{
-        color: grey;
+        color: #aa9870;
         padding:0px; }
   #main #show #infokasten {
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
@@ -329,7 +342,7 @@ body {
        text-decoration:none;
        padding:0px; }
 #about a:hover{
-      color: grey;
+      color: #aa9870;
       padding:0px; }
   
 /* Vorschlag css */  
