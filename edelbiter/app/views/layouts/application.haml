@@ -9,12 +9,12 @@
   %body
     #container
       #header
-        #top_navigation= render_navigation
+        / .titelbild
+        /   %span &nbsp;
         .titelbild
-          %span &nbsp;
-        #homelink= link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
+          = link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
         #subtitle= $additional.logountertitel
-      %hr.elle
+        #top_navigation= render_navigation
 
       #main= yield
       %hr.ellereverse

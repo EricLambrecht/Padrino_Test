@@ -38,9 +38,8 @@ body {
 #header {
   width: 100%;
   margin: auto;
-  padding: 30px 0px 10px 0px;
   text-align:center;
-  overflow: hidden; 
+  overflow: visible; 
   }
   #header #homelink a{
      text-decoration:none;
@@ -53,13 +52,16 @@ body {
      z-index: 5;
      position: absolute;
  }
- #header .titelbild span{
-     position: absolute;
+ #header .titelbild {
+     position: relative;
+     display: block;
      z-index: 1;
+     font-size: 70pt;
+     letter-spacing: 200px;
+     margin-bottom: -50px;
      width: 1000px;
      height: 200px;
-     top: 105px;
-     left: 26px;
+     left: -132px;
      background: url("/pictures/banner.png") no-repeat;
      background-size: 100%;
  }
@@ -84,7 +86,7 @@ body {
   
   #subtitle {
     text-align: center;
-    margin-top: 120px;
+    margin-bottom: 35px;
   }
   
   #top_navigation ul {
@@ -104,7 +106,7 @@ body {
     width:150px;
     padding-left:1px;
     padding-bottom:2px;
-    margin-right:52px;
+    margin-right:45px;
     text-align: left;
     float: left;
     border-bottom:3px solid #000000;
