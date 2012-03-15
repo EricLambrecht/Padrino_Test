@@ -59,20 +59,21 @@ body {
      font-size: 70pt;
      letter-spacing: 200px;
      margin-bottom: -50px;
-     width: 1000px;
+     width: 730px;
      height: 200px;
-     left: -132px;
-     background: url("/pictures/banner.png") no-repeat;
+     left: 0px;
+     top: -25px;
+     background: url("/pictures/slick.png") no-repeat;
      background-size: 100%;
  }
   #header #homelink a:hover{
-     color: #aa9870;
+     color: #b4a06d;
      padding:0px;
  }
   #header #homelink {
     color: #222;
     font-family:Bodoni MT, Didot,  Georgia, serif;
-    font-size: 60pt;
+    font-size: 50pt;
     letter-spacing:0.01em;
     padding:0px;
     margin-bottom: 0px;
@@ -93,7 +94,8 @@ body {
   
     font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     width:110%;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    margin-top: 10px;
     margin:auto;
     }
   #top_navigation ul li {
@@ -113,12 +115,12 @@ body {
     text-decoration: none;
     display: block;}
   #top_navigation ul li a:hover {
-    border-bottom:3px solid #aa9870;
+    border-bottom:3px solid #b4a06d;
     color: black;
     padding-left:1px;
     padding-bottom:2px;}
   #top_navigation ul li a.selected {
-    border-bottom:3px solid #aa9870;}
+    border-bottom:3px solid #b4a06d;}
 
 #main {
   text-align:left;
@@ -135,9 +137,9 @@ body {
     #main .post .kurztitel {
       font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 20pt;
-      color: #aa9870; }
+      color: #b4a06d; }
       #main .post .kurztitel a {
-        color: #aa9870;
+        color: #b4a06d;
         text-decoration: none; }
         #main .post .kurztitel a:hover {
           text-decoration: underline; }
@@ -190,7 +192,7 @@ body {
          text-decoration:none;
          padding:0px; }
   #main #show a:hover{
-        color: #aa9870;
+        color: #b4a06d;
         padding:0px; }
   #main #show #infokasten {
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
@@ -344,7 +346,7 @@ body {
        text-decoration:none;
        padding:0px; }
 #about a:hover{
-      color: #aa9870;
+      color: #b4a06d;
       padding:0px; }
   
 /* Vorschlag css */  

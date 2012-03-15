@@ -11,10 +11,10 @@
       #header
         / .titelbild
         /   %span &nbsp;
+        #top_navigation= render_navigation
         .titelbild
           = link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
         #subtitle= $additional.logountertitel
-        #top_navigation= render_navigation
 
       #main= yield
       %hr.ellereverse
