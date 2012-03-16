@@ -12,8 +12,9 @@
         / .titelbild
         /   %span &nbsp;
         #top_navigation= render_navigation
+        %a.titellink{:href => "/"}
         .titelbild
-          = link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
+          / = link_to '&nbsp;&nbsp;&nbsp;', url_for('/')
         #subtitle= $additional.logountertitel
 
       #main= yield

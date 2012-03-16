@@ -1,7 +1,9 @@
 body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
-  background-color: #F5F5F5; }
+  background-color: #F5F5F5;
+  background-image: url("/pictures/kachel.png");
+  }
   body a {
     color: #000; }
   body h2 {
@@ -41,7 +43,7 @@ body {
   text-align:center;
   overflow: visible; 
   }
-  #header #homelink a{
+/*  #header #homelink a{
      text-decoration:none;
      padding:0px;
      display: block;
@@ -51,6 +53,16 @@ body {
      top: 115px;
      z-index: 5;
      position: absolute;
+ }*/
+ #header .titellink {
+   position: relative;
+   z-index: 3;
+   display: block;
+   width: 600px;
+   height: 60px;
+   left: 60px;
+   top: -5px;
+   margin-bottom: -65px;
  }
  #header .titelbild {
      position: relative;
@@ -58,7 +70,7 @@ body {
      z-index: 1;
      font-size: 70pt;
      letter-spacing: 200px;
-     margin-bottom: -50px;
+     margin-bottom: -60px;
      width: 730px;
      height: 200px;
      left: 0px;
@@ -87,7 +99,7 @@ body {
   
   #subtitle {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 0px;
   }
   
   #top_navigation ul {
@@ -167,25 +179,43 @@ body {
         padding-right: 5px;
         border-right: 1px solid #CCCCCC; }
  #main #show .bild {
-    margin-bottom:20px;
-    position:relative;
-    text-align: center;
+    margin-bottom:5px;
+    float:left;
+    padding-right: 7px;
  }
- #main #show .bild span {
-   position:absolute;
-   display: block;
-   width: 101%;
-   height: 100%;
-   top: -2px;
-   left: 40px;
-   background: url("/pictures/rahmen.png") no-repeat;
-   background-size: 88%;
+ #main #show .bild .balken {
+   border-top: 48px solid black;
+   position: absolute;
+   width: 560px;
+   height: 18px;
+   filter:alpha(opacity=70); 
+   -moz-opacity:.70; 
+   opacity:.70;
  }
+ #main #show .bild .ueberschrift {
+   position: absolute;
+   font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-size: 2em;
+   color: #b4a06d;
+   margin: 10px;
+ }
+ /*#main #show .bild span {
+    position:absolute;
+    display: block;
+    width: 101%;
+    height: 100%;
+    top: -2px;
+    left: 40px;
+    background: url("/pictures/rahmen.png") no-repeat;
+    background-size: 88%;
+  } RAHMEN */
+  
   #main #show .titel {
-    /* min-height:210px; */
-    width:430px;
+    width:100%;
     font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24pt;
+    margin-bottom: 5px;
+    line-height:1.2em;
     text-align: left;
     float:left; }
   #main #show .titel a{
@@ -197,16 +227,19 @@ body {
   #main #show #infokasten {
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     float:right;
-    width: 180;
-    /* min-height: 200px; */
-    padding: 0px 10px;
+    width: 163px;
+    min-height: 330px;
+    border-left: 2px solid #b4a06d;
+    padding-left:8px;
     margin-bottom: 10px;
-    border-left: 1px solid #DDD;
     font-size:10pt;
-    line-height:1.2em;
-    color:#666;}
+    line-height:2.3em;
+    color:#b4a06d;}
   #main #show #infokasten table{
-    width: 180px;
+    width: 163px;
+  }
+  #main #show #infokasten td{
+    border-top: 1px solid #b4a06d;
   }
   #main #show #infokasten .naehrwert {
       text-align:left;}
@@ -214,12 +247,12 @@ body {
       text-align:right;
       padding-left:4px;}
   #main #show #infokasten .zutaten {
-      width: 180px;
-      margin-bottom: 0px}
+    width: 163px;
+    margin-top: -7px}
 
   #main #show .body {
     clear:both;
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     letter-spacing:0px;
     text-align:justify;
@@ -227,17 +260,18 @@ body {
     text-indent: 20px;
     color:#000;
     column-count:2;
-    column-gap:1em;
-    -moz-column-count:2;
-    -moz-column-gap:1em;
-    -webkit-column-count:2;
-    -webkit-column-gap:1em;}
-  #main #show .body p:first-child:first-letter {
+        column-gap:1em;
+        -moz-column-count:2;
+        -moz-column-gap:1em;
+        -webkit-column-count:2;
+        -webkit-column-gap:1em;
+    }
+/*  #main #show .body p:first-child:first-letter {
     font-size:2.7em;
     display:block;
     float:left;
     margin: 12px 5px 5px 0px;
-  }
+  }*/
   
  /*Trennlinien*/
  #main hr {
@@ -271,11 +305,11 @@ body {
   #main #show .wertung {
     text-align:center;
     margin-bottom: 20px;
-    font-size: 16pt;
+    font-size: 12pt;
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   }
   #main #show .wertung #zahl {
-    font-size: 28pt;
+    font-size: 12pt;
   }
       
 
