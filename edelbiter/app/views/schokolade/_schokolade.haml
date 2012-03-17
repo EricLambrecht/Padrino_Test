@@ -1,8 +1,10 @@
 .post
   .bild
-    %span
-    %img{:src => "/pictures/"+@post.bild, :width => '650px', :height => '330px'}
-  .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
+    / %span / RAHMEN
+    .balken
+    .ueberschrift
+      = @spotlight_name
+    %img{:src => "/pictures/"+@post.bild, :width => '560px', :height => '330px'}
   #infokasten
     .zutaten
       = @post.woher
@@ -29,13 +31,14 @@
       %tr
         %td.kakao= 'Zutaten:'
         %td.wert= @post.zutaten 
-    
+  .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
 
   .body{:lang => 'de'}= simple_format(@post.body)
 
   .wertung
-    =wertungWorte(@post.wertung)
+    Wertung:
     %span#zahl= drittel(@post.wertung)
-    = ' Punkte'
+    Punkte, 
+    =wertungWorte(@post.wertung)
     
 %hr.elle

@@ -38,15 +38,15 @@ Edelbiter.helpers do
 
   def wertungWorte (wertung)
     if wertung < 3
-      return 'Wertung: Sehr schlecht '
+      return 'Sehr schlecht '
     elsif wertung < 5
-      return 'Wertung: Schlecht'
+      return 'Schlecht'
     elsif wertung < 7
-      return 'Wertung: Befriedigend'
+      return 'Befriedigend'
     elsif wertung < 10
-      return 'Wertung: Gut'
+      return 'Gut'
     else
-      return 'Wertung: Sehr Gut'
+      return 'Sehr Gut'
     end
   end
 end
