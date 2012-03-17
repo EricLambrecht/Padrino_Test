@@ -30,7 +30,7 @@
     %table
       %tr
         %td.kakao= 'Zutaten:'
-        %td.wert= @post.zutaten 
+        %td.zutaten= @post.zutaten 
   .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
 
   .body{:lang => 'de'}= simple_format(@post.body)
