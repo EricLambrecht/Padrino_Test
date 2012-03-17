@@ -183,6 +183,7 @@ body {
     float:left;
     padding-right: 7px;
  }
+
  #main #show .bild .balken {
    border-top: 48px solid black;
    position: absolute;
@@ -191,6 +192,7 @@ body {
    filter:alpha(opacity=70); 
    -moz-opacity:.70; 
    opacity:.70;
+
  }
  #main #show .bild .ueberschrift {
    position: absolute;
