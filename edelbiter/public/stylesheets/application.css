@@ -183,17 +183,7 @@ body {
     float:left;
     padding-right: 7px;
  }
-<<<<<<< HEAD
- #main #show .bild span {
-   position:absolute;
-   display: block;
-   width: 101%;
-   height: 100%;
-   top: -2px;
-   left: 40px;
-   background: url("/pictures/rahmenRampe.png") no-repeat;
-   background-size: 88%;
-=======
+
  #main #show .bild .balken {
    border-top: 48px solid black;
    position: absolute;
@@ -202,7 +192,7 @@ body {
    filter:alpha(opacity=70); 
    -moz-opacity:.70; 
    opacity:.70;
->>>>>>> bc823d9ab7912ae7039beb00358940ccd20ef7c0
+
  }
  #main #show .bild .ueberschrift {
    position: absolute;
