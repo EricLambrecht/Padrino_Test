@@ -1,6 +1,8 @@
 =f.hidden_field(:ansicht, :value => @auswahl.ansicht)
 =f.hidden_field(:reihenfolge, :value => @auswahl.reihenfolge)
 %br
+%h2 &nbsp;&nbsp;Suchen, finden & genie&szlig;en:
+%br
 %table
   %tr
     %td
@@ -27,13 +29,11 @@
         = link_to image_tag("/img/glyphicons_114_list.png", border: 0), url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.ansicht == 1
         = link_to image_tag("/img/glyphicons_113_justify.png", border: 0), url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 0, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
-%br
 .alignright
-  - if @auswahl.ansicht == 0 
-    - if @anzahlErgebnisse < 1
-      Keine Eintr&auml;ge gefunden
-    - elsif @anzahlErgebnisse == 1
-      Ein Eintrag Gefunden
-    - else
-      = @anzahlErgebnisse
-      Eintr&auml;ge gefunden
+  - if @anzahlErgebnisse < 1
+    Keine Eintr&auml;ge gefunden
+  - elsif @anzahlErgebnisse == 1
+    Ein Eintrag Gefunden
+  - else
+    = @anzahlErgebnisse
+    Eintr&auml;ge gefunden

@@ -4,30 +4,26 @@
 %br
 %br
 .ueberschrift
-  Suchen, finden & genie&szlig;en:
 %br
--form_for @auswahl, url(:archive, :index) do |f|
-  #suche= partial 'archive/suche', :locals => { :f => f }
-%br
-- if @auswahl.ansicht == 1
-  #body
-    #postliste
-      %table
-        %caption
-          = 'Gefundene Eintr&auml;ge: ' 
-          =@anzahlErgebnisse
-        %thead
-          %tr
-            %th.sortable-text Titel
-            %th.sortable-date-dmy Datum
-            %th.sortable-numeric Wertung
-            %th.sortable-numeric Kakaogehalt
-            %th.sortable-numeric Preis
-        %tbody
-          %tr= partial 'archive/postliste', :collection => @posts
-- if @auswahl.ansicht == 0
-  #main
-    #show= partial 'archive/schokolade', :collection => @posts
+#hintergrund
+  -form_for @auswahl, url(:archive, :index) do |f|
+    #suche= partial 'archive/suche', :locals => { :f => f }
+  - if @auswahl.ansicht == 1
+    #body
+      #postliste
+        %table
+          %thead
+            %tr
+              %th.sortable-text Titel
+              %th.sortable-date-dmy Datum
+              %th.sortable-numeric Wertung
+              %th.sortable-numeric Kakaogehalt
+              %th.sortable-numeric Preis
+          %tbody
+            %tr= partial 'archive/postliste', :collection => @posts
+  - if @auswahl.ansicht == 0
+    #main
+      #show= partial 'archive/schokolade', :collection => @posts
   %br
   %br
 = partial 'archive/seitenzahl'

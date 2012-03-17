@@ -201,6 +201,9 @@ body {
    color: #b4a06d;
    margin: 10px;
  }
+ #hintergrund {
+   background-color: #f9f7f3;
+ }
  /*#main #show .bild span {
     position:absolute;
     display: block;
@@ -467,7 +470,6 @@ body {
         width: auto;
         padding: 0;
         margin: 0 auto 1.5em auto;
-        border-left: 1px solid #C1DAD7;
         border-collapse:collapse;
         }
 #postliste .cs1
@@ -484,33 +486,23 @@ body {
         {
         text-align:right;
         }
-#postliste caption
-        {
-        padding: 0 0 5px 0;
-        margin:0 auto;
-        width:auto;
-        font:  13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-        text-align: right;
-        }
 #postliste th
         {
-        font: bold 10px/22px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
         color: #4f6b72;
-        border-right: 1px solid #C1DAD7;
-        border-bottom: 1px solid #C1DAD7;
-        border-top: 1px solid #C1DAD7;
+        border: 1px solid;
         letter-spacing: 1px;
         text-transform: uppercase;
         text-align: left;
         padding: 8px 12px 4px 12px;
-        background: #CAE8EA url(../media/bg_header.jpg) no-repeat;
+        background: #b4a06d;
         vertical-align:middle;
         }
 #postliste td.total
         {
         border-top: 0;
         border-left: 0;
-        border-right: 1px solid #C1DAD7;
+        border: 1px solid;
         background: none;
         text-align:right;
         font-weight:bold;
@@ -535,16 +527,16 @@ body {
 
         {
         cursor:pointer;
-        background: #CAE8EA url() no-repeat;
+        background: #cfbc8b url() no-repeat;
         padding: 8px 12px 4px 16px;
         }
 #postliste th.forwardSort
         {
-        background:#CAE8EA url("../img/glyphicons_212_down_arrow") no-repeat 0 0;
+        background:#b4a06d no-repeat 0 0;
         }
 #postliste th.reverseSort
         {
-        background:#CAE8EA url("../img/glyphicons_212_up_arrow") no-repeat 0 0;
+        background:#b4a06d no-repeat 0 0;
         }
 #postliste table thead th.forwardSort a,
 #postliste table thead th.reverseSort a
@@ -562,7 +554,7 @@ body {
 #postliste td a
         {
         text-decoration:none;
-        color:#239;
+        color:#b4a06d;
         background:transparent;
         }
 #postliste td img
@@ -573,16 +565,15 @@ body {
 #postliste td a:hover
         {
         color:#a84444;
-        border-bottom:1px dotted #a80000;
+        border-bottom:1px solid #b4a06d;
         background:transparent;
         }
 #postliste td
         {
-        font: normal 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-        border-right: 1px solid #C1DAD7;
-        border-bottom: 1px solid #C1DAD7;
+        font: normal 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        border: 1px solid;
         padding: 6px 12px 6px 12px;
-        color: #4f6b72;
+        color: #b4a06d;
         }
 #postliste td.lft
         {
@@ -590,8 +581,7 @@ body {
         }
 #postliste tr.alt
         {
-        background: #F5FAFA;
-        color: #797268;
+        color: #b4a06d;
         }
 
 
@@ -629,9 +619,9 @@ body {
   -moz-border-radius: 3px;
   border-radius: 3px;
   display: block;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #b4a06d;
+  background:  -moz-linear-gradient(top, #b4a06d, #f9f7f3);
+  background:  -webkit-gradient(linear, left top, left bottom, from(#b4a06d), to(#f9f7f3));
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -646,6 +636,7 @@ body {
 #suche .alignright{
   text-align: right;
 }
+
 
 #body table {
     background-color: white;
