@@ -338,23 +338,42 @@ body {
   padding: 15px 15px 20px 20px;
   margin: 10px 0px;
   height: auto;
-  width: 94.5%;
+  width: 94%;
   }
-  #sidebar p {
-    padding-top: 10px;
-    padding-bottom: 12px; }
+
+#sidebar p {
+  padding-top: 10px;
+  padding-bottom: 12px; }
     
 #social_media .tweets {
   text-align:justify;
-  padding-right:20px;
-  width:27%;
-  color:#444;
+  margin-left: -18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b4a06d;
+  width:575px;
+  font-size: 12pt;
+  line-height: 1.4em;
+  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
+  letter-spacing:0px;
+  color:#000;
+  float:left;
 }
-
+#social_media .tweets .datum{
+  font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10pt;
+  margin-bottom: -3px;
+  color:#b4a06d;
+  margin-top: -9px;
+  float: right;
+  display: block;
+}
 #social_media #facebook{
+  vertical-align: middle;
   width:110px;
-  border-left:1px solid #EEE;
-  padding-left:20px;
+  border-left: 2px solid #b4a06d;
+  padding-left:6px;
+  padding-top: 10px;
   text-align: center;
   vertical-align: top;
 }
@@ -364,7 +383,7 @@ body {
 }
 
 #social_media table {
-  margin-top:10px;
+  margin-top:15px;
 }
 
 #posts  .post{
@@ -610,6 +629,8 @@ body {
         }
 
 #search {
+  font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12pt;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   display: none;
@@ -617,8 +638,9 @@ body {
   margin-bottom:20px;
 }
 #search input{
-  width: 80%;
+  width: 200px;
   padding: 5px;
+  margin-left: 5px;
   border: 1px solid #CCC;
 }
 #body {

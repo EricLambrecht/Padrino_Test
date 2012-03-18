@@ -97,7 +97,7 @@ class Edelbiter < Padrino::Application
     
     # Twitter
     
-    @tweets = Twitter.user_timeline("edelbiter", :count => 3)
+    @tweets = Twitter.user_timeline("edelbiter", :count => 4)
     render 'schokolade/index'
       
 

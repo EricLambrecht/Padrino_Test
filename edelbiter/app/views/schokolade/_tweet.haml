@@ -1,2 +1,3 @@
-%td.tweets
-  %p=  linkify( tweet.text ) + ' - (' + tweet.created_at.strftime('%d.%m.%Y') + ')'
+.tweets
+  %p=  linkify( tweet.text )
+  .datum=tweet.created_at.strftime('%d.%m.%Y')

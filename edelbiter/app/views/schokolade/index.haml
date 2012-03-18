@@ -20,7 +20,8 @@
     %tr 
       // 4 spaltig!
       // tweets (unterhalb) beinhalten schon <td>s!
-      = partial 'schokolade/tweet', :collection => @tweets
+      %td
+        = partial 'schokolade/tweet', :collection => @tweets
       %td#facebook
         =javascript_include_tag('facebook.js')
         .fb-like{"data-href" => "http://www.facebook.com/edelbiter", "data-layout" => "box_count", "data-send" => "true", "data-show-faces" => "true", "data-width" => "40"}
@@ -34,8 +35,8 @@
 %br
 %br
 #search
-  %label{:for => "filter"} Filter
-  %input#filter{:name => "filter", :type => "text", :value => ""}
+  %label{:for => "filter"} Suche
+  %input#filter{:name => "filter", :type => "text", :value => "", :placeholder => "z.B. Herstellername"}
 #body
   #postliste
     %table
