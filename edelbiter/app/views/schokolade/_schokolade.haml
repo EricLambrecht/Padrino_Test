@@ -33,12 +33,17 @@
         %td.zutaten= @post.zutaten 
   .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
 
-  .body{:lang => 'de'}= simple_format(@post.body)
+  .body{:lang => 'de'}
+    = simple_format(@post.body)
+    / Wertung:
+    / %span#zahl= drittel(@post.wertung)
+    / Punkte, 
+    / =wertungWorte(@post.wertung)
 
   .wertung
-    Wertung:
-    %span#zahl= drittel(@post.wertung)
-    Punkte, 
+    / Wertung:
+    %span#zahl= drittelworte(@post.wertung)
+    Punkte - 
     =wertungWorte(@post.wertung)
     
 %hr.elle

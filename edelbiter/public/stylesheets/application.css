@@ -179,7 +179,7 @@ body {
         padding-right: 5px;
         border-right: 1px solid #CCCCCC; }
  #main #show .bild {
-    margin-bottom:5px;
+    margin-bottom:12px;
     float:left;
     padding-right: 7px;
  }
@@ -216,8 +216,8 @@ body {
     width:100%;
     font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24pt;
-    margin-bottom: 5px;
-    line-height:1.2em;
+    margin-bottom: 8px;
+    line-height:1.3em;
     text-align: left;
     float:left; }
   #main #show .titel a{
@@ -235,10 +235,10 @@ body {
     padding-left:8px;
     margin-bottom: 10px;
     font-size:10pt;
-    line-height:2.3em;
     color:#b4a06d;}
   #main #show #infokasten table{
     width: 163px;
+    line-height:2.4em;
   }
   #main #show #infokasten td{
     border-top: 1px solid #b4a06d;
@@ -250,14 +250,17 @@ body {
       padding-left:4px;}
   #main #show #infokasten .zutaten {
     width: 163px;
-    leine-height:1.2em;
-    margin-top: -7px}
-  #main #show #infokasten td .zutaten {
-    leine-height:1.2em;
+    line-height:1.2em;
+    margin-top: -3px;
+    margin-bottom: 8px;
+    }
+  #main #show #infokasten table .zutaten {
+    text-align: right;
   }
 
   #main #show .body {
     clear:both;
+    margin-bottom: 8px;
     font-size: 12pt;
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     letter-spacing:0px;
@@ -312,7 +315,7 @@ body {
     text-align:center;
     margin-bottom: 20px;
     font-size: 12pt;
-    font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
+    font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   #main #show .wertung #zahl {
     font-size: 12pt;

@@ -1,8 +1,5 @@
 .post
   .bild
-    / %span / RAHMEN
-    .ueberschrift
-      = @spotlight_name
     %img{:src => "/pictures/"+schokolade.bild, :width => '560px', :height => '330px'}
   #infokasten
     .zutaten
@@ -29,15 +26,20 @@
     %table
       %tr
         %td.kakao= 'Zutaten:'
-        %td.wert= schokolade.zutaten 
+        %td.zutaten= schokolade.zutaten 
   .titel= link_to schokolade.titel.upcase, url_for(:archive, :show, :id => schokolade.id)
 
-  .body{:lang => 'de'}= simple_format(schokolade.body)
+  .body{:lang => 'de'}
+    = simple_format(schokolade.body)
+    / Wertung:
+    / %span#zahl= drittel(schokolade.wertung)
+    / Punkte, 
+    / =wertungWorte(schokolade.wertung)
 
   .wertung
-    Wertung:
-    %span#zahl= drittel(schokolade.wertung)
-    Punkte, 
+    / Wertung:
+    %span#zahl= drittelworte(schokolade.wertung)
+    Punkte - 
     =wertungWorte(schokolade.wertung)
     
 %hr.elle

@@ -33,20 +33,76 @@ Edelbiter.helpers do
       return sprintf("%.1f",wertung.to_s).sub(".",",")
     end
   end
+  
+  # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln
+  
+  def drittelworte( wertung )
+    if wertung < 1
+      string1 = ''
+    elsif wertung < 2
+      string1 = 'eins'
+    elsif wertung < 3
+      string1 = 'zwei'
+    elsif wertung < 4
+      string1 = 'drei'
+    elsif wertung < 5
+      string1 = 'vier'
+    elsif wertung < 6
+      string1 = 'f&uuml;nf'
+    elsif wertung < 7
+      string1 = 'secht'
+    elsif wertung < 8
+      string1 = 'sieben'
+    elsif wertung < 9
+      string1 = 'acht'
+    elsif wertung < 10
+      string1 = 'neun'
+    elsif wertung < 11
+      string1 = 'zehn'
+    elsif wertung < 12
+      string1 = 'elf'
+    else
+      string1 = 'zw&ouml;f'
+    end
+    rest = sprintf("%.1f",(wertung.to_f % 1))
+    if rest.to_f == 0.3
+      return string1 + " ein drittel"
+    elsif rest.to_f == 0.6
+      return string1 + " zwei drittel"
+    elsif rest.to_f == 0
+      return string1
+    else
+      return sprintf("%.1f",wertung.to_s).sub(".",",")
+    end
+  end
 
   # Die Wertung kann in Worten Dargestellt werden...
 
   def wertungWorte (wertung)
-    if wertung < 3
-      return 'Sehr schlecht '
+    if wertung < 1
+      return 'unglaublich schlecht'
+    elsif wertung < 2
+      return 'wirklich schlecht'
+    elsif wertung < 3
+      return 'relativ schlecht'
+    elsif wertung < 4
+      return 'in ordnung'
     elsif wertung < 5
-      return 'Schlecht'
+      return 'relativ gut'
+    elsif wertung < 6
+      return 'wirklich gut'
     elsif wertung < 7
-      return 'Befriedigend'
+      return 'sehr gut'
+    elsif wertung < 8
+      return 'hervorragend'
+    elsif wertung < 9
+      return 'unbeschreiblich gut'
     elsif wertung < 10
-      return 'Gut'
+      return 'bet&ouml;rend gut'
+    elsif wertung < 11
+      return 'unwirklich gut'
     else
-      return 'Sehr Gut'
+      return 'katastrophal gut'
     end
   end
 end
