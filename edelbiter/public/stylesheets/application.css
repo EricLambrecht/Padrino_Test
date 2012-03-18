@@ -62,22 +62,33 @@ body {
    height: 60px;
    left: 60px;
    top: -5px;
-   margin-bottom: -65px;
+   margin-bottom: -60px;
  }
  #header .titelbild {
      position: relative;
      display: block;
      z-index: 1;
-     font-size: 70pt;
-     letter-spacing: 200px;
-     margin-bottom: -60px;
-     width: 730px;
-     height: 200px;
-     left: 0px;
-     top: -25px;
-     background: url("/pictures/slick.png") no-repeat;
+     margin-bottom: 0px;
+     width: 600px;
+     height: 70px;
+     left: 60px;
+     top: 0px;
+     background: url("/pictures/titel.png") no-repeat;
      background-size: 100%;
  }
+ #header .ornament {
+     position: relative;
+     display: block;
+     z-index: 1;
+     margin-bottom: -25px;
+     width: 140px;
+     height: 80px;
+     left: 300px;
+     top: 0px;
+     background: url("/pictures/ornament.png") no-repeat;
+     background-size: 100%;
+ }
+
   #header #homelink a:hover{
      color: #b4a06d;
      padding:0px;
@@ -99,14 +110,15 @@ body {
   
   #subtitle {
     text-align: center;
-    margin-bottom: 0px;
+    font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 10px;
+    
   }
   
   #top_navigation ul {
-  
     font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     width:110%;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     margin-top: 10px;
     margin:auto;
     }
@@ -269,11 +281,11 @@ body {
     text-indent: 20px;
     color:#000;
     column-count:2;
-        column-gap:1em;
+        column-gap:1.1em;
         -moz-column-count:2;
-        -moz-column-gap:1em;
+        -moz-column-gap:1.1em;
         -webkit-column-count:2;
-        -webkit-column-gap:1em;
+        -webkit-column-gap:1.1em;
     }
 /*  #main #show .body p:first-child:first-letter {
     font-size:2.7em;
@@ -324,7 +336,7 @@ body {
 #social_media {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   padding: 15px 15px 20px 20px;
-  margin: 40px 0px;
+  margin: 10px 0px;
   height: auto;
   width: 94.5%;
   }
@@ -449,7 +461,20 @@ body {
 #footer {
   margin-top: 20px;
   padding: 10px 10px 10px 10px; 
-}  
+}
+
+.kakaofrucht {
+    position: relative;
+    display: block;
+    z-index: 1;
+    margin-bottom: 0px;
+    width: 110px;
+    height: 70px;
+    left: 320px;
+    top: 0px;
+    background: url("/pictures/kakaofrucht.png") no-repeat;
+    background-size: 100%;
+}
 
 #postliste {
   margin-top: 30px;
