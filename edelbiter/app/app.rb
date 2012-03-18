@@ -83,7 +83,7 @@ class Edelbiter < Padrino::Application
     if (Post.last(:oeffentlich => true).datum + 2) >= DateTime.now
       @spotlight_name = "Aktueller Test:"
       @post = Post.last(:oeffentlich => true)
-    elsif (Blogpost.last(:oeffentlich => true).datum + 0) >= DateTime.now
+    elsif (Blogpost.last(:oeffentlich => true).datum + 2) >= DateTime.now
       @spotlight_name = "Aktueller Blogeintrag:"
       @post = Blogpost.last(:oeffentlich => true)
     else

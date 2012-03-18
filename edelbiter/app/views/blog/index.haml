@@ -3,4 +3,5 @@
 
 .post= partial 'blog/post', :collection => @blogposts
 
-= partial 'blog/seitenzahl'
+- if @anzahlErgebnisse > @postsJeSeite
+  = partial 'blog/seitenzahl'
