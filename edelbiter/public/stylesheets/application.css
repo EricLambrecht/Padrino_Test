@@ -83,7 +83,7 @@ body {
      margin-bottom: -25px;
      width: 140px;
      height: 80px;
-     left: 300px;
+     left: 304px;
      top: 0px;
      background: url("/pictures/ornament.png") no-repeat;
      background-size: 100%;
@@ -118,7 +118,7 @@ body {
   #top_navigation ul {
     font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
     width:110%;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
     margin-top: 10px;
     margin:auto;
     }
@@ -128,23 +128,23 @@ body {
     margin: 0px;
     padding: 0; }
   #top_navigation ul li a {
-    font-size: 11pt;
+    font-size: 10pt;
     width:150px;
     padding-left:1px;
-    padding-bottom:2px;
+    padding-bottom:1px;
     margin-right:45px;
     text-align: left;
     float: left;
-    border-bottom:3px solid #000000;
+    border-bottom:2px solid #000000;
     text-decoration: none;
     display: block;}
   #top_navigation ul li a:hover {
-    border-bottom:3px solid #b4a06d;
+    border-bottom:2px solid #b4a06d;
     color: black;
     padding-left:1px;
-    padding-bottom:2px;}
+    padding-bottom:1px;}
   #top_navigation ul li a.selected {
-    border-bottom:3px solid #b4a06d;}
+    border-bottom:2px solid #b4a06d;}
 
 #main {
   text-align:left;
@@ -272,7 +272,7 @@ body {
 
   #main #show .body {
     clear:both;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     font-size: 12pt;
     font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
     letter-spacing:0px;
@@ -318,6 +318,19 @@ body {
   border-bottom:1px solid #000;
   background:none;
 }
+.trennornament {
+    position: relative;
+    display: block;
+    z-index: 1;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    width: 200px;
+    height: 50px;
+    left: 272px;
+    top: 0px;
+    background: url("/pictures/trennornament.png") no-repeat;
+    background-size: 100%;
+}
   
   /* Schokolade */
   #main #show .body p:first-child {
@@ -336,7 +349,7 @@ body {
 #social_media {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   padding: 15px 15px 20px 20px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   height: auto;
   width: 94%;
   }
@@ -478,8 +491,8 @@ body {
 /* Footer */ 
   
 #footer {
-  margin-top: 20px;
-  padding: 10px 10px 10px 10px; 
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .kakaofrucht {
@@ -487,9 +500,9 @@ body {
     display: block;
     z-index: 1;
     margin-bottom: 0px;
-    width: 110px;
-    height: 70px;
-    left: 320px;
+    width: 75px;
+    height: 40px;
+    left: 340px;
     top: 0px;
     background: url("/pictures/kakaofrucht.png") no-repeat;
     background-size: 100%;
@@ -532,13 +545,13 @@ body {
         }
 #postliste th
         {
-        font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
         color: #4f6b72;
         border: 1px solid;
         letter-spacing: 1px;
         text-transform: uppercase;
         text-align: left;
-        padding: 8px 12px 4px 12px;
+        padding: 5px 12px 5px 12px;
         background: #b4a06d;
         vertical-align:middle;
         }
@@ -614,9 +627,10 @@ body {
         }
 #postliste td
         {
-        font: normal 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
+        font-size: 12pt;
         border: 1px solid;
-        padding: 6px 12px 6px 12px;
+        padding: 10px 12px 10px 12px;
         color: #b4a06d;
         }
 #postliste td.lft
@@ -650,7 +664,9 @@ body {
 #suche {
   margin: 0 0 9px;
   padding: 0 3px 2px;
-  color: #333333;
+  font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10pt;
+  color: #000;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -665,7 +681,7 @@ body {
 }
 #suche td {
   text-align: center;
-  font-size: 13pt;
+  font-size: 10pt;
   width: 75%;
 }
 
