@@ -80,12 +80,12 @@ body {
      position: relative;
      display: block;
      z-index: 1;
-     margin-bottom: -25px;
-     width: 140px;
-     height: 80px;
-     left: 300px;
-     top: 0px;
-     background: url("/pictures/ornament.png") no-repeat;
+     margin-bottom: -24px;
+     width: 110px;
+     height: 62px;
+     left: 319px;
+     top: 4px;
+     background: url("/pictures/Kakaofrucht2.png") no-repeat;
      background-size: 100%;
  }
 
@@ -525,11 +525,8 @@ body {
   margin-bottom: 40px;
 }
 #postliste th {
-  font-weight: bold;
   padding-bottom: 5px;
 }
-
-
 
 
 /*                    POSTLISTE                     */
@@ -539,7 +536,6 @@ body {
         width: auto;
         padding: 0;
         margin: 0 auto 1.5em auto;
-        border-collapse:collapse;
         }
 #postliste .cs1
         {
@@ -557,14 +553,11 @@ body {
         }
 #postliste th
         {
-        font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
-        color: #4f6b72;
-        border: 1px solid;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: black;
+        font-size: 12pt;
         text-align: left;
         padding: 5px 12px 5px 12px;
-        background: #b4a06d;
         vertical-align:middle;
         }
 #postliste td.total
@@ -596,16 +589,15 @@ body {
 
         {
         cursor:pointer;
-        background: #cfbc8b url() no-repeat;
         padding: 8px 12px 4px 16px;
         }
 #postliste th.forwardSort
         {
-        background:#b4a06d no-repeat 0 0;
+
         }
 #postliste th.reverseSort
         {
-        background:#b4a06d no-repeat 0 0;
+
         }
 #postliste table thead th.forwardSort a,
 #postliste table thead th.reverseSort a
@@ -617,13 +609,13 @@ body {
 #postliste th a
         {
         text-decoration:none;
-        color: #4f6b72;
+        color: #000;
         background:transparent;
         }
 #postliste td a
         {
         text-decoration:none;
-        color:#b4a06d;
+        color:#000;
         background:transparent;
         }
 #postliste td img
@@ -633,21 +625,17 @@ body {
         }
 #postliste td a:hover
         {
-        color:#a84444;
-        border-bottom:1px solid #b4a06d;
-        background:transparent;
+        color: #b4a06d;
         }
 #postliste td
         {
         font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-        font-size: 12pt;
-        border: 1px solid;
-        padding: 10px 12px 10px 12px;
-        color: #b4a06d;
+        font-size: 14pt;
+        color: #000;
         }
 #postliste td.lft
         {
-        text-align:left;
+          
         }
 #postliste tr.alt
         {
@@ -705,40 +693,44 @@ body {
 #body table {
     background-color: white;
     -webkit-border-radius: 10px;
-    width: 100%;
+    width: 650px;
     padding: 0px;
     font-size: 12pt;
     }
 
   #body td{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #EEE;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #b4a06d;
+    padding-left: 6px;
   }
   #body th.sortable {
         color: #000;
         cursor: pointer;
-        text-decoration: underline;
-        border-bottom: 2px solid #AAA;
-        padding-bottom: 3px;
+
+        border-bottom: 1px solid #b4a06d;
+        padding-bottom: 5px;
+        margin-bottom: 2px;
       }
   #body th.sortable:hover { 
         color: black;
       }
+  #body th.sortable-numeric { 
+        text-align: center;
+        width: 50px;
+      }
   #body th.sorted-asc, th.sorted-desc  {
-        color: black;
+      color: black;
       }
   #body td {
-        background-color: white;
-        vertical-align:middle;
+      vertical-align:middle;
       }
+  #body td.wertung{
+      text-align: center;
+  }
   #body td.odd {
-        background-color: #EEE;
-        color: #000;
       }
   #body td.hovered {
-        background-color: #EEE;
-        color: #666;
       }
   #body td.kurztitel {
       }
