@@ -1,19 +1,17 @@
 - @title = "Vorschlag machen"
 
 %br
-%br
 
 -# Es muss noch ein Eintrag .suggest .text_field im application .css erstellt werden
 -# Es muss noch ein Eintrag .suggest .text_area im application .css erstellt werden
 
 #suggest
   .flash=[:notice].map { |type| flash_tag(type, :class => "message #{type}") }.join
-  %h2.ueberschrift
+  .ueberschrift
     Vorschlag machen
-  %p
-    %p= $additional.vorschlag
-  
   %br
+  .beschreibung{:lang => 'de'}
+    = simple_format($additional.vorschlag)
   
   %form{:action => url(:suggest, :send), :method => 'post'}
     %table

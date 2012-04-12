@@ -10,16 +10,19 @@
   %body
     #container
       #header
-        / .titelbild
-        /   %span &nbsp;
         #top_navigation= render_navigation
         %a.titellink{:href => "/"}
         .titelbild
         #subtitle= $additional.logountertitel
         .ornament
+        %br
+        %br
+        .elle
 
       #main= yield
 
       #footer
         .ellereverse
-      .kakaofrucht
+      .impressum
+        Design: Edelbiter &nbsp; ~ &nbsp;&nbsp;
+        = link_to 'Impressum', url_for(:about, :index)

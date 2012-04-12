@@ -84,7 +84,7 @@ body {
      width: 110px;
      height: 62px;
      left: 319px;
-     top: 4px;
+     top: 1px;
      background: url("/pictures/Kakaofrucht2.png") no-repeat;
      background-size: 100%;
  }
@@ -154,7 +154,7 @@ body {
     font-size: 2.1em; }
   #main .post {
     margin-bottom: 35px;
-    margin-top: 25px}
+    margin-top: 0px}
     #main .post p {
       padding-bottom: 0px;
       }
@@ -334,7 +334,7 @@ body {
     position: relative;
     display: block;
     z-index: 1;
-    margin-bottom: 7px;
+    margin-bottom: 20px;
     margin-top: 5px;
     width: 200px;
     height: 50px;
@@ -417,94 +417,110 @@ body {
   clear:both;
 }   
 
-/* Ueber Uns css
-   Wird #about überhaupt benutzt?
-*/  
-    
-#about h2 {
-  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-  font-size: 2em;
-  color: #752A26; }
-#about h3 {
-  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-  font-size: 1.5em;
-  color: #752A26;
-  padding-bottom: 6px; }
-#about p {
-  padding-bottom: 12px; }
 
-#about .titel {
-  /* min-height:210px; */
-  width:430px;
+#about {
+  width: 94%;
+  margin: auto;
+}
+#about .body {
+  padding-bottom: 12px;
+  line-height: 1.4em;
+  font-size: 12pt;
+  text-indent: 20px;
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-  font-size: 24pt;
+  letter-spacing:0px;
+  margin-bottom:20px;
+  }
+  #about .body p:first-child {
+        text-indent:0px;  
+    }
+#about .titel {
+  margin-bottom: 10px;
+  font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18pt;
   text-align: left;
 }
-#about .titel a{
-       text-decoration:none;
-       padding:0px; }
-#about a:hover{
-      color: #b4a06d;
-      padding:0px; }
+#about img{
+  float: right;
+  padding: 10px;
+  margin: 20px 0px 8px 10px;
+  border: 2px solid #000;
+}
+#about .impressum{
+  left: 795px;
+  position: absolute;
+  width:100px;
+}
   
 /* Vorschlag css */  
 
 #suggest {
-  width:98%;
+  width:94%;
+  margin:auto;
 }
   
 .ueberschrift {
   font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2em;
-  color: #000;  
+  color: #000;
+  margin-left: 10px;  
   }
 #suggest h3 {
-  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-  font-size: 1.5em;
+  font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 11pt;
   color: #000;
   padding-bottom: 6px; }
-#suggest p {
-  padding-bottom: 12px; 
-  font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
-  font-size: 13pt;
+#suggest .beschreibung {
+   line-height: 1.4em;
+   font-size: 12pt;
+   text-indent: 20px;
+   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
+   letter-spacing:0px;
+   margin-bottom:40px;
 }
-  
+#suggest .beschreibung p:first-child {
+      text-indent:0px;  
+  }
 #suggest table {
-  width:100%;
+  width:550px;
 } 
   
-#suggest table, tr, td {
-  margin:0px;
-  padding:0px;
+#suggest table td {
+  padding-right: 8px;
 }
   
 #suggest input.text_field{
-  width: 90%; 
+  width: 325px;
   border: 1px solid #CCC;
   padding: 5px;
-  font-size: 12pt;
+  font-size: 10pt;
   margin-bottom: 20px;}
   
 #suggest input.text_field2{
-  width: 100%; 
+  width: 205px; 
   border: 1px solid #CCC;
   padding: 5px;
-  font-size: 12pt;
+  font-size: 10pt;
   margin-bottom: 20px;}
 
 #suggest textarea {
-  width: 100%; 
+  width: 550px; 
   border: 1px solid #CCC;
   padding: 5px;
-  font-family: Helvetica, sans-serif;
-  font-size: 12pt;
+  font-size: 10pt;
   margin-bottom: 20px;}
 
 /* Footer */ 
   
 #footer {
-  margin-top: 30px;
+  margin-top: 35px;
   margin-bottom: 30px;
+}
+
+.impressum, .impressum a {
+  font-size: 9pt;
+  font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #b4a06d;
 }
 
 .kakaofrucht {
@@ -588,7 +604,6 @@ body {
 #postliste th.sortable-sortEnglishDateTime
 
         {
-        cursor:pointer;
         padding: 8px 12px 4px 16px;
         }
 #postliste th.forwardSort
@@ -671,9 +686,8 @@ body {
   -moz-border-radius: 3px;
   border-radius: 3px;
   display: block;
-  background: #b4a06d;
-  background:  -moz-linear-gradient(top, #b4a06d, #fff);
-  background:  -webkit-gradient(linear, left top, left bottom, from(#b4a06d), to(#fff));
+  border: 3px solid #b4a06d;
+  background: #ddd;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -683,6 +697,18 @@ body {
   text-align: center;
   font-size: 10pt;
   width: 75%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+#suche img {
+  position:absolute;
+  top: 390px;
+  border: 2px solid #b4a06d;
+  background: #d4c08d;
+  padding: 3px;
+  height:20px;
+  width:20px;
 }
 
 #suche .alignright{
@@ -693,7 +719,7 @@ body {
 #body table {
     background-color: white;
     -webkit-border-radius: 10px;
-    width: 650px;
+    width: 700px;
     padding: 0px;
     font-size: 12pt;
     }
@@ -707,7 +733,6 @@ body {
   #body th.sortable {
         color: #000;
         cursor: pointer;
-
         border-bottom: 1px solid #b4a06d;
         padding-bottom: 5px;
         margin-bottom: 2px;
@@ -717,8 +742,12 @@ body {
       }
   #body th.sortable-numeric { 
         text-align: center;
-        width: 50px;
+        width: 115px;
+        border-bottom: 1px solid #b4a06d;
       }
+  #body th.sortable-text {
+    border-bottom: 1px solid #b4a06d;
+  }
   #body th.sorted-asc, th.sorted-desc  {
       color: black;
       }

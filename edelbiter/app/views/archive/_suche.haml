@@ -18,6 +18,9 @@
       &nbsp;
   %tr
     %td
+      &nbsp;
+  %tr
+    %td
       Reihenfolge:&nbsp;
       - if @auswahl.sortierung == 0
         Alphabetisch
@@ -25,7 +28,7 @@
         = link_to image_tag("/img/glyphicons_212_down_arrow.png", border: 0), url_for(:archive, :sort, :reihenfolge => 1, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.reihenfolge == 1 && @auswahl.sortierung != 0
         = link_to image_tag("/img/glyphicons_213_up_arrow.png", border: 0), url_for(:archive, :sort, :reihenfolge => 0, :ansicht => @auswahl.ansicht, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
-      &nbsp;&nbsp;&nbsp;Ansicht:&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ansicht:&nbsp;&nbsp;
       - if @auswahl.ansicht == 0
         = link_to image_tag("/img/glyphicons_114_list.png", border: 0), url_for(:archive, :sort, :reihenfolge => @auswahl.reihenfolge, :ansicht => 1, :sortierung => @auswahl.sortierung, :kategorie => @auswahl.kategorie, :seite => @auswahl.seite)
       - if @auswahl.ansicht == 1
