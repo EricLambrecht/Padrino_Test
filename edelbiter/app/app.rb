@@ -87,7 +87,7 @@ class Edelbiter < Padrino::Application
       @spotlight_name = "Aktueller Blogeintrag:"
       @post = Blogpost.last(:oeffentlich => true)
     else
-      @spotlight_name = "Im Rampenlicht:"
+      @spotlight_name = "Heute im Rampenlicht:"
       spotlights = Post.all(:spotlight => true)
       randomDateID = (DateTime.now.strftime('%d').to_i + (30 * (DateTime.now.strftime('%m').to_i-1))) % spotlights.size
       @post = spotlights[randomDateID]

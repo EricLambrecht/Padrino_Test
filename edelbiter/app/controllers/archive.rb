@@ -3,7 +3,7 @@ Edelbiter.controllers :archive do
   # Index-Seite, hier wir die Default-Einstellung festgelegt  
   get :index do
     @auswahl = Auswahl.new
-    @auswahl.reihenfolge = 0
+    @auswahl.reihenfolge = 1
     @auswahl.sortierung = 4
     @auswahl.kategorie = 0
     @auswahl.seite = 1

@@ -3,7 +3,8 @@
 / =javascript_include_tag('tablesort.js')
 %br
 -form_for @auswahl, url(:archive, :index) do |f|
-  #suche= partial 'archive/suche', :locals => { :f => f }
+  #kasten
+    #suche= partial 'archive/suche', :locals => { :f => f }
 - if @auswahl.ansicht == 1
   #body
     #postliste

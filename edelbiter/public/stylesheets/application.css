@@ -275,8 +275,10 @@ body {
   #main #show #infokasten .zutaten {
     width: 163px;
     line-height:1.2em;
-    margin-top: -3px;
+    margin-top: 3px;
+    padding-top: 8px;
     margin-bottom: 8px;
+    border-top: 1px solid #b4a06d;
     }
   #main #show #infokasten table .zutaten {
     text-align: right;
@@ -361,9 +363,10 @@ body {
 #social_media {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   padding: 15px 15px 20px 20px;
-  margin: 5px 0px;
+  margin: 5px auto;
   height: auto;
-  width: 94%;
+  width: 95%;
+  overflow: visible;
   }
 
 #sidebar p {
@@ -373,7 +376,7 @@ body {
 #social_media .tweets {
   text-align:justify;
   margin-left: -18px;
-  margin-right: 10px;
+  margin-right: 0px;
   margin-bottom: 10px;
   border-bottom: 1px solid #b4a06d;
   width:575px;
@@ -393,11 +396,12 @@ body {
   float: right;
   display: block;
 }
+
 #social_media #facebook{
   vertical-align: middle;
   width:110px;
   border-left: 2px solid #b4a06d;
-  padding-left:6px;
+  padding-left:15px;
   padding-top: 10px;
   text-align: center;
   vertical-align: top;
@@ -675,22 +679,24 @@ body {
 #body {
   font-size: 20px;
 }
-
+#kasten{
+  border: 3px solid #b4a06d;
+  padding: 2px;
+  width:94%;
+  margin: 0 auto 14px auto;
+}
 #suche {
-  margin: 0 0 9px;
   padding: 0 3px 2px;
   font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 10pt;
   color: #000;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   display: block;
-  border: 3px solid #b4a06d;
-  background: #ddd;
-  -webkit-border-radius: 4px;
+  border: 1px solid #b4a06d;
+  /*background: #ddd;*/
+  background-image: url("/pictures/kachel.png");
+/*  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px;*/
   text-align: center;
 }
 #suche td {
@@ -703,7 +709,7 @@ body {
 
 #suche img {
   position:absolute;
-  top: 390px;
+  top: 393px;
   border: 2px solid #b4a06d;
   background: #d4c08d;
   padding: 3px;
@@ -717,9 +723,9 @@ body {
 
 
 #body table {
-    background-color: white;
+    background: none;
     -webkit-border-radius: 10px;
-    width: 700px;
+    width: 100%;
     padding: 0px;
     font-size: 12pt;
     }
