@@ -1,6 +1,11 @@
 
 - @title = "Blog"
 
+#kasten
+  #suche
+    .ueberschrift Lesenswerte Blogposts
+    .aufzaehlung= partial 'blog/aufzaehlung', :collection => @aufzaehlung
+
 .post= partial 'blog/post', :collection => @blogposts
 
 - if @anzahlErgebnisse > @postsJeSeite

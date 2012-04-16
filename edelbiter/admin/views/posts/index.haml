@@ -12,23 +12,23 @@
         %colgroup
           -# (zurzeit 9 Spalten)
           %col{:width => '5%'}
-          %col{:width => '20%'}
-          %col{:width => '10%'}
-          %col{:width => '10%'}
-          %col{:width => '15%'} 
+          %col{:width => '35%'}
           %col{:width => '8%'}
-          %col{:width => '10%'}
-          %col{:width => '10%'}
-          %col{:width => '12%'}
+          %col{:width => '8%'}
+          / %col{:width => '15%'} 
+          / %col{:width => '8%'}
+          %col{:width => '15%'}
+          %col{:width => '8%'}
+          %col{:width => '20%'}
         %tr
           %th.first=mat(:post, :id)
           -#%th=mat(:post, :titel)
           %th=mat(:post, :kurztitel)
           %th=mat(:post, :wertung)
           %th=mat(:post, :design)
-          %th=mat(:post, :hersteller)
+          / %th=mat(:post, :hersteller)
           -#%th=mat(:post, :kakaogehalt)
-          %th=mat(:post, :bild)
+          / %th=mat(:post, :bild)
           %th=mat(:post, :datum)
           %th=mat(:post, :oeffentlich)
           %th.last="&nbsp;"
@@ -37,13 +37,11 @@
             %td.first=post.id
             -#%td=post.titel
             %td=post.kurztitel
-
             %td=post.wertung
             %td=post.design
-            %td=post.hersteller
+            / %td=post.hersteller
             -#%td=post.kakaogehalt
-
-            %td=post.bild
+            / %td=post.bild
             %td#datum=post.datum.strftime("%d-%m-%Y")
             %td=post.oeffentlich
             %td.last

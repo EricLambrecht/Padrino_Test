@@ -7,13 +7,7 @@
 .group
   =f.label :body
   =f.error_message_on :body
-  ~f.text_area :body, :class => :text_area
-  %span.description Ex: a simple text
-
-.group
-  =f.label :pic
-  =f.error_message_on :pic
-  =f.text_field :pic, :class => :text_field
+  ~f.text_area :body, :class => :text_area, :rows => '10'
   %span.description Ex: a simple text
 
 .check

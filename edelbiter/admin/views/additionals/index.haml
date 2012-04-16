@@ -11,26 +11,18 @@
       %table.table
         %tr
           %th.first=mat(:additional, :id)
-          %th=mat(:additional, :impname)
-          %th=mat(:additional, :impstr)
-          %th=mat(:additional, :impstadt)
-          %th=mat(:additional, :impland)
+          %th=mat(:additional, :impressum)
           %th=mat(:additional, :copyright)
-          %th=mat(:additional, :logopic)
           %th=mat(:additional, :logountertitel)
           %th=mat(:additional, :vorschlag)
           %th.last="&nbsp;"
         -@additionals.each do |additional|
           %tr
             %td.first=additional.id
-            %td=additional.impname
-            %td=additional.impstr
-            %td=additional.impstadt
-            %td=additional.impland
-            %td=additional.copyright
-            %td=additional.logopic
-            %td=additional.logountertitel
-            %td=additional.vorschlag
+            / %td=additional.impressum
+            / %td=additional.copyright
+            / %td=additional.logountertitel
+            / %td=additional.vorschlag
             %td.last
               =button_to pat(:edit), url(:additionals, :edit, :id => additional.id), :method => :get, :class => :button_to
               ="|"

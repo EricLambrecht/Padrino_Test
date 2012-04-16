@@ -24,7 +24,7 @@
           =text_field_tag :absender, :placeholder => "E-Mail-Adresse", :class => :text_field2
 
     %h3 Ihre Nachricht:
-    =text_area_tag :nachricht, :placeholder => "Nachricht...", :class => :text_area
+    =text_area_tag :nachricht, :placeholder => "Nachricht...", :rows => '12',:class => :text_area
     
     %br 
     =submit_tag "Absenden", :class => 'btn-inverse'

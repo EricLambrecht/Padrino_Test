@@ -31,4 +31,5 @@ class Post
   property :kurztitel,        String,  :required => true
   
   property :spotlight,        Boolean, :default => false
+  property :tweettext,        String
 end

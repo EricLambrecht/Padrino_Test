@@ -26,6 +26,7 @@ migration 2, :create_posts do
       column :kurztitel, String, :length => 40
       
       column :spotlight, Boolean, :default => false
+      column :tweettext,   String
     end
   end
 

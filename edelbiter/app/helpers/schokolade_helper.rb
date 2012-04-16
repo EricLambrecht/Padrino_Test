@@ -19,6 +19,7 @@ Edelbiter.helpers do
     s
   end
   
+  
   # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln
   
   def drittel( wertung )

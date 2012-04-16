@@ -7,5 +7,7 @@ class Blogpost
   property :body,        Text
   property :kategorie,   String
   property :oeffentlich, Boolean
+  property :spotlight,   Boolean
   property :datum,       DateTime
+  property :tweettext,   String
 end

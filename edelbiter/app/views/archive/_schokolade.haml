@@ -26,7 +26,7 @@
         %td.wert= sprintf("%.0f", schokolade.fett.to_s) + 'g'
     %table
       %tr
-        %td.kakao= 'Zutaten:'
+        %td.kakao= 'Zutaten:&nbsp;'
         %td.zutaten= schokolade.zutaten 
   .titel= link_to schokolade.titel.upcase, url_for(:archive, :show, :id => schokolade.id)
 

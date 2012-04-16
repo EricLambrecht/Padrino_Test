@@ -10,16 +10,18 @@
     .inner
       %table.table
         %colgroup
-          %col{:width => '10%'}
+          %col{:width => '5%'}
           %col{:width => '40%'}
-          %col{:width => '20%'}
+          %col{:width => '15%'}
           %col{:width => '10%'}
-          %col{:width => '20%'}
+          %col{:width => '10%'}
+          %col{:width => '30%'}
         %tr
           %th.first=mat(:blogpost, :id)
           %th=mat(:blogpost, :titel)
           %th=mat(:blogpost, :datum)
           %th=mat(:blogpost, :oeffentlich)
+          %th=mat(:blogpost, :spotlight)
           %th.last="&nbsp;"
         -@blogposts.each do |blogpost|
           %tr
@@ -27,6 +29,7 @@
             %td=blogpost.titel
             %td#datum=blogpost.datum.strftime("%d-%m-%Y")
             %td=blogpost.oeffentlich
+            %td=blogpost.spotlight
             %td.last
               =button_to pat(:edit), url(:blogposts, :edit, :id => blogpost.id), :method => :get, :class => :button_to
               ="|"

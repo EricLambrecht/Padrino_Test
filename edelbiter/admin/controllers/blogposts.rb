@@ -15,7 +15,13 @@ Admin.controllers :blogposts do
     
     @blogpost.datum = DateTime.now
     
+    if @blogpost[:tweettext].to_s.size >= 3
+      tweet = @blogpost[:tweettext].to_s + ' http://edelbiter.de/b/' + @blogpost.id.to_s
+      # Twitter.update(tweet)
+    end
+    
     if @blogpost.save
+      @blogpost.update(:tweettext => '')
       flash[:notice] = 'Blogpost wurde erfolgreich erstellt.'
       redirect url(:blogposts, :edit, :id => @blogpost.id)
     else
@@ -30,8 +36,13 @@ Admin.controllers :blogposts do
 
   put :update, :with => :id do
     @blogpost = Blogpost.get(params[:id])
-    
     @eingabe = params[:blogpost]
+   
+    if @eingabe[:tweettext].to_s.size >= 3
+      tweet = @eingabe[:tweettext].to_s + ' http://edelbiter.de/b/' + @blogpost.id.to_s
+      # Twitter.update(tweet)
+      @eingabe.update(:tweettext => '')
+    end
     
     if ( !@blogpost.oeffentlich and (@eingabe[:oeffentlich].to_i == 1) )
       # ...dann aendere das Datum auf jetzt.

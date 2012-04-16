@@ -4,17 +4,12 @@ class Additional
   # property <name>, <type>
   property :id,             Serial
   
-  # Adresse (imperessum)
-  property :impname,        String
-  property :impstr,         String
-  property :impstadt,       String
-  property :impland,        String
+  # Imperessum
+  property :impressum,      Text
 
   # Weitere Sachen
   property :copyright,      String
-  property :logopic,        String
   property :logountertitel, String
-
 
   # Text Vorschlag seite
   property :vorschlag,      Text

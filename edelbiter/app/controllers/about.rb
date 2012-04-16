@@ -26,5 +26,9 @@ Edelbiter.controllers :about do
   get :notFound do
     render 'about/notFound'
   end
+  
+  get :impressum do
+    render 'about/impressum'
+  end
 
 end

@@ -2,7 +2,7 @@
 - @title = "&Uuml;ber uns"
 %br
 #about
-  .impressum= link_to 'Impressum', url_for(:about, :index)
+  .impressum= link_to 'Impressum', url_for(:about, :impressum)
   %img{:src => "/pictures/about1.jpg"}
   - @abouts.each do |about|
     .titel=about.title.upcase

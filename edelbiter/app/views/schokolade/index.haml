@@ -1,13 +1,12 @@
 
 - @title = "Startseite"
-
+%br
 / .ueberschrift
 /   = @spotlight_name
 - if @post.class.name == 'Post'
   #show= partial 'schokolade/schokolade'
 - if @post.class.name == 'Blogpost'
   .post= partial 'schokolade/blogpost'
-%br
 %br
 .elle
 #social_media
@@ -30,7 +29,6 @@
 %br
 %br
 %br
-%br 
 .ueberschrift
   Liste aller getesteten Schokoladen
 %br

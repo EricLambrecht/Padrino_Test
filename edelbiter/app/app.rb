@@ -94,13 +94,12 @@ class Edelbiter < Padrino::Application
     end
     
     @posts = Post.all(:order => :kurztitel.asc)
+    @balken = true
     
     # Twitter
-    
     @tweets = Twitter.user_timeline("edelbiter", :count => 4)
     render 'schokolade/index'
-      
-
+    
   end
   
   # Ab hier werden falsche Seitenaufrufe abgefangen
@@ -128,7 +127,24 @@ class Edelbiter < Padrino::Application
   get '/edelbiter' do
     redirect url(:about, :index)
   end
-
+  
+  # Shorturls
+  get '/s/:shorty' do
+    if params[:shorty].to_i.to_s == params[:shorty]
+      redirect url(:archive, :show, :id => params[:shorty])
+    else
+      redirect url(:about, :notFound)
+    end
+  end
+  
+  get '/b/:shorty' do
+    if params[:shorty].to_i.to_s == params[:shorty]
+      redirect url(:blog, :show, :id => params[:shorty])
+    else
+      redirect url(:about, :notFound)
+    end
+  end
+  
   not_found do
     status 404
     redirect url(:about, :notFound)

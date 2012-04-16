@@ -4,7 +4,6 @@ migration 4, :create_abouts do
       column :id, Integer, :serial => true
       column :title, String, :length => 255
       column :body, Text
-      column :pic, String, :length => 255
       column :oeffentlich, Boolean
     end
   end

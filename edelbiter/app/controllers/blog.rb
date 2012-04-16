@@ -21,6 +21,7 @@ Edelbiter.controllers :blog do
   get :index do
     @blogposts = Blogpost.all(:oeffentlich => true, :order => :datum.desc)
     # PostsJeSeite muss identisch mit PostsJeSeite im nächsten Controller sein!
+    @aufzaehlung = @blogposts.all(:spotlight => true)
     @seite = 1
     @postsJeSeite = 3
     @anzahlErgebnisse = @blogposts.size
@@ -34,6 +35,7 @@ Edelbiter.controllers :blog do
     @seite = params[:seite].to_i
     @blogposts = Blogpost.all(:oeffentlich => true, :order => :datum.desc)
     # PostsJeSeite muss identisch mit PostsJeSeite im vorherigen Controller sein!
+    @aufzaehlung = @blogposts.all(:spotlight => true)
     @postsJeSeite = 3
     @anzahlErgebnisse = @blogposts.size
     @anzahlSeiten = sprintf("%.0f", (@anzahlErgebnisse / @postsJeSeite) + 0.5).to_i

@@ -32,8 +32,8 @@ Padrino.configure_apps do
   Twitter.configure do |config|
     config.consumer_key = 'YGLPyK1tHeN5vEmrZmt7aQ'
     config.consumer_secret = 'cdG71EZYHKz5DQgwHnzdsqKagk2jqXQIcpB4DBtUDk'
-    config.oauth_token = '266165811-fBDxRpTVsEnDvzc8To1reVUcQsn5DSQqC4wwmZw2'
-    config.oauth_token_secret = 'USpsZy3CuRItrAkUjHghHHf3K6WFvJibIK1moNqTzI'
+    config.oauth_token = '266165811-TyzV86qRmajCPXKoVuUXUcUuFHIUgjQOpbe3USyx'
+    config.oauth_token_secret = 'hCmOLVbwK1RJCnsBdey5GuOjsHcSOQ7RAT4V3Ao00'
   end
 end
 

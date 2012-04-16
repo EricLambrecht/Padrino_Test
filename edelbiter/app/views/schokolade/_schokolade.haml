@@ -1,8 +1,9 @@
 .post
   .bild
-    .balken
-    .ueberschrift
-      = @spotlight_name
+    -if @balken == true
+      .balken
+      .ueberschrift
+        = @spotlight_name
     %img{:src => "/pictures/"+@post.bild, :width => '560px', :height => '330px'}
   #infokasten
     .impressum Datenblatt:
@@ -29,7 +30,7 @@
         %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
     %table
       %tr
-        %td.kakao= 'Zutaten:'
+        %td.kakao= 'Zutaten:&nbsp;'
         %td.zutaten= @post.zutaten 
   .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
 

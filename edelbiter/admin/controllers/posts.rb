@@ -24,6 +24,10 @@ Admin.controllers :posts do
     
     @post.datum = DateTime.now
     
+    if @blogpost[:tweettext].to_s.size >= 3
+      tweet = @blogpost[:tweettext].to_s + ' http://edelbiter.de/b/' + @post.id.to_s
+      # Twitter.update(tweet)
+    end
     
     if @post.save
       @neu = Post.last(:titel => @post.titel)
@@ -33,7 +37,7 @@ Admin.controllers :posts do
           @neu.update(:bild => @neu.id.to_s + '.jpg')
         end
       end
-      
+      @post.update(:tweettext => '')
       flash[:notice] = 'Post was successfully created.'
       redirect url(:posts, :edit, :id => @post.id)
     else
@@ -57,6 +61,12 @@ Admin.controllers :posts do
     
     @eingabe = params[:post]
     
+    if @eingabe[:tweettext].to_s.size >= 3
+      tweet = @eingabe[:tweettext].to_s + ' http://edelbiter.de/s/' + @post.id.to_s
+      # Twitter.update(tweet)
+      @eingabe.update(:tweettext => '')
+    end
+    
     # Numerische Werte auf nil setzen, wenn leer-String vorhanden
     @eingabe[:wertung] = nil if @eingabe[:wertung] == ''
     @eingabe[:design] = nil if @eingabe[:design] == ''
@@ -72,9 +82,13 @@ Admin.controllers :posts do
     
     if ( !@post.oeffentlich and (@eingabe[:oeffentlich].to_i == 1) )
       # ...dann aendere das Datum auf jetzt.
-      puts 'ich bin HIER'
+      # puts 'ich bin HIER'
       @eingabe[:datum] = DateTime.now.to_s
     end
+    
+    # if params[:tweettext] != ''
+    #   Twitter.update(params[:tweettext] + ' http://edelbiter.de/s/' + @post.id)
+    # end
     
     if @post.update(@eingabe)
       flash[:notice] = 'Post was successfully updated.'
