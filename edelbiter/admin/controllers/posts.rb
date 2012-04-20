@@ -82,7 +82,6 @@ Admin.controllers :posts do
     
     if ( !@post.oeffentlich and (@eingabe[:oeffentlich].to_i == 1) )
       # ...dann aendere das Datum auf jetzt.
-      # puts 'ich bin HIER'
       @eingabe[:datum] = DateTime.now.to_s
     end
     
