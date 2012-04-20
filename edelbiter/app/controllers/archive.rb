@@ -72,7 +72,7 @@ Edelbiter.controllers :archive do
     @anzahlErgebnisse = @posts.size
     
     # Vorbereitung der Seiten-Mechanik
-    @postsJeSeite = 3
+    @postsJeSeite = 4
     if @auswahl.ansicht == 0 && @posts.size > @postsJeSeite
         @anzahlSeiten = sprintf("%.0f", (@anzahlErgebnisse / @postsJeSeite) + 0.5).to_i
         schokoladenAufSeite = @posts.all(:limit => (@postsJeSeite * @auswahl.seite)) - @posts.all(:limit => (@postsJeSeite * (@auswahl.seite-1)))

@@ -37,6 +37,7 @@ end
 
 # Other requirements
 gem 'twitter'
+# gem 'mail'
 gem 'sinatra-simple-navigation', :require => 'sinatra/simple-navigation'
 
 # Or Padrino Edge

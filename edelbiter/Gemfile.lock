@@ -132,6 +132,7 @@ DEPENDENCIES
   dm-validations
   do_postgres
   haml
+  mail
   padrino (= 0.10.5)
   pg
   rake
