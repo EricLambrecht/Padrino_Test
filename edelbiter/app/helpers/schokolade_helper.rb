@@ -24,7 +24,9 @@ Edelbiter.helpers do
   
   def drittel( wertung )
     rest = sprintf("%.1f",(wertung.to_f % 1))
-    if rest.to_f == 0.3
+    if wertung.to_f == 2.3
+      return "2 &#8531;"
+    elsif rest.to_f == 0.3
       return (wertung - 0.3).to_i.to_s + " &#8531;"
     elsif rest.to_f == 0.6
       return (wertung - 0.6).to_i.to_s + " &#8532;"
