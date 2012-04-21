@@ -10,24 +10,30 @@
     .zutaten
       = @post.woher
     %table
-      %tr
-        %td.kakao= 'Kakaogehalt: '
-        %td.wert= @post.kakaogehalt.to_s + '%'
-      %tr
-        %td.preis= 'Preis: '
-        %td.wert= sprintf("%.2f", @post.preis.to_s).sub(".",",") + '&euro;'
-      %tr
-        %td.gewicht= 'Packungsgewicht: '
-        %td.wert= sprintf("%.0f", @post.gewicht.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'Kohlenhydrate: ' 
-        %td.wert=sprintf("%.0f", @post.kohlenhydrate.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'davon Zucker: '
-        %td.wert= sprintf("%.0f", @post.zucker.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'Fett: '
-        %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
+      - if @post.kakaogehalt.to_s != ''
+        %tr
+          %td.kakao= 'Kakaogehalt: '
+          %td.wert= @post.kakaogehalt.to_s + '%'
+      - if @post.preis.to_s != ''
+        %tr
+          %td.preis= 'Preis: '
+          %td.wert= sprintf("%.2f", @post.preis.to_s).sub(".",",") + '&euro;'
+      - if @post.gewicht.to_s != ''
+        %tr
+          %td.gewicht= 'Packungsgewicht: '
+          %td.wert= sprintf("%.0f", @post.gewicht.to_s) + 'g'
+      - if @post.kohlenhydrate.to_s != ''
+        %tr
+          %td.naehrwert= 'Kohlenhydrate: ' 
+          %td.wert=sprintf("%.0f", @post.kohlenhydrate.to_s) + 'g'
+      - if @post.zucker.to_s != ''
+        %tr
+          %td.naehrwert= 'davon Zucker: '
+          %td.wert= sprintf("%.0f", @post.zucker.to_s) + 'g'
+      - if @post.fett.to_s != ''
+        %tr
+          %td.naehrwert= 'Fett: '
+          %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
     %table
       %tr
         %td.kakao= 'Zutaten:&nbsp;'

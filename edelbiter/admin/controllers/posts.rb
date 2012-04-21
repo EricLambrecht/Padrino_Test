@@ -24,8 +24,8 @@ Admin.controllers :posts do
     
     @post.datum = DateTime.now
     
-    if @blogpost[:tweettext].to_s.size >= 3
-      tweet = @blogpost[:tweettext].to_s + ' http://edelbiter.de/b/' + @post.id.to_s
+    if @post[:tweettext].to_s.size >= 3
+      tweet = @post[:tweettext].to_s + ' http://edelbiter.de/b/' + @post.id.to_s
       # Twitter.update(tweet)
     end
     

@@ -6,6 +6,14 @@
   %span.description Vollstaendiger Titel
 
 .group
+  =f.label :kurztitel
+  =f.error_message_on :kurztitel
+  %br
+  =f.text_field :kurztitel, :class => :kurztitel
+  %br
+  %span.description Kurzer Titel f&uuml;r die Sortierung nach Alphabet
+
+.group
   =f.label :body
   =f.error_message_on :body
   ~f.text_area :body, :class => :text_area, :rows => '10'
@@ -131,14 +139,6 @@
   =f.text_field :woher, :class => :kurztitel
   %br
   %span.description Bsp: Erh&auml;ltlich bei vielen Superm&auml;rkten
-        
-.group
-  =f.label :kurztitel
-  =f.error_message_on :kurztitel
-  %br
-  =f.text_field :kurztitel, :class => :kurztitel
-  %br
-  %span.description Kurzer Titel f&uuml;r die Sortierung nach Alphabet
   
 .check
   =f.label 'Ver&ouml;ffentlichen?'

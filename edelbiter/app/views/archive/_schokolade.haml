@@ -5,29 +5,35 @@
     .impressum Datenblatt:
     .zutaten
       = schokolade.woher
-    %table
-      %tr
-        %td.kakao= 'Kakaogehalt: '
-        %td.wert= schokolade.kakaogehalt.to_s + '%'
-      %tr
-        %td.preis= 'Preis: '
-        %td.wert= sprintf("%.2f", schokolade.preis.to_s).sub(".",",") + '&euro;'
-      %tr
-        %td.gewicht= 'Packungsgewicht: '
-        %td.wert= sprintf("%.0f", schokolade.gewicht.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'Kohlenhydrate: ' 
-        %td.wert=sprintf("%.0f", schokolade.kohlenhydrate.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'davon Zucker: '
-        %td.wert= sprintf("%.0f", schokolade.zucker.to_s) + 'g'
-      %tr
-        %td.naehrwert= 'Fett: '
-        %td.wert= sprintf("%.0f", schokolade.fett.to_s) + 'g'
-    %table
-      %tr
-        %td.kakao= 'Zutaten:&nbsp;'
-        %td.zutaten= schokolade.zutaten 
+      %table
+        - if schokolade.kakaogehalt.to_s != ''
+          %tr
+            %td.kakao= 'Kakaogehalt: '
+            %td.wert= schokolade.kakaogehalt.to_s + '%'
+        - if schokolade.preis.to_s != ''
+          %tr
+            %td.preis= 'Preis: '
+            %td.wert= sprintf("%.2f", schokolade.preis.to_s).sub(".",",") + '&euro;'
+        - if schokolade.gewicht.to_s != ''
+          %tr
+            %td.gewicht= 'Packungsgewicht: '
+            %td.wert= sprintf("%.0f", schokolade.gewicht.to_s) + 'g'
+        - if schokolade.kohlenhydrate.to_s != ''
+          %tr
+            %td.naehrwert= 'Kohlenhydrate: ' 
+            %td.wert=sprintf("%.0f", schokolade.kohlenhydrate.to_s) + 'g'
+        - if schokolade.zucker.to_s != ''
+          %tr
+            %td.naehrwert= 'davon Zucker: '
+            %td.wert= sprintf("%.0f", schokolade.zucker.to_s) + 'g'
+        - if schokolade.fett.to_s != ''
+          %tr
+            %td.naehrwert= 'Fett: '
+            %td.wert= sprintf("%.0f", schokolade.fett.to_s) + 'g'
+      %table
+        %tr
+          %td.kakao= 'Zutaten:&nbsp;'
+          %td.zutaten= schokolade.zutaten
   .titel= link_to schokolade.titel.upcase, url_for(:archive, :show, :id => schokolade.id)
 
   .body{:lang => 'de'}

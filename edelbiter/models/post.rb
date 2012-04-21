@@ -27,7 +27,7 @@ class Post
   property :preis,            Float
   
   property :datum,            DateTime,:required => true
-  property :oeffentlich,      Boolean
+  property :oeffentlich,      Boolean, :default => true
   property :kurztitel,        String,  :required => true
   
   property :spotlight,        Boolean, :default => false

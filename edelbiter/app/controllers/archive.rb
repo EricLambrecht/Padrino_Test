@@ -45,9 +45,9 @@ Edelbiter.controllers :archive do
     @auswahl.reihenfolge = 1 if @auswahl.sortierung == 0
     
     @posts = Post.all(:oeffentlich => true) if @auswahl.kategorie == 0
-    @posts = Post.all(:oeffentlich => true, :kakaogehalt.lt => 70) if @auswahl.kategorie == 1
+    @posts = Post.all(:oeffentlich => true, :kakaogehalt.lt => 70) - Post.all(:oeffentlich => true, :kakaogehalt => 100) if @auswahl.kategorie == 1
     @posts = Post.all(:oeffentlich => true, :kakaogehalt.lt => 80, :kakaogehalt.gte => 70) if @auswahl.kategorie == 2
-    @posts = Post.all(:oeffentlich => true, :kakaogehalt.gte => 80) if @auswahl.kategorie == 3
+    @posts = Post.all(:oeffentlich => true, :kakaogehalt.gte => 80) + Post.all(:oeffentlich => true, :kakaogehalt => 100) if @auswahl.kategorie == 3
     @posts = Post.all(:oeffentlich => true, :wertung.lt => 4) if @auswahl.kategorie == 4
     @posts = Post.all(:oeffentlich => true, :wertung.lt => 7, :wertung.gte => 4) if @auswahl.kategorie == 5
     @posts = Post.all(:oeffentlich => true, :wertung.gte => 7) if @auswahl.kategorie == 6
