@@ -83,13 +83,20 @@ Edelbiter.controllers :archive do
   
   # Anzeige eines einzelnen Schokoladen-Artikels
   get :show, :with => :id do
-    @post = Post.get(params[:id])
+    if Post.get(params[:id]) != nil
+      redirect url(:archive, :show, :id => params[:id], :name => do_url(Post.get(params[:id]).kurztitel))
+    else
+      redirect url(:about, :notFound)
+    end
+  end
+  
+  get :show, :with => [:id,:name] do
     @balken = false
+    @post = Post.get(params[:id])
     if @post != nil && @post.oeffentlich == true
       render 'schokolade/show'
     else
       redirect url(:about, :notFound)
     end
   end
-
 end

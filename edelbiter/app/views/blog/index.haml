@@ -5,7 +5,7 @@
   #suche
     .ueberschrift Lesenswerte Blogposts
     .aufzaehlung= partial 'blog/aufzaehlung', :collection => @aufzaehlung
-
+%br
 .post= partial 'blog/post', :collection => @blogposts
 
 - if @anzahlErgebnisse > @postsJeSeite

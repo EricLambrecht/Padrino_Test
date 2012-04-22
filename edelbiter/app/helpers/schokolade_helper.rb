@@ -108,4 +108,11 @@ Edelbiter.helpers do
       return 'katastrophal gut'
     end
   end
+
+# Macht einen String URL Kompatibel
+
+  def do_url (name)
+    name.to_s.downcase.gsub(' ', '_')
+  end
+  
 end

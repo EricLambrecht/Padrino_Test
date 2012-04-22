@@ -1,14 +1,12 @@
-- @title = "Vorschlag machen"
+- @title = "Kontakt"
 
 %br
 
--# Es muss noch ein Eintrag .suggest .text_field im application .css erstellt werden
--# Es muss noch ein Eintrag .suggest .text_area im application .css erstellt werden
 
 #suggest
   .flash=[:notice].map { |type| flash_tag(type, :class => "message #{type}") }.join
   .ueberschrift
-    Vorschlag machen
+    Kontakt
   %br
   .beschreibung{:lang => 'de'}
     = simple_format($additional.vorschlag)
