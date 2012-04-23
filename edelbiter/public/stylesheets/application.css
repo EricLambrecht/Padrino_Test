@@ -5,7 +5,7 @@ body {
   background-image: url("/pictures/kachel.png");
   }
   body a {
-    color: #000; }
+    color: #2a2a2a; }
   body h2 {
     padding-bottom: 12px;
     font-weight: bold; }
@@ -27,6 +27,7 @@ body {
         font-weight: bold; }
 
 #container {
+  color: #2a2a2a;
   width: 740px;
   margin: auto;
   display: block;
@@ -61,7 +62,7 @@ body {
    width: 600px;
    height: 60px;
    left: 60px;
-   top: -5px;
+   top: -10px;
    margin-bottom: -60px;
  }
  #header .titelbild {
@@ -70,9 +71,9 @@ body {
      z-index: 1;
      margin-bottom: 0px;
      width: 600px;
-     height: 70px;
+     height: 62px;
      left: 60px;
-     top: 0px;
+     top: -5px;
      background: url("/pictures/titel.png") no-repeat;
      background-size: 100%;
  }
@@ -111,7 +112,7 @@ body {
   #subtitle {
     text-align: center;
     font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin: 10px;
+    margin-bottom: 15px;
     
   }
   
@@ -135,12 +136,12 @@ body {
     margin-right:45px;
     text-align: left;
     float: left;
-    border-bottom:2px solid #000000;
+    border-bottom:2px solid #2a2a2a;
     text-decoration: none;
     display: block;}
   #top_navigation ul li a:hover {
     border-bottom:2px solid #b4a06d;
-    color: black;
+    color: #2a2a2a;
     padding-left:1px;
     padding-bottom:1px;}
   #top_navigation ul li a.selected {
@@ -164,7 +165,7 @@ body {
       line-height:1.3em;
       }
       #main .post .kurztitel a {
-        color: #000;
+        color: #2a2a2a;
         text-decoration: none; }
         #main .post .kurztitel a:hover {
           color: #b4a06d;
@@ -184,7 +185,7 @@ body {
       text-align:justify;
       text-justify: newspaper;
       text-indent: 20px;
-      color:#000;
+      color:#2a2a2a;
       padding-bottom: 10px; 
       line-height: 1.4em;
       -webkit-hyphens: auto;
@@ -293,7 +294,7 @@ body {
     text-align:justify;
     text-justify: newspaper;
     text-indent: 20px;
-    color:#000;
+    color:#2a2a2a;
     column-count:2;
         column-gap:1.1em;
         -moz-column-count:2;
@@ -320,16 +321,16 @@ body {
   width:100%;
   padding:1px 0px;
   border:0px;
-  border-bottom:3px solid #000;
-  border-top:1px solid #000;
+  border-bottom:3px solid #2a2a2a;
+  border-top:1px solid #2a2a2a;
 }
   
 .elle {
   width:100%;
   padding:1px 0px;
   border:0px;
-  border-top:3px solid #000;
-  border-bottom:1px solid #000;
+  border-top:3px solid #2a2a2a;
+  border-bottom:1px solid #2a2a2a;
   background:none;
 }
 .trennornament {
@@ -384,7 +385,7 @@ body {
   line-height: 1.4em;
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   letter-spacing:0px;
-  color:#000;
+  color:#2a2a2a;
   float:left;
 }
 #social_media .tweets .datum{
@@ -448,7 +449,7 @@ body {
   float: right;
   padding: 10px;
   margin: 20px 0px 8px 10px;
-  border: 2px solid #000;
+  border: 2px solid #2a2a2a;
 }
 #about .impressum{
   left: 795px;
@@ -464,16 +465,16 @@ body {
 }
   
 .ueberschrift {
-  font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18pt;
-  color: #000;
+  color: #2a2a2a;
   margin-top: 8px;
   margin-bottom: 10px;
   }
 #suggest h3 {
   font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 11pt;
-  color: #000;
+  color: #2a2a2a;
   padding-bottom: 6px; }
 #suggest .beschreibung {
    line-height: 1.4em;
@@ -575,7 +576,7 @@ body {
 #postliste th
         {
         font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;
-        color: black;
+        color: #2a2a2a;
         font-size: 12pt;
         text-align: left;
         padding: 5px 12px 5px 12px;
@@ -622,20 +623,20 @@ body {
 #postliste table thead th.forwardSort a,
 #postliste table thead th.reverseSort a
         {
-        color:#000;
+        color:#2a2a2a;
         text-decoration:none;
         }
 
 #postliste th a
         {
         text-decoration:none;
-        color: #000;
+        color: #2a2a2a;
         background:transparent;
         }
 #postliste td a
         {
         text-decoration:none;
-        color:#000;
+        color:#2a2a2a;
         background:transparent;
         }
 #postliste td img
@@ -651,7 +652,7 @@ body {
         {
         font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
         font-size: 13pt;
-        color: #000;
+        color: #2a2a2a;
         }
 #postliste td.lft
         {
@@ -690,7 +691,7 @@ body {
   padding: 0 3px 2px;
   font-family: 'Novecentowide-normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 10pt;
-  color: #000;
+  color: #2a2a2a;
   display: block;
   border: 1px solid #b4a06d;
   /*background: #ddd;*/
@@ -710,7 +711,7 @@ body {
 
 #suche img {
   position:absolute;
-  top: 377px;
+  top: 295px;
   border: 2px solid #b4a06d;
   background: #d4c08d;
   padding: 3px;
@@ -730,7 +731,7 @@ body {
   font-family: Baskerville, Baskerville Old Face,'OpenBaskerville0053Normal', Georgia,Times New Roman, serif;
   letter-spacing:0px;
   text-align:left;
-  color:#000;
+  color:#2a2a2a;
   line-height: 1.4em;
   column-count:2;
   column-gap:1.1em;
@@ -755,14 +756,14 @@ body {
     padding-left: 6px;
   }
   #body th.sortable {
-        color: #000;
+        color: #2a2a2a;
         cursor: pointer;
         border-bottom: 1px solid #b4a06d;
         padding-bottom: 5px;
         margin-bottom: 2px;
       }
   #body th.sortable:hover { 
-        color: black;
+        color: #2a2a2a;
       }
   #body th.sortable-numeric { 
         text-align: center;
@@ -773,7 +774,7 @@ body {
     border-bottom: 1px solid #b4a06d;
   }
   #body th.sorted-asc, th.sorted-desc  {
-      color: black;
+      color: #2a2a2a;
       }
   #body td {
       vertical-align:middle;
@@ -787,3 +788,36 @@ body {
       }
   #body td.kurztitel {
       }
+#bonus {
+  height:183px;
+  padding-top:18px;
+  border-top: 2px dotted #b4a06d;
+  margin-bottom: 0px;
+}
+#bonus .bild {
+  float: left;
+  display: block;
+}
+#bonus .titel {
+  float: right;
+  display: block;
+  font-family: 'Novecentowide-Normal', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 22pt;
+  width: 61%;
+  line-height:1.3em;
+  text-align: left;
+
+}
+#bonus .titel a{
+  text-decoration:none;
+  padding:0px;
+}
+#bonus a:hover{
+  color: #b4a06d;
+}
+/*.bonuslinie {
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}*/

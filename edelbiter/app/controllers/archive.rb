@@ -93,6 +93,8 @@ Edelbiter.controllers :archive do
   get :show, :with => [:id,:name] do
     @balken = false
     @post = Post.get(params[:id])
+    @bonus = Post.all(:hersteller  => @post.hersteller)-@post
+    @bonus = @bonus.all(:oeffentlich => true)
     if @post != nil && @post.oeffentlich == true
       render 'schokolade/show'
     else

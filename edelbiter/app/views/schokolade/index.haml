@@ -1,8 +1,6 @@
 
 - @title = "Wir essen Schokolade"
-%br
-/ .ueberschrift
-/   = @spotlight_name
+
 - if @post.class.name == 'Post'
   #show= partial 'schokolade/schokolade'
 - if @post.class.name == 'Blogpost'
@@ -31,7 +29,6 @@
 %br
 .ueberschrift
   Liste aller getesteten Schokoladen
-%br
 %br
 #search
   %label{:for => "filter"} Suche
