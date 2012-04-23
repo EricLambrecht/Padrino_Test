@@ -13,7 +13,7 @@
       - if @post.kakaogehalt.to_s != ''
         %tr
           %td.kakao= 'Kakaogehalt: '
-          %td.wert= @post.kakaogehalt.to_s + '%'
+          %td.wert= sprintf("%.1f", @post.kakaogehalt.to_s).sub(".",",") + '%'
       - if @post.preis.to_s != ''
         %tr
           %td.preis= 'Preis: '
@@ -21,19 +21,19 @@
       - if @post.gewicht.to_s != ''
         %tr
           %td.gewicht= 'Packungsgewicht: '
-          %td.wert= sprintf("%.0f", @post.gewicht.to_s) + 'g'
+          %td.wert= sprintf("%.0f", @post.gewicht.to_s).sub(".",",") + 'g'
       - if @post.kohlenhydrate.to_s != ''
         %tr
           %td.naehrwert= 'Kohlenhydrate: ' 
-          %td.wert=sprintf("%.0f", @post.kohlenhydrate.to_s) + 'g'
+          %td.wert= sprintf("%.1f", @post.kohlenhydrate.to_s).sub(".",",") + 'g'
       - if @post.zucker.to_s != ''
         %tr
           %td.naehrwert= 'davon Zucker: '
-          %td.wert= sprintf("%.0f", @post.zucker.to_s) + 'g'
+          %td.wert= sprintf("%.1f", @post.zucker.to_s).sub(".",",") + 'g'
       - if @post.fett.to_s != ''
         %tr
           %td.naehrwert= 'Fett: '
-          %td.wert= sprintf("%.0f", @post.fett.to_s) + 'g'
+          %td.wert= sprintf("%.1f", @post.fett.to_s).sub(".",",") + 'g'
     %table
       %tr
         %td.kakao= 'Zutaten:&nbsp;'
