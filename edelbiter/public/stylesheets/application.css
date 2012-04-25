@@ -662,6 +662,11 @@ body {
         {
         color: #b4a06d;
         }
+#postliste .unsichtbar {
+  color: white;
+  display: inline;
+  font-size:2pt;
+}
 
 #search {
   font-family: 'Novecentowide-medium', "Helvetica Neue",Helvetica,Arial,sans-serif;

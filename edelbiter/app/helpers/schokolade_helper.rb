@@ -20,16 +20,14 @@ Edelbiter.helpers do
   end
   
   
-  # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln
+  # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln. Fixed.
   
   def drittel( wertung )
     rest = sprintf("%.1f",(wertung.to_f % 1))
-    if wertung.to_f == 2.3
-      return "2 &#8531;"
-    elsif rest.to_f == 0.3
-      return (wertung - 0.3).to_i.to_s + " &#8531;"
+    if rest.to_f == 0.3
+      return (wertung - (wertung%1)).to_i.to_s + '<div class="unsichtbar"> .3 </div>&#8531;'
     elsif rest.to_f == 0.6
-      return (wertung - 0.6).to_i.to_s + " &#8532;"
+      return (wertung - (wertung%1)).to_i.to_s + '<div class="unsichtbar"> .6 </div>&#8532;'
     elsif rest.to_f == 0
       return wertung.to_i.to_s
     else
@@ -37,7 +35,7 @@ Edelbiter.helpers do
     end
   end
   
-  # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln
+  # Macht aus der float wertung eine Zahl mit einem oder zwei Dritteln. Funktioniert.
   
   def drittelworte( wertung )
     if wertung < 1
