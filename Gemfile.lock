@@ -144,6 +144,11 @@ DEPENDENCIES
   do_postgres
   haml
   padrino (= 0.10.5)
+  padrino-admin (= 0.10.5)
+  padrino-cache (= 0.10.5)
+  padrino-core (= 0.10.5)
+  padrino-gen (= 0.10.5)
+  padrino-helpers (= 0.10.5)
   pg
   rake
   sinatra-flash

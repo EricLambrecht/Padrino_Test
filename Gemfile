@@ -1,8 +1,6 @@
 source :rubygems
 
-# Server requirements (defaults to WEBrick)
-# gem 'thin'
-# gem 'mongrel'
+PADRINO_VERSION = '0.10.5'
 
 # Project requirements
 gem 'rake'
@@ -38,13 +36,12 @@ end
 
 # Other requirements
 gem 'twitter'
-# gem 'mail'
 gem 'sinatra-simple-navigation', :require => 'sinatra/simple-navigation'
 
-# Or Padrino Edge
-# gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 
-# Or Individual Gems
-# %w(core gen helpers cache mailer admin).each do |g|
-#   gem 'padrino-' + g, '0.10.5'
-# end
+# Padrino requirements
+gem 'padrino-core',    PADRINO_VERSION
+gem 'padrino-admin',   PADRINO_VERSION
+gem 'padrino-cache',   PADRINO_VERSION
+gem 'padrino-helpers', PADRINO_VERSION
+gem 'padrino-gen', PADRINO_VERSION
