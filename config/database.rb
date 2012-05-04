@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'active_record'
+
 ##
 # A MySQL connection:
 # DataMapper.setup(:default, 'mysql://user:password@localhost/the_database_name')
@@ -18,3 +21,15 @@ case Padrino.env
   when :production  then DataMapper.setup(:default, 'postgres://tester:test@localhost/edelbiter_production')
   when :test        then DataMapper.setup(:default, "sqlite3://" + Padrino.root('db', "edelbiter_test.db"))
 end
+
+# config/database.rb
+postgres = URI.parse(ENV['DATABASE_URL'] || '')
+
+ActiveRecord::Base.configurations[:production] = {
+  :adapter  => 'postgresql',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1], 
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host
+}
