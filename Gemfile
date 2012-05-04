@@ -31,8 +31,8 @@ gem 'padrino', '0.10.5'
 
 # Datenbank-Wechsel für Heroku
 group :production do
- gem 'dm-postgres-adapter'
- gem 'do_postgres'
+# gem 'dm-postgres-adapter'
+# gem 'do_postgres'
  gem 'pg'
 end
 
