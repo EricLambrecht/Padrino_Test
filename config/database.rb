@@ -38,9 +38,8 @@ DataMapper.setup(:default,
   :database => 'DB1077840',
   :username => 'U1077840',
   :password => '3d3lb!tt3r',
-  :host     => 'rdbms.strato.de'
-  #,
-  #:port     => '10025'
+  :host     => 'rdbms.strato.de',
+  :port     => ''
 )
 
 
