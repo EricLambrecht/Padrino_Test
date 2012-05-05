@@ -39,7 +39,7 @@ DataMapper.setup(:default,
   :username => 'app4481517',
   :password => 'test',
   :host     => 'int.instance13421.db.xeround.com',
-  :port     => '9074'
+  :port     => 9074
 )
 
 
