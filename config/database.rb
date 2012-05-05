@@ -35,7 +35,7 @@ DataMapper.logger = logger
 DataMapper::Property::String.length(255)
 DataMapper.setup(:default,
   :adapter  => 'mysql',
-  :database => 'edelbitter',
+  :database => 'app4481517',
   :username => 'app4481517',
   :password => 'test',
   :host     => 'int.instance13421.db.xeround.com',
