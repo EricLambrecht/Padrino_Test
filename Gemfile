@@ -1,6 +1,6 @@
 source :rubygems
 
-PADRINO_VERSION = '0.10.5'
+PADRINO_VERSION = '0.10.6'
 
 # Project requirements
 gem 'rake'
@@ -25,7 +25,7 @@ gem 'activerecord'
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.10.5'
+gem 'padrino', PADRINO_VERSION
 
 # Datenbank-Wechsel für Heroku
 group :production do
