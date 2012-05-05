@@ -20,10 +20,6 @@ class Admin < Padrino::Application
   # layout  :my_layout             # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
 
-  get '*' do
-    puts "Hello Bjoern"
-  end
-
   set :login_page, "/admin/sessions/new"
 
   enable  :sessions

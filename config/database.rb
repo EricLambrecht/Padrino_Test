@@ -15,14 +15,14 @@ require 'active_record'
 # config/database.rb
 postgres = URI.parse(ENV['DATABASE_URL'] || '')
 
-#ActiveRecord::Base.configurations[:production] = {
-#  :adapter  => 'postgresql',
-#  :encoding => 'utf8',
-#  :database => postgres.path[1..-1], 
-#  :username => postgres.user,
-#  :password => postgres.password,
-#  :host     => postgres.host
-#}
+ActiveRecord::Base.configurations[:production] = {
+  :adapter  => 'postgresql',
+  :encoding => 'utf8',
+  :database => postgres.path[1..-1], 
+  :username => postgres.user,
+  :password => postgres.password,
+  :host     => postgres.host
+}
 
 DataMapper.logger = logger
 DataMapper::Property::String.length(255)
