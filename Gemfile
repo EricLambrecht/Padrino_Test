@@ -9,6 +9,9 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 # Component requirements
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'haml'
+gem 'data_objects'
+gem 'rake-compiler'
+gem 'rspec'
 
 group :development, :test do
   gem 'dm-sqlite-adapter'
@@ -29,9 +32,12 @@ gem 'padrino', PADRINO_VERSION
 
 # Datenbank-Wechsel für Heroku
 group :production do
- gem 'dm-postgres-adapter'
- gem 'do_postgres'
- gem 'pg'
+ #gem 'dm-postgres-adapter'
+ #gem 'do_postgres'
+ #gem 'pg'
+ gem 'mysql'
+ gem 'dm-mysql-adapter'
+ gem 'do_mysql'
 end
 
 # Other requirements
