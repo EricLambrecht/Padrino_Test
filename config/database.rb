@@ -35,11 +35,11 @@ DataMapper.logger = logger
 DataMapper::Property::String.length(255)
 DataMapper.setup(:default,
   :adapter  => 'mysql',
-  :database => 'DB1077840',
-  :username => 'U1077840',
-  :password => '3d3lb!tt3r',
-  :host     => 'rdbms.strato.de',
-  :port     => ''
+  :database => 'edelbitter',
+  :username => 'app4481517',
+  :password => 'test',
+  :host     => 'int.instance13421.db.xeround.com',
+  :port     => '9074'
 )
 
 
