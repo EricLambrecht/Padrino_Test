@@ -11,8 +11,6 @@ class Edelbiter < Padrino::Application
     $additional = nil
   end
   $additional = $additional[0]
- 
-
 
   ##
   # Caching support

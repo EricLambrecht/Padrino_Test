@@ -7,7 +7,7 @@ migration 3, :create_blogposts do
       column :kategorie,   String,   :length => 255
       column :oeffentlich, Boolean
       column :spotlight,   Boolean
-      column :datum,       DateTime,  required => true
+      column :datum,       DateTime,  :required => true
       column :tweettext,   String
     end
   end
