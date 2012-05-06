@@ -33,15 +33,24 @@ require 'active_record'
 
 DataMapper.logger = logger
 DataMapper::Property::String.length(255)
-DataMapper.setup(:default,
-  :adapter  => 'mysql',
-  :database => 'app4481517',
-  :username => 'app4481517',
-  :password => 'test',
-  :host     => 'int.instance13421.db.xeround.com',
-  :port     => 9074
-)
+#DataMapper.setup(:default,
+#  :adapter  => 'mysql',
+#  :database => 'app4481517',
+#  :username => 'app4481517',
+#  :password => 'test',
+#  :host     => 'instance13421.db.xeround.com',
+#  :port     => 9074
+#)
 
+DataMapper.setup(:default,
+  :adapter  => 'postgresql',
+  :encoding => 'utf8',
+  :database => 'resource45289',
+  :username => 'pqezofbwhoycsz',
+  :password => 'LtqNnZD-OlhD1LRDWg8gSkgECj',
+  :host     => 'ec2-23-23-201-251.compute-1.amazonaws.com',
+  :port     => 5432
+)
 
 
 #case Padrino.env

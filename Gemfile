@@ -32,12 +32,12 @@ gem 'padrino', PADRINO_VERSION
 
 # Datenbank-Wechsel für Heroku
 group :production do
- #gem 'dm-postgres-adapter'
- #gem 'do_postgres'
- #gem 'pg'
- gem 'mysql'
- gem 'dm-mysql-adapter'
- gem 'do_mysql'
+ gem 'dm-postgres-adapter'
+ gem 'do_postgres'
+ gem 'pg'
+ #gem 'mysql'
+ #gem 'dm-mysql-adapter'
+ #gem 'do_mysql'
 end
 
 # Other requirements
