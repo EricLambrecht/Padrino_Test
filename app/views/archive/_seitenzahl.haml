@@ -1,0 +1,11 @@
+#show
+  .wertung
+    - if @anzahlErgebnisse > @postsJeSeite && @auswahl.ansicht == 0
+      - if @auswahl.seite > 1
+        = link_to 'zur&uuml;ck', url_for(:archive, :sort, :seite => (@auswahl.seite - 1), :ansicht => @auswahl.ansicht, :reihenfolge => @auswahl.reihenfolge, :kategorie => @auswahl.kategorie, :sortierung => @auswahl.sortierung)
+      Seite
+      = @auswahl.seite
+      von
+      = @anzahlSeiten.to_i
+      - if @auswahl.seite < @anzahlSeiten
+        = link_to 'weiter', url_for(:archive, :sort, :seite => (@auswahl.seite + 1), :ansicht => @auswahl.ansicht, :reihenfolge => @auswahl.reihenfolge, :kategorie => @auswahl.kategorie, :sortierung => @auswahl.sortierung)

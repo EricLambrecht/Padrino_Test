@@ -1,0 +1,54 @@
+.post
+  .bild
+    -if @balken == true
+      .balken
+      .ueberschrift
+        = @spotlight_name
+    %img{:src => "/pictures/"+@post.bild, :width => '560px', :height => '330px'}
+  #infokasten
+    .impressum Datenblatt:
+    .zutaten
+      = @post.woher
+    %table
+      - if @post.kakaogehalt.to_s != ''
+        %tr
+          %td.kakao= 'Kakaogehalt: '
+          %td.wert= sprintf("%.1f", @post.kakaogehalt.to_s).sub(".",",") + '%'
+      - if @post.preis.to_s != ''
+        %tr
+          %td.preis= 'Preis: '
+          %td.wert= sprintf("%.2f", @post.preis.to_s).sub(".",",") + '&euro;'
+      - if @post.gewicht.to_s != ''
+        %tr
+          %td.gewicht= 'Packungsgewicht: '
+          %td.wert= sprintf("%.0f", @post.gewicht.to_s).sub(".",",") + 'g'
+      - if @post.kohlenhydrate.to_s != ''
+        %tr
+          %td.naehrwert= 'Kohlenhydrate: ' 
+          %td.wert= sprintf("%.1f", @post.kohlenhydrate.to_s).sub(".",",") + 'g'
+      - if @post.zucker.to_s != ''
+        %tr
+          %td.naehrwert= 'davon Zucker: '
+          %td.wert= sprintf("%.1f", @post.zucker.to_s).sub(".",",") + 'g'
+      - if @post.fett.to_s != ''
+        %tr
+          %td.naehrwert= 'Fett: '
+          %td.wert= sprintf("%.1f", @post.fett.to_s).sub(".",",") + 'g'
+    %table
+      %tr
+        %td.kakao= 'Zutaten:&nbsp;'
+        %td.zutaten= @post.zutaten 
+  .titel= link_to @post.titel.upcase, url_for(:archive, :show, :id => @post.id)
+
+  .body{:lang => 'de'}
+    = simple_format(@post.body)
+    / Wertung:
+    / %span#zahl= drittel(@post.wertung)
+    / Punkte, 
+    / =wertungWorte(@post.wertung)
+
+  .wertung
+    / Wertung:
+    %span#zahl= drittelworte(@post.wertung)
+    Punkte - 
+    =wertungWorte(@post.wertung)

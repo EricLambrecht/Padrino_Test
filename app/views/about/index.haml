@@ -1,0 +1,19 @@
+
+- @title = "&Uuml;ber uns"
+%br
+#about
+  .impressum= link_to 'Impressum', url_for(:about, :impressum)
+  %img{:src => "/pictures/about1.jpg"}
+  - @abouts.each do |about|
+    .titel=about.title.upcase
+    .body{:lang => 'de'}
+      = simple_format(about.body)
+
+/ #imperessum
+/   %br
+/   %b Imperessum:
+/   %p= $additional.impname
+/   %p= $additional.impstr
+/   %p= $additional.impstadt
+/   %p= $additional.impland
+

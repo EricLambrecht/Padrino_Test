@@ -1,0 +1,172 @@
+
+.group
+  =f.label :titel
+  =f.error_message_on :titel
+  =f.text_field :titel, :class => :text_field
+  %span.description Vollstaendiger Titel
+
+.group
+  =f.label :kurztitel
+  =f.error_message_on :kurztitel
+  %br
+  =f.text_field :kurztitel, :class => :kurztitel
+  %br
+  %span.description Kurzer Titel f&uuml;r die Sortierung nach Alphabet. Muss mit Grossbuchstaben beginnen.
+
+.group
+  =f.label :body
+  =f.error_message_on :body
+  ~f.text_area :body, :class => :text_area, :rows => '10'
+  %span.description Beschreibung/Rezension
+  
+%br
+
+%table
+  %tr
+    %td.title
+      %h3 Wertungen
+    %td
+    %td.title
+      %h3 Spezifika
+    %td
+    %td
+    %td.title
+      %h3 Bild
+      
+  %tr
+    %td#wertung
+      =f.label :wertung
+      =f.error_message_on :wertung
+      =f.text_field :wertung, :class => :text_field
+      %span.description Bsp: 7.6
+
+    %td#design
+      =f.label :design
+      =f.error_message_on :design
+      =f.text_field :design, :class => :text_field
+      %span.description Bsp: 7.6
+    
+    %td#hersteller
+      =f.label :hersteller
+      =f.error_message_on :hersteller
+      =f.text_field :hersteller, :class => :text_field
+      %span.description Bsp: Lindt
+
+    %td#kakaogehalt
+      =f.label :kakaogehalt
+      =f.error_message_on :kakaogehalt
+      =f.text_field :kakaogehalt, :class => :text_field
+      %span.description Bsp: 70.0
+
+    %td#anbaugebiet
+      =f.label :anbaugebiet
+      =f.error_message_on :anbaugebiet
+      =f.text_field :anbaugebiet, :class => :text_field
+      %span.description Bsp: Ecuador
+      
+    %td#bild  
+      =f.label :bild
+      =f.error_message_on :bild 
+      %br
+      =f.file_field :bild, :name => 'pic'
+      %br
+      %span.description Bildupload
+%hr
+%br
+
+
+
+%table
+  %tr
+    %td.title
+      %h3 N&auml;hrwerte
+    %td
+    %td
+    %td.title
+      %h3 Weitere Packungsangaben
+
+  %tr
+    %td.naehrwerte
+      =f.label :fett
+      =f.error_message_on :fett
+      =f.text_field :fett, :class => :text_field
+      %span.description Fett je 100g
+
+    %td.naehrwerte
+      =f.label :kohlenhydrate
+      =f.error_message_on :kohlenhydrate
+      =f.text_field :kohlenhydrate, :class => :text_field
+      %span.description Kohlenhydrate
+
+    %td.naehrwerte
+      =f.label :zucker
+      =f.error_message_on :zucker
+      =f.text_field :zucker, :class => :text_field
+      %span.description ...davon Zucker
+
+    %td#zutaten
+      =f.label :zutaten
+      =f.error_message_on :zutaten
+      =f.text_field :zutaten, :class => :text_field
+      %span.description Zutat, Zutat, zutat, ..
+      
+    %td#gewicht
+      =f.label :gewicht
+      =f.error_message_on :gewicht
+      =f.text_field :gewicht, :class => :text_field
+      %span.description Packungsgewicht
+
+    %td#preis
+      =f.label :preis
+      =f.error_message_on :preis
+      =f.text_field :preis, :class => :text_field
+      %span.description Bsp: 2.99
+
+-#.group
+-#  =f.label :datum
+-#  =f.error_message_on :datum
+-#  =f.text_field :datum, :class => :text_field
+-#  %span.description ! Muss automatisiert werden
+
+
+%hr
+%br
+
+.group
+  =f.label :woher
+  =f.error_message_on :woher
+  %br
+  =f.text_field :woher, :class => :kurztitel
+  %br
+  %span.description Bsp: Erh&auml;ltlich bei vielen Superm&auml;rkten
+  
+.check
+  =f.label 'Ver&ouml;ffentlichen?'
+  =f.error_message_on :oeffentlich
+  =f.check_box :oeffentlich, :class => :check_box 
+  %br
+  %span.description Wenn angekreuzt: &Ouml;ffentlich
+
+.check
+  =f.label 'Spotlight?'
+  =f.error_message_on :spotlight
+  =f.check_box :spotlight, :class => :check_box 
+  %br
+  %span.description Wenn angekreuzt: "Im Rampenlicht"
+ 
+
+#tweet.check
+  =f.label 'Tweet erstellen?'
+  =f.error_message_on :tweet
+  %input{:type => 'checkbox', :id => 'tweetcheck', :onClick => 'change();'}
+  %br
+  =f.text_area :tweettext, :id => 'tweettext', :disabled => true, :rows => 3, :cols => 40
+    
+.datum
+  Das Datum des Posts wird nur bei Erstellung und/oder Ver&ouml;ffentlichung aktualisiert.
+  
+.clear
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:posts, :index)}';return false", :class => :button

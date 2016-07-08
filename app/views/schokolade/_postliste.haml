@@ -1,0 +1,8 @@
+
+
+
+-if postliste.oeffentlich
+  %tr
+    %td#kurztitel= link_to postliste.kurztitel, url_for(:archive, :show, :id => postliste.id)
+    %td.wertung= drittel(postliste.wertung)
+    %td.wertung= sprintf("%.2f", postliste.preis.to_s).sub(".",",") + ' &euro;'

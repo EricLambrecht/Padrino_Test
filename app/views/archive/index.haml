@@ -1,0 +1,22 @@
+
+- @title = "Schokoladen"
+/ =javascript_include_tag('tablesort.js')
+%br
+-form_for @auswahl, url(:archive, :index) do |f|
+  #kasten
+    #suche= partial 'archive/suche', :locals => { :f => f }
+- if @auswahl.ansicht == 1
+  #body
+    #postliste
+      %table
+        %thead
+          %tr
+            %th.sortable-text Titel
+            %th.sortable-numeric Wertung
+            %th.sortable-numeric Preis
+        %tbody
+          %tr= partial 'schokolade/postliste', :collection => @posts
+- if @auswahl.ansicht == 0
+  #main
+    #show= partial 'archive/schokolade', :collection => @posts
+= partial 'archive/seitenzahl'

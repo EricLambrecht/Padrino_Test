@@ -1,0 +1,18 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first=link_to pat(:list), url(:additionals, :index)
+      %li.active=link_to pat(:new), url(:additionals, :new)
+  .content
+    %h2.title
+      =pat(:new)
+      =mt(:additional)
+    .inner
+      -if $additional == nil
+        -form_for :additional, url(:additionals, :create), :class => :form do |f|
+          =partial "additionals/form", :locals => { :f => f }
+      -else
+        %p Es ist schon ein Eintrag vorhanden
+
+
+-content_for :sidebar, partial("base/sidebar")

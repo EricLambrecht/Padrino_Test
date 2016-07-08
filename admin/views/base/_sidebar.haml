@@ -1,0 +1,47 @@
+.block
+  %h3 Platzhalter
+  .content
+    %br
+    %br
+    / %p Controller Namen:
+    / %table{:width => '100%'}
+    /   %colgroup
+    /     %col{:width => '100px'}
+    /   %tr
+    /     %td app.rb:
+    /     %td Startseite
+    /   %tr
+    /     %td archive:
+    /     %td Tabelle mit allen Schokoladen
+    /   %tr
+    /     %td archive:show:
+    /     %td Einzelne Schokolade
+    /   %tr
+    /     %td about:
+    /     %td &Uuml;ber uns
+    /   %tr
+    /     %td suggest:
+    /     %td Vorschlag machen (Kontakt)
+    /   %tr
+    /     %td blog:
+    /     %td Der Blog mit Texteintr&auml;gen
+    / 
+    / %p Klassen Namen:
+    / %table{:width => '100%'}
+    /   %colgroup
+    /     %col{:width => '100px'}
+    /   %tr
+    /     %td post:
+    /     %td Schokoladen
+    /   %tr
+    /     %td blogpost:
+    /     %td Blogeintr&auml;ge
+    /   %tr
+    /     %td about:
+    /     %td &Uuml;ber uns Daten
+
+.block
+  %h3 Links
+  %ul.navigation
+    %li=link_to 'Startseite Edelbiter', url_for('../')
+    %li=link_to 'GitHub Repo', url_for('https://github.com/EricLambrecht/Padrino_Test')

@@ -1,0 +1,29 @@
+
+!!! Strict
+%html
+  %head
+    %title= [@title, "Edelbiter"].compact.join(" | ")
+    = stylesheet_link_tag 'reset', 'application', 'webfonts', 'bootstrap'
+    = favicon_tag '/favicon.ico', :type => 'image/ico'
+    = javascript_include_tag 'jquery'
+    = yield_content :include
+  %body
+    #container
+      #header
+        #top_navigation= render_navigation
+        %a.titellink{:href => "/"}
+        .titelbild
+        #subtitle= $additional.logountertitel
+        / .ornament
+        / %br
+        / %br
+        .elle
+
+      #main= yield
+
+      #footer
+        .ellereverse
+      .impressum
+        =$additional.copyright
+        &nbsp; ~ &nbsp;&nbsp;
+        = link_to 'Impressum', url_for(:about, :impressum)

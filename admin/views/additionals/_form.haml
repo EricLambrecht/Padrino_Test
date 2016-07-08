@@ -1,0 +1,28 @@
+.group
+  =f.label :impressum
+  =f.error_message_on :impressum
+  =f.text_area :impressum, :class => :text_area, :rows => '10'
+  %span.description Der Text fuer's Impressum
+
+.group
+  =f.label :copyright
+  =f.error_message_on :copyright
+  =f.text_field :copyright, :class => :text_field
+  %span.description Der Text im Footer
+
+.group
+  =f.label :logountertitel
+  =f.error_message_on :logountertitel
+  =f.text_field :logountertitel, :class => :text_field
+  %span.description Der Text unterm Logo
+
+.group
+  =f.label :vorschlag
+  =f.error_message_on :vorschlag
+  ~f.text_area :vorschlag, :class => :text_area, :rows => '10'
+  %span.description Der Text auf der Kontakt-Seite
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:additionals, :index)}';return false", :class => :button

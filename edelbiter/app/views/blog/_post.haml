@@ -1,8 +1,0 @@
--if post.oeffentlich
-  .post
-    .kurztitel= link_to post.titel, url_for(:blog, :show, :id => post.id)
-    .datum= post.datum.strftime('%d.%m.%Y')
-    .body{:lang => 'de'}
-      = simple_format(post.body)
-    
-.trennornament
